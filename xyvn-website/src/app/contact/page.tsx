@@ -2,12 +2,12 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Zap, Users, Award, Send, CheckCircle2, Calendar, MessageCircle, X, ArrowRight, Headphones } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import ContactSection from '@/components/sections/ContactSection';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export default function ContactPage() {
-  const [showChat, setShowChat] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
   const [isWorkingHours, setIsWorkingHours] = useState(true);
 
@@ -55,7 +55,7 @@ export default function ContactPage() {
 
   const contactMethods = [
     {
-      icon: Phone,
+      icon: FaWhatsapp,
       title: 'WhatsApp',
       desc: '通过 WhatsApp 联系我们',
       action: '+65 9156 1413',
@@ -138,108 +138,24 @@ export default function ContactPage() {
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center gap-2"
                 >
                   <MessageSquare className="w-5 h-5" />
-                  立即咨询
+                  联系我们
                 </motion.button>
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="tel:+6591561413"
-                  className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-medium hover:bg-white/10 transition-all flex items-center gap-2"
+                  href="https://wa.me/6591561413"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-green-500/10 border border-green-500/20 text-green-400 rounded-full font-medium hover:bg-green-500/20 transition-all flex items-center gap-2"
                 >
-                  <Phone className="w-5 h-5" />
-                  电话咨询
+                  <FaWhatsapp className="w-5 h-5" />
+                  WhatsApp 联系
                 </motion.a>
-                {isWorkingHours && (
-                  <motion.button
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setShowChat(true)}
-                    className="px-8 py-4 bg-green-500/10 border border-green-500/20 text-green-400 rounded-full font-medium hover:bg-green-500/20 transition-all flex items-center gap-2"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    在线客服
-                  </motion.button>
-                )}
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
-
-      {/* Chat Modal */}
-      <AnimatePresence>
-        {showChat && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-6"
-            onClick={() => setShowChat(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-              className="bg-gray-900 border border-white/10 rounded-3xl p-8 max-w-md w-full"
-            >
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
-                    <Headphones className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">在线客服</h3>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                      <span className="text-sm text-gray-400">在线</span>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setShowChat(false)}
-                  className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all"
-                >
-                  <X className="w-5 h-5 text-gray-400" />
-                </button>
-              </div>
-
-              <div className="bg-white/5 rounded-2xl p-6 mb-6">
-                <p className="text-gray-300 mb-4">
-                  👋 您好！我是 XYVN 的在线客服，很高兴为您服务。
-                </p>
-                <p className="text-gray-400 text-sm">
-                  请选择您的咨询类型，我们会尽快为您解答：
-                </p>
-              </div>
-
-              <div className="space-y-3">
-                {['项目咨询', '技术支持', '商务合作', '其他问题'].map((type, index) => (
-                  <motion.button
-                    key={type}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ x: 5 }}
-                    className="w-full p-4 bg-white/5 border border-white/10 rounded-xl text-left hover:bg-white/10 hover:border-blue-500/50 transition-all group"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-white font-medium">{type}</span>
-                      <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
-                    </div>
-                  </motion.button>
-                ))}
-              </div>
-
-              <div className="mt-6 text-center text-sm text-gray-500">
-                或直接拨打热线：<a href="tel:+6591561413" className="text-blue-400 hover:underline">+65 9156 1413</a>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Why Choose Us */}
       <section className="py-20 relative">
