@@ -8,6 +8,8 @@ interface ButtonProps {
   size?: 'sm' | 'md' | 'lg'
   className?: string
   onClick?: () => void
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
 }
 
 export default function Button({
@@ -16,6 +18,8 @@ export default function Button({
   size = 'md',
   className,
   onClick,
+  type = 'button',
+  disabled = false,
 }: ButtonProps) {
   const baseStyles = 'font-medium rounded-full transition-all duration-300'
   
@@ -37,6 +41,8 @@ export default function Button({
       whileTap={{ scale: 0.95 }}
       className={cn(baseStyles, variants[variant], sizes[size], className)}
       onClick={onClick}
+      type={type}
+      disabled={disabled}
     >
       {children}
     </motion.button>
