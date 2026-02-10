@@ -55,40 +55,24 @@ export default function ContactPage() {
 
   const contactMethods = [
     {
-      icon: MessageSquare,
-      title: '在线咨询',
-      desc: '通过表单快速联系我们',
-      action: '填写表单',
-      color: 'from-blue-500 to-cyan-500',
-      available: true,
-      responseTime: '24小时内回复',
-    },
-    {
       icon: Phone,
-      title: '电话沟通',
-      desc: '直接拨打我们的热线',
+      title: 'WhatsApp',
+      desc: '通过 WhatsApp 联系我们',
       action: '+65 9156 1413',
-      color: 'from-purple-500 to-pink-500',
-      available: isWorkingHours,
-      responseTime: '即时接听',
+      color: 'from-green-500 to-emerald-500',
+      available: true,
+      responseTime: '即时回复',
+      link: 'https://wa.me/6591561413',
     },
     {
       icon: Mail,
       title: '邮件联系',
       desc: '发送邮件详细说明需求',
       action: 'ern@xyvnai.com',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-purple-500 to-pink-500',
       available: true,
       responseTime: '12小时内回复',
-    },
-    {
-      icon: MessageCircle,
-      title: '在线客服',
-      desc: '实时聊天，即时解答',
-      action: '开始聊天',
-      color: 'from-orange-500 to-red-500',
-      available: isWorkingHours,
-      responseTime: '即时回复',
+      link: 'mailto:ern@xyvnai.com',
     },
   ];
 
@@ -308,12 +292,15 @@ export default function ContactPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {contactMethods.map((method, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <motion.div
+                <motion.a
+                  href={method.link}
+                  target={method.link?.startsWith('http') ? '_blank' : undefined}
+                  rel={method.link?.startsWith('http') ? 'noopener noreferrer' : undefined}
                   whileHover={{ y: -10 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all relative"
+                  className="block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-500/50 transition-all relative cursor-pointer"
                 >
                   <div className={`absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-medium ${
                     method.available 
@@ -334,7 +321,7 @@ export default function ContactPage() {
                   <div className={`text-sm font-medium bg-gradient-to-r ${method.color} bg-clip-text text-transparent`}>
                     {method.action}
                   </div>
-                </motion.div>
+                </motion.a>
               </ScrollReveal>
             ))}
           </div>
