@@ -1,0 +1,80 @@
+# 依赖
+/node_modules
+/.pnp
+.pnp.js
+
+# 测试
+/coverage
+*.lcov
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+
+# 生产构建
+/build
+/dist
+
+# 环境变量
+.env
+.env*.local
+.env.production
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+
+# 调试日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 操作系统
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# Prisma
+/prisma/migrations/*
+!/prisma/migrations/.gitkeep
+
+# 测试
+/playwright-report/
+/playwright/.cache/
+/test-results/
+
+# Sentry
+.sentryclirc
+
+# 临时文件
+*.tmp
+*.temp
+.cache
+
+# 日志
+logs
+*.log
+
+# 备份
+*.bak
+*.backup
+
+# 打包分析
+.next/analyze/

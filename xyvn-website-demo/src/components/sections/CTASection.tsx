@@ -1,0 +1,81 @@
+'use client'
+import { motion } from 'framer-motion'
+import ScrollReveal from '@/components/ui/ScrollReveal'
+import { ArrowRight } from 'lucide-react'
+
+export default function CTASection() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section className="py-24 relative overflow-hidden">
+      {/* 背景渐变 */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20" />
+      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+      
+      <div className="max-w-4xl mx-auto px-6 md:px-8 text-center relative z-10">
+        <ScrollReveal>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            准备好创造
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              {' '}卓越体验{' '}
+            </span>
+            了吗？
+          </h2>
+          
+          <p className="text-xl mb-12 text-gray-400 max-w-2xl mx-auto">
+            无论是全新项目还是现有产品优化，我们都能为您提供专业的解决方案
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={scrollToContact}
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center justify-center gap-2"
+            >
+              立即咨询
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const portfolioSection = document.getElementById('portfolio');
+                if (portfolioSection) {
+                  portfolioSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-medium hover:bg-white/10 transition-all"
+            >
+              查看案例
+            </motion.button>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.3}>
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { number: '100+', label: '成功项目', icon: '🚀' },
+              { number: '50+', label: '合作客户', icon: '🤝' },
+              { number: '98%', label: '客户满意度', icon: '⭐' },
+            ].map((stat, index) => (
+              <div 
+                key={index}
+                className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all"
+              >
+                <div className="text-3xl mb-2">{stat.icon}</div>
+                <div className="text-4xl font-bold mb-2 text-white">{stat.number}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  )
+}
