@@ -67,7 +67,7 @@ export default function ContactPage() {
       icon: Phone,
       title: '电话沟通',
       desc: '直接拨打我们的热线',
-      action: '+86 138 0000 0000',
+      action: '+65 9156 1413',
       color: 'from-purple-500 to-pink-500',
       available: isWorkingHours,
       responseTime: '即时接听',
@@ -76,7 +76,7 @@ export default function ContactPage() {
       icon: Mail,
       title: '邮件联系',
       desc: '发送邮件详细说明需求',
-      action: 'hello@xyvn.com',
+      action: 'ern@xyvnai.com',
       color: 'from-green-500 to-emerald-500',
       available: true,
       responseTime: '12小时内回复',
@@ -103,28 +103,12 @@ export default function ContactPage() {
 
   const offices = [
     {
-      city: '深圳总部',
-      address: '广东省深圳市南山区科技园南区',
-      phone: '+86 138 0000 0000',
-      email: 'shenzhen@xyvn.com',
-      hours: '周一至周五 9:00-18:00',
-      icon: '🏢',
-    },
-    {
-      city: '北京分部',
-      address: '北京市朝阳区望京 SOHO T3',
-      phone: '+86 139 0000 0000',
-      email: 'beijing@xyvn.com',
-      hours: '周一至周五 9:00-18:00',
-      icon: '🏛️',
-    },
-    {
-      city: '上海分部',
-      address: '上海市浦东新区陆家嘴环路 1000 号',
-      phone: '+86 137 0000 0000',
-      email: 'shanghai@xyvn.com',
-      hours: '周一至周五 9:00-18:00',
-      icon: '🌆',
+      city: 'Singapore Office',
+      address: '1 Jln Membina, Singapore 169479',
+      phone: '+65 9156 1413',
+      email: 'ern@xyvnai.com',
+      hours: 'Monday - Friday 9:00-18:00',
+      icon: '🇸🇬',
     },
   ];
 
@@ -175,7 +159,7 @@ export default function ContactPage() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="tel:+8613800000000"
+                  href="tel:+6591561413"
                   className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-medium hover:bg-white/10 transition-all flex items-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
@@ -266,7 +250,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-6 text-center text-sm text-gray-500">
-                或直接拨打热线：<a href="tel:+8613800000000" className="text-blue-400 hover:underline">138 0000 0000</a>
+                或直接拨打热线：<a href="tel:+6591561413" className="text-blue-400 hover:underline">+65 9156 1413</a>
               </div>
             </motion.div>
           </motion.div>
@@ -369,12 +353,12 @@ export default function ContactPage() {
                 办公地点
               </h2>
               <p className="text-xl text-gray-400">
-                我们在全国主要城市设有办公室
+                我们的新加坡办公室
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="max-w-2xl mx-auto">
             {offices.map((office, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <motion.div
@@ -477,7 +461,7 @@ export default function ContactPage() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="tel:+8613800000000"
+                  href="tel:+6591561413"
                   className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-medium hover:bg-white/10 transition-all"
                 >
                   电话咨询
