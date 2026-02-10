@@ -186,7 +186,7 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={status === 'loading'}
-          className="flex-1 md:flex-none"
+          className="flex-1 md:flex-none flex items-center justify-center gap-2"
         >
           {status === 'loading' ? (
             <>
@@ -195,12 +195,12 @@ export default function ContactForm() {
                 transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
                 className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
               />
-              发送中...
+              <span>发送中...</span>
             </>
           ) : (
             <>
               <Send className="w-5 h-5" />
-              发送咨询
+              <span>发送咨询</span>
             </>
           )}
         </Button>
