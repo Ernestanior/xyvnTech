@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function HeroSectionEnhanced() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0f]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0f] pt-32 md:pt-40">
       {/* 精致背景渐变 */}
       <div className="absolute inset-0">
         {/* 顶部紫色光晕 */}
