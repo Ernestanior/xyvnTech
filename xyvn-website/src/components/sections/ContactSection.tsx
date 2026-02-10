@@ -10,25 +10,25 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: '邮箱',
-      content: 'hello@xyvn.com',
-      link: 'mailto:hello@xyvn.com',
+      content: 'ern@xyvnai.com',
+      link: 'mailto:ern@xyvnai.com',
     },
     {
       icon: Phone,
       title: '电话',
-      content: '+86 138 0000 0000',
-      link: 'tel:+8613800000000',
+      content: '+65 9156 1413',
+      link: 'tel:+6591561413',
     },
     {
       icon: MapPin,
       title: '地址',
-      content: '中国 · 深圳 · 南山区',
+      content: '1 Jln Membina, Singapore 169479',
       link: null,
     },
     {
       icon: Clock,
       title: '工作时间',
-      content: '周一至周五 9:00-18:00',
+      content: 'Monday - Friday 9:00-18:00',
       link: null,
     },
   ];
