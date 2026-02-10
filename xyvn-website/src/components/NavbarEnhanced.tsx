@@ -3,8 +3,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
+import logo from '@/app/assets/logo.png';
 
 export default function NavbarEnhanced() {
   const [scrolled, setScrolled] = useState(false);
@@ -83,8 +85,17 @@ export default function NavbarEnhanced() {
             <Link href="/" className="relative group">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-2"
+                className="flex items-center gap-3"
               >
+                <div className="relative w-10 h-10 md:w-12 md:h-12">
+                  <Image
+                    src={logo}
+                    alt="XYVN Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
                   <span className="relative text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -223,9 +234,19 @@ export default function NavbarEnhanced() {
               <div className="p-6">
                 {/* Close Button */}
                 <div className="flex justify-between items-center mb-8">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    XYVN
-                  </span>
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-10 h-10">
+                      <Image
+                        src={logo}
+                        alt="XYVN Logo"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                      XYVN
+                    </span>
+                  </div>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
                     className="p-2 hover:bg-white/10 rounded-lg transition-colors"
