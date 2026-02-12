@@ -22,21 +22,47 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus('loading');
     
-    // 模拟 API 调用
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        projectType: 'website',
-        budget: '',
-        message: '',
+    try {
+      const response = await fetch('/api/inquiries', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || null,
+          company: formData.company || null,
+          service_type: formData.projectType,
+          budget: formData.budget || null,
+          message: formData.message,
+        }),
       });
-      
-      setTimeout(() => setStatus('idle'), 3000);
-    }, 1500);
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          projectType: 'website',
+          budget: '',
+          message: '',
+        });
+        
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error('Submit error:', error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

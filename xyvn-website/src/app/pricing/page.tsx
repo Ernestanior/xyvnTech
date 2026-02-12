@@ -8,6 +8,13 @@ import FAQSection from '@/components/sections/FAQSection';
 import CTASection from '@/components/sections/CTASection';
 import { pricingPackages, calculateDiscount, PricingPackage } from '@/data/pricingPackages';
 import { currencies, Currency, formatPrice, getCurrency, formatPriceRange } from '@/data/currencyData';
+import PricingModeToggle from '@/components/pricing/PricingModeToggle';
+import BillingCycleToggle from '@/components/pricing/BillingCycleToggle';
+import SubscriptionPricingCard from '@/components/pricing/SubscriptionPricingCard';
+import SubscriptionCalculator from '@/components/pricing/SubscriptionCalculator';
+import CostComparisonCalculator from '@/components/pricing/CostComparisonCalculator';
+import { allSubscriptionPackages, getSubscriptionsByCategory } from '@/data/subscriptionPackages';
+import { PricingMode, BillingCycle } from '@/types/pricing';
 
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('corporate-website');
@@ -15,6 +22,10 @@ export default function PricingPage() {
   const [showCurrencyMenu, setShowCurrencyMenu] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<PricingPackage | null>(null);
   const [showCalculator, setShowCalculator] = useState(false);
+  
+  // 新增：定价模式状态
+  const [pricingMode, setPricingMode] = useState<PricingMode>('subscription'); // 默认订阅制
+  const [billingCycle, setBillingCycle] = useState<BillingCycle>('annual'); // 默认年付
   
   // 计算器状态
   const [calculatorCategory, setCalculatorCategory] = useState('corporate-website');
@@ -542,6 +553,12 @@ export default function PricingPage() {
                 </div>
               </div>
 
+              {/* 定价模式切换 */}
+              <PricingModeToggle 
+                value={pricingMode} 
+                onChange={setPricingMode} 
+              />
+
               <div className="flex flex-wrap gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -628,9 +645,59 @@ export default function PricingPage() {
             ))}
           </div>
 
+          {/* 计费周期切换 - 仅订阅模式显示 */}
+          {pricingMode === 'subscription' && (
+            <BillingCycleToggle 
+              value={billingCycle} 
+              onChange={setBillingCycle}
+              annualDiscount={17}
+            />
+          )}
+
           {/* Pricing Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {filteredPackages.map((pkg, index) => (
+            {pricingMode === 'subscription' ? (
+              // 订阅制套餐
+              getSubscriptionsByCategory(selectedCategory).length > 0 ? (
+                getSubscriptionsByCategory(selectedCategory).map((pkg, index) => (
+                  <SubscriptionPricingCard
+                    key={pkg.id}
+                    package={pkg}
+                    billingCycle={billingCycle}
+                    currency={selectedCurrency}
+                    onSelect={() => {
+                      const contactSection = document.getElementById('contact');
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    delay={index * 0.1}
+                  />
+                ))
+              ) : (
+                // 暂无订阅套餐提示
+                <div className="col-span-full text-center py-20">
+                  <div className="max-w-md mx-auto">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center mx-auto mb-6">
+                      <Sparkles className="w-10 h-10 text-blue-400" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-3">该服务类型暂无订阅套餐</h3>
+                    <p className="text-gray-400 mb-6">
+                      我们正在为更多服务类型推出订阅套餐，敬请期待！
+                    </p>
+                    <button
+                      onClick={() => setPricingMode('one-time')}
+                      className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg transition-all inline-flex items-center gap-2"
+                    >
+                      <ArrowRight className="w-5 h-5" />
+                      查看买断制套餐
+                    </button>
+                  </div>
+                </div>
+              )
+            ) : (
+              // 买断制套餐（保留现有代码）
+              filteredPackages.map((pkg, index) => (
               <ScrollReveal key={pkg.id} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ y: -10, scale: 1.02 }}
@@ -706,10 +773,33 @@ export default function PricingPage() {
                   </div>
                 </motion.div>
               </ScrollReveal>
-            ))}
+            ))
+            )}
           </div>
         </div>
       </section>
+
+      {/* 成本对比 - 仅订阅模式显示 */}
+      {pricingMode === 'subscription' && getSubscriptionsByCategory(selectedCategory).length > 0 && (
+        <section className="py-20 relative">
+          <div className="container mx-auto px-6">
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                  为什么选择订阅制？
+                </h2>
+                <p className="text-xl text-gray-400">
+                  对比买断制，订阅制能为您节省更多成本
+                </p>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={0.2}>
+              <CostComparisonCalculator currency={selectedCurrency} category={selectedCategory} />
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
 
       {/* Package Detail Modal */}
       <AnimatePresence>
@@ -860,8 +950,14 @@ export default function PricingPage() {
             >
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-2">智能价格计算器</h3>
-                  <p className="text-gray-400">选择项目类型和功能，实时计算价格</p>
+                  <h3 className="text-3xl font-bold text-white mb-2">
+                    {pricingMode === 'subscription' ? '订阅费用计算器' : '智能价格计算器'}
+                  </h3>
+                  <p className="text-gray-400">
+                    {pricingMode === 'subscription' 
+                      ? '计算您的订阅总成本' 
+                      : '选择项目类型和功能，实时计算价格'}
+                  </p>
                 </div>
                 <button
                   onClick={() => setShowCalculator(false)}
@@ -871,8 +967,42 @@ export default function PricingPage() {
                 </button>
               </div>
 
-              {/* 类型选择 */}
-              <div className="mb-8">
+              {pricingMode === 'subscription' ? (
+                // 订阅制计算器
+                <>
+                  <SubscriptionCalculator 
+                    currency={selectedCurrency} 
+                    category={selectedCategory}
+                    onCategoryChange={setSelectedCategory}
+                  />
+                  
+                  {/* 操作按钮 */}
+                  <div className="flex gap-4 mt-6">
+                    <button
+                      onClick={() => {
+                        setShowCalculator(false);
+                        const contactSection = document.getElementById('contact');
+                        if (contactSection) {
+                          contactSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-medium hover:shadow-lg transition-all"
+                    >
+                      立即订阅
+                    </button>
+                    <button
+                      onClick={() => setShowCalculator(false)}
+                      className="px-6 py-3 bg-white/5 border border-white/10 text-white rounded-full font-medium hover:bg-white/10 transition-all"
+                    >
+                      关闭
+                    </button>
+                  </div>
+                </>
+              ) : (
+                // 买断制计算器（原有代码）
+                <>
+                  {/* 类型选择 */}
+                  <div className="mb-8">
                 <h4 className="text-lg font-bold text-white mb-4">1. 选择项目类型</h4>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {categories.map((category) => (
@@ -1046,6 +1176,8 @@ export default function PricingPage() {
                   关闭
                 </button>
               </div>
+                </>
+              )}
             </motion.div>
           </motion.div>
         )}

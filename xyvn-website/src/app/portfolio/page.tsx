@@ -123,14 +123,7 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-full mb-6"
-              >
-                <Star className="w-4 h-4 text-yellow-400" />
-                <span className="text-blue-400 text-sm font-medium">精选案例</span>
-              </motion.div>
+              
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 明星项目
               </h2>

@@ -46,15 +46,10 @@ export default function NavbarEnhanced() {
           icon: '💬',
           desc: '微信小程序定制开发'
         },
-        { 
-          href: '/services/design', 
-          label: '产品设计', 
-          icon: '🎨',
-          desc: 'UI/UX 设计服务'
-        },
       ]
     },
     { href: '/portfolio', label: '案例' },
+    { href: '/blog', label: '博客' },
     { href: '/about', label: '关于' },
     { href: '/pricing', label: '价格' },
     { href: '/contact', label: '联系' },
@@ -145,9 +140,9 @@ export default function NavbarEnhanced() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[600px] bg-gray-900 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden p-3"
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[500px] bg-gray-900 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden p-3"
                         >
-                          <div className="grid grid-cols-2 gap-3">
+                          <div className="grid grid-cols-1 gap-3">
                             {link.dropdown.map((item, idx) => (
                               <Link
                                 key={idx}

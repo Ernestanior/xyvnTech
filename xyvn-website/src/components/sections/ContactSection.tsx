@@ -110,28 +110,7 @@ export default function ContactSection() {
                 ))}
               </div>
 
-              {/* 社交媒体 */}
-              <div className="pt-8 border-t border-white/10">
-                <h4 className="text-white font-medium mb-4">关注我们</h4>
-                <div className="flex gap-4">
-                  {['微信', 'GitHub', 'Twitter', 'LinkedIn'].map((platform, index) => (
-                    <motion.a
-                      key={platform}
-                      href="#"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      whileHover={{ y: -5 }}
-                      className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-blue-500/20 hover:border-blue-500/50 transition-all"
-                    >
-                      <span className="text-gray-400 hover:text-blue-400 text-sm">
-                        {platform[0]}
-                      </span>
-                    </motion.a>
-                  ))}
-                </div>
-              </div>
+              
             </div>
           </ScrollReveal>
 

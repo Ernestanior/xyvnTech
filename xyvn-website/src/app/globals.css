@@ -11,13 +11,6 @@
     @apply font-sans antialiased bg-[#0a0a0f] text-white;
   }
   
-  /* 在移动端显示默认光标 */
-  @media (min-width: 768px) {
-    body {
-      cursor: none;
-    }
-  }
-  
   ::selection {
     @apply bg-blue-500/30 text-white;
   }

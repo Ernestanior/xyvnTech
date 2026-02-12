@@ -62,8 +62,18 @@ export const currencies: Currency[] = [
 export const formatPrice = (price: number, currency: Currency): string => {
   const convertedPrice = price * currency.rate;
   
-  // 取整到百位（个位和十位都是0）
-  const roundedPrice = Math.round(convertedPrice / 100) * 100;
+  // 根据价格大小决定取整策略
+  let roundedPrice: number;
+  if (convertedPrice >= 1000) {
+    // 大于等于1000：取整到百位
+    roundedPrice = Math.round(convertedPrice / 100) * 100;
+  } else if (convertedPrice >= 100) {
+    // 100-999：取整到十位
+    roundedPrice = Math.round(convertedPrice / 10) * 10;
+  } else {
+    // 小于100：取整到个位
+    roundedPrice = Math.round(convertedPrice);
+  }
   
   const withCommas = roundedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   
@@ -85,4 +95,9 @@ export const formatPriceRange = (min: number, max: number, currency: Currency): 
   const maxFormatted = convertedMax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   
   return `${currency.symbol}${minFormatted} - ${currency.symbol}${maxFormatted}`;
+};
+
+// 转换价格到指定币种
+export const convertPrice = (price: number, currency: Currency): number => {
+  return price * currency.rate;
 };

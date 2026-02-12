@@ -5,7 +5,7 @@ import CTASection from '@/components/sections/CTASection';
 
 export const metadata: Metadata = {
   title: '我们的服务 - XYVN',
-  description: '提供专业的网站开发、APP开发、UI/UX设计等服务',
+  description: '提供专业的网站开发、APP开发、小程序开发等服务',
 };
 
 export default function ServicesPage() {

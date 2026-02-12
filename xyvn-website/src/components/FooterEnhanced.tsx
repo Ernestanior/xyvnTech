@@ -35,7 +35,6 @@ export default function FooterEnhanced() {
       { label: '网站开发', href: '/services#web' },
       { label: 'APP 开发', href: '/services#app' },
       { label: '小程序开发', href: '/services#miniapp' },
-      { label: '产品设计', href: '/services#design' },
       { label: '技术咨询', href: '/services#consulting' },
     ],
     company: [

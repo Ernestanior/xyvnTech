@@ -58,14 +58,7 @@ export default function ProcessSectionEnhanced() {
       <div className="container mx-auto px-6 relative z-10">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6"
-            >
-              <span className="text-blue-400 text-sm font-medium">工作流程</span>
-            </motion.div>
+            
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
               专业的开发流程
             </h2>

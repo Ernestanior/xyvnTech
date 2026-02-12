@@ -30,14 +30,6 @@ export default function ServicesSection() {
       gradient: 'from-green-500 to-emerald-500',
       link: '/services/miniprogram',
     },
-    {
-      icon: Palette,
-      title: '产品设计',
-      description: '以用户为中心的设计，提升业务转化率',
-      features: ['UX 研究', '可用性测试', '设计系统'],
-      gradient: 'from-orange-500 to-red-500',
-      link: '/services/design',
-    },
   ];
 
   return (
@@ -66,7 +58,7 @@ export default function ServicesSection() {
         </motion.div>
 
         {/* 服务卡片 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <motion.div
               key={index}

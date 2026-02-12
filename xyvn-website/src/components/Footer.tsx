@@ -37,7 +37,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="#" className="text-gray-400 hover:text-white transition">网站开发</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white transition">APP 开发</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition">产品设计</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition">小程序开发</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white transition">技术咨询</Link></li>
             </ul>
           </div>

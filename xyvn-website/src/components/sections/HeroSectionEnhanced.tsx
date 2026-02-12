@@ -42,7 +42,7 @@ export default function HeroSectionEnhanced() {
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light"
             >
-              专注于网站开发、APP 开发和产品设计
+              专注于网站开发、APP 开发和小程序开发
               <br className="hidden md:block" />
               用技术和创意为您的品牌赋能
             </motion.p>

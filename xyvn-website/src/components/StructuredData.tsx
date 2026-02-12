@@ -5,7 +5,7 @@ export default function StructuredData() {
     name: 'XYVN',
     url: 'https://xyvn.com',
     logo: 'https://xyvn.com/logo.png',
-    description: '专注网站开发、APP开发和产品设计的科技公司',
+    description: '专注网站开发、APP开发和小程序开发的科技公司',
     address: {
       '@type': 'PostalAddress',
       addressLocality: '深圳',
@@ -70,8 +70,8 @@ export default function StructuredData() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'UI/UX设计',
-            description: '用户体验设计和界面设计服务',
+            name: '小程序开发',
+            description: '微信小程序和其他平台小程序开发服务',
           },
         },
       ],
