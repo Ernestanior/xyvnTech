@@ -1,6 +1,8 @@
 // 管理后台布局
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import AdminSidebar from '@/components/admin/layout/AdminSidebar';
