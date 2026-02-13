@@ -20,9 +20,14 @@ next-env.d.ts
 .env
 .env*.local
 .env.production
+.dev.vars
 
 # Vercel
 .vercel
+
+# Cloudflare
+.wrangler
+wrangler.toml
 
 # TypeScript
 *.tsbuildinfo
@@ -40,6 +45,7 @@ Thumbs.db
 *.swp
 *.swo
 *~
+*.pem
 
 # IDE
 .vscode/*
