@@ -1,0 +1,12 @@
+# Cloudflare Pages 忽略文件
+# 排除大文件和缓存目录
+
+# Next.js 缓存
+.next/cache/
+
+# Webpack 缓存
+.next/cache/webpack/
+
+# 其他缓存
+node_modules/
+.git/

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:cf": "next build && node -e \"const fs = require('fs'); const path = require('path'); const cacheDir = path.join('.next', 'cache'); if (fs.existsSync(cacheDir)) { fs.rmSync(cacheDir, { recursive: true, force: true }); console.log('Removed .next/cache for Cloudflare Pages'); }\"",
     "start": "next start",
     "lint": "next lint",
     "deploy": "bash deploy.sh",
