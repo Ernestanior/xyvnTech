@@ -16,7 +16,7 @@
 3. **配置项目**
    ```
    Framework Preset: Next.js
-   Root Directory: xyvn-website
+   Root Directory: ./（留空或选择根目录）
    Build Command: npm run build
    Output Directory: .next
    Install Command: npm install
@@ -53,8 +53,7 @@
 # 1. 登录 Vercel
 vercel login
 
-# 2. 部署（在 xyvn-website 目录）
-cd xyvn-website
+# 2. 部署（在项目根目录）
 vercel
 
 # 3. 按照提示操作
@@ -130,7 +129,7 @@ A: 检查构建日志，通常是依赖问题或环境变量缺失
 A: 确保环境变量已正确配置，特别是 Supabase 相关的
 
 ### Q: 404 错误
-A: 检查 Root Directory 是否设置为 `xyvn-website`
+A: 检查路由配置，确保 Next.js 应用正确构建
 
 ### Q: 超出免费额度
 A: 查看 Usage 页面，优化图片和缓存策略
