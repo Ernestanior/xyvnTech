@@ -13,7 +13,7 @@ interface SubscriptionCalculatorProps {
 }
 
 export default function SubscriptionCalculator({ currency, category, onCategoryChange }: SubscriptionCalculatorProps) {
-  const [selectedTier, setSelectedTier] = useState<'starter' | 'growth' | 'business'>('growth');
+  const [selectedTier, setSelectedTier] = useState<'starter' | 'growth' | 'business' | 'enterprise'>('growth');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
   const [years, setYears] = useState(3);
   const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
@@ -111,9 +111,11 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
     
     if (addon.billingType === 'monthly') {
       return total + (addon.price * totalMonths);
-    } else if (addon.billingType === 'annual') {
-      return total + (addon.price * years);
+    } else if (addon.billingType === 'per-unit') {
+      // 按单位计费，这里简化为一次性费用
+      return total + addon.price;
     } else {
+      // one-time
       return total + addon.price;
     }
   }, 0);
@@ -275,7 +277,7 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
                       </div>
                     </div>
                     <div className="text-sm text-purple-400 font-medium">
-                      +{formatPrice(addon.price, currency)}/{addon.billingType === 'monthly' ? '月' : addon.billingType === 'annual' ? '年' : '次'}
+                      +{formatPrice(addon.price, currency)}/{addon.billingType === 'monthly' ? '月' : addon.billingType === 'per-unit' ? '单位' : '次'}
                     </div>
                   </div>
                 </button>

@@ -210,13 +210,13 @@ export default function AdminDashboardPage() {
                     <MessageSquare className="w-4 h-4 text-gray-400 flex-shrink-0" />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm text-white truncate">
-                        {stats?.inquiries.unread > 0 
-                          ? `您有 ${stats.inquiries.unread} 条未读咨询` 
+                        {(stats?.inquiries?.unread ?? 0) > 0 
+                          ? `您有 ${stats?.inquiries?.unread ?? 0} 条未读咨询` 
                           : '暂无新咨询'}
                       </p>
                       <p className="text-xs text-gray-500">
-                        {stats?.inquiries.total > 0 
-                          ? `共 ${stats.inquiries.total} 条咨询` 
+                        {(stats?.inquiries?.total ?? 0) > 0 
+                          ? `共 ${stats?.inquiries?.total ?? 0} 条咨询` 
                           : '等待客户咨询'}
                       </p>
                     </div>
