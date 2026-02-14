@@ -82,10 +82,10 @@ export default function NavbarEnhanced() {
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center gap-3"
               >
-                <div className="relative w-10 h-10 md:w-12 md:h-12">
+                <div className="relative w-15 h-15 md:w-12 md:h-12">
                   <Image
                     src={logo}
-                    alt="XYVN Logo"
+                    alt="ARVIX Logo"
                     fill
                     className="object-contain"
                     priority
@@ -93,8 +93,8 @@ export default function NavbarEnhanced() {
                 </div>
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
-                  <span className="relative text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    XYVN
+                  <span className="relative text-md font-bold text-white bg-clip-text text-transparent">
+                    ARVIX
                   </span>
                 </div>
                 <Sparkles className="w-5 h-5 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -233,13 +233,13 @@ export default function NavbarEnhanced() {
                     <div className="relative w-10 h-10">
                       <Image
                         src={logo}
-                        alt="XYVN Logo"
+                        alt="ARVIX Logo"
                         fill
                         className="object-contain"
                       />
                     </div>
                     <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                      XYVN
+                      ARVIX
                     </span>
                   </div>
                   <button

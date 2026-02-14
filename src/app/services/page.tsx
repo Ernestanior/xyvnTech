@@ -4,7 +4,7 @@ import ProcessSection from '@/components/sections/ProcessSection';
 import CTASection from '@/components/sections/CTASection';
 
 export const metadata: Metadata = {
-  title: '我们的服务 - XYVN',
+  title: '我们的服务 - ARVIX',
   description: '提供专业的网站开发、APP开发、小程序开发等服务',
 };
 

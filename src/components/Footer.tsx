@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* 公司信息 */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">XYVN</h3>
+            <h3 className="text-2xl font-bold mb-4">ARVIX</h3>
             <p className="text-gray-400 mb-6">
               打造卓越数字体验，专注网站和 APP 开发
             </p>
@@ -67,7 +67,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} XYVN. 保留所有权利。
+            © {currentYear} ARVIX. 保留所有权利。
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="text-gray-400 hover:text-white text-sm transition">

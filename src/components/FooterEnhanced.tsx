@@ -63,7 +63,7 @@ export default function FooterEnhanced() {
     { icon: Github, href: 'https://github.com', label: 'GitHub', color: 'hover:text-gray-400' },
     { icon: Twitter, href: 'https://twitter.com', label: 'Twitter', color: 'hover:text-blue-400' },
     { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn', color: 'hover:text-blue-600' },
-    { icon: Mail, href: 'mailto:contact@xyvn.com', label: 'Email', color: 'hover:text-red-400' },
+    { icon: Mail, href: 'mailto:contact@arvixai.com', label: 'Email', color: 'hover:text-red-400' },
   ];
 
   return (
@@ -84,7 +84,7 @@ export default function FooterEnhanced() {
                   className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                   whileHover={{ scale: 1.05 }}
                 >
-                  XYVN
+                  ARVIX
                 </motion.h3>
               </Link>
               <p className="text-gray-400 mb-6 leading-relaxed">
@@ -217,8 +217,8 @@ export default function FooterEnhanced() {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-gray-400">
                     <Mail className="w-4 h-4 mt-1 flex-shrink-0 text-blue-400" />
-                    <a href="mailto:contact@xyvn.com" className="hover:text-white transition-colors">
-                      contact@xyvn.com
+                    <a href="mailto:contact@arvixai.com" className="hover:text-white transition-colors">
+                      contact@arvixai.com
                     </a>
                   </li>
                   <li className="flex items-start gap-3 text-gray-400">
@@ -242,7 +242,7 @@ export default function FooterEnhanced() {
           {/* 底部信息 */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-gray-400 text-sm">
-              <span>© {currentYear} XYVN. 保留所有权利.</span>
+              <span>© {currentYear} ARVIX. 保留所有权利.</span>
               <span className="hidden md:inline">|</span>
               <span className="flex items-center gap-1">
                 Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> in China

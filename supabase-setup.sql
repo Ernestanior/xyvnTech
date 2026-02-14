@@ -1,4 +1,4 @@
--- XYVN 博客系统数据库初始化脚本
+-- ARVIX 博客系统数据库初始化脚本
 -- 在 Supabase Dashboard > SQL Editor 中执行此脚本
 
 -- 启用 UUID 扩展

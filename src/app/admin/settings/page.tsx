@@ -154,7 +154,7 @@ export default function SettingsPage() {
                 value={settings.site_name || ''}
                 onChange={(e) => handleChange('site_name', e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="XYVN Tech"
+                placeholder="ARVIX AI"
               />
             </div>
 
@@ -167,7 +167,7 @@ export default function SettingsPage() {
                 value={settings.site_url || ''}
                 onChange={(e) => handleChange('site_url', e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="https://www.xyvnai.com"
+                placeholder="https://arvixai.com"
               />
             </div>
 
@@ -224,7 +224,7 @@ export default function SettingsPage() {
                 value={settings.contact_email || ''}
                 onChange={(e) => handleChange('contact_email', e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="contact@xyvnai.com"
+                placeholder="contact@arvixai.com"
               />
             </div>
 
@@ -251,7 +251,7 @@ export default function SettingsPage() {
                 value={settings.contact_wechat || ''}
                 onChange={(e) => handleChange('contact_wechat', e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="xyvn_tech"
+                placeholder="arvix_ai"
               />
             </div>
 
@@ -296,7 +296,7 @@ export default function SettingsPage() {
                 value={settings.social_facebook || ''}
                 onChange={(e) => handleChange('social_facebook', e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="https://facebook.com/xyvntech"
+                placeholder="https://facebook.com/arvixai"
               />
             </div>
 
@@ -310,7 +310,7 @@ export default function SettingsPage() {
                 value={settings.social_twitter || ''}
                 onChange={(e) => handleChange('social_twitter', e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="https://twitter.com/xyvntech"
+                placeholder="https://twitter.com/arvixai"
               />
             </div>
 
@@ -324,7 +324,7 @@ export default function SettingsPage() {
                 value={settings.social_linkedin || ''}
                 onChange={(e) => handleChange('social_linkedin', e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="https://linkedin.com/company/xyvntech"
+                placeholder="https://linkedin.com/company/arvixai"
               />
             </div>
 
@@ -338,7 +338,7 @@ export default function SettingsPage() {
                 value={settings.social_instagram || ''}
                 onChange={(e) => handleChange('social_instagram', e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="https://instagram.com/xyvntech"
+                placeholder="https://instagram.com/arvixai"
               />
             </div>
 
@@ -351,7 +351,7 @@ export default function SettingsPage() {
                 value={settings.social_github || ''}
                 onChange={(e) => handleChange('social_github', e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="https://github.com/xyvntech"
+                placeholder="https://github.com/arvixai"
               />
             </div>
           </div>
@@ -381,7 +381,7 @@ export default function SettingsPage() {
                 value={settings.seo_title || ''}
                 onChange={(e) => handleChange('seo_title', e.target.value)}
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                placeholder="XYVN Tech - 专业的软件开发服务"
+                placeholder="ARVIX AI - 专业的软件开发服务"
               />
             </div>
 

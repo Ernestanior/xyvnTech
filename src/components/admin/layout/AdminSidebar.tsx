@@ -60,7 +60,7 @@ export default function AdminSidebar() {
             <span className="text-xl font-bold text-white">X</span>
           </div>
           <div>
-            <h1 className="text-lg font-bold text-white">XYVN</h1>
+            <h1 className="text-lg font-bold text-white">ARVIX</h1>
             <p className="text-xs text-gray-400">管理后台</p>
           </div>
         </Link>

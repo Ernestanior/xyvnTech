@@ -75,7 +75,7 @@ function LoginForm() {
               <span className="text-3xl font-bold text-white">X</span>
             </div>
           </motion.div>
-          <h1 className="text-3xl font-bold text-white mb-2">XYVN 管理后台</h1>
+          <h1 className="text-3xl font-bold text-white mb-2">ARVIX 管理后台</h1>
           <p className="text-gray-400">登录以管理您的内容</p>
         </div>
 
@@ -108,7 +108,7 @@ function LoginForm() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="admin@xyvn.com"
+                  placeholder="admin@arvixai.com"
                   disabled={loading}
                 />
               </div>
@@ -166,7 +166,7 @@ function LoginForm() {
 
         {/* 版权信息 */}
         <p className="text-center text-gray-500 text-sm mt-8">
-          © 2024 XYVN. All rights reserved.
+          © 2024 ARVIX. All rights reserved.
         </p>
       </motion.div>
     </div>
