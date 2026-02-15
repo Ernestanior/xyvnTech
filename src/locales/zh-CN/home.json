@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "用技术创造无限可能",
+    "subtitle": "专业的软件开发服务，助力企业数字化转型",
+    "description": "我们提供网站开发、APP开发、小程序开发等全方位的数字化解决方案",
+    "cta": {
+      "primary": "开始合作",
+      "secondary": "查看案例"
+    }
+  },
+  "features": {
+    "title": "为什么选择我们",
+    "subtitle": "专业、高效、可靠的技术伙伴",
+    "items": {
+      "quality": {
+        "title": "品质保证",
+        "description": "严格的代码审查和测试流程，确保项目质量"
+      },
+      "speed": {
+        "title": "快速交付",
+        "description": "敏捷开发流程，快速响应需求变化"
+      },
+      "support": {
+        "title": "持续支持",
+        "description": "提供长期技术支持和维护服务"
+      },
+      "innovation": {
+        "title": "技术创新",
+        "description": "采用最新技术栈，打造现代化应用"
+      }
+    }
+  },
+  "stats": {
+    "projects": "成功项目",
+    "clients": "服务客户",
+    "experience": "年经验",
+    "satisfaction": "客户满意度"
+  },
+  "cta": {
+    "title": "准备开始您的项目了吗？",
+    "description": "立即联系我们，获取免费咨询和项目报价",
+    "button": "免费咨询"
+  }
+}

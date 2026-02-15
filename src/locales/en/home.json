@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Creating Infinite Possibilities with Technology",
+    "subtitle": "Professional Software Development Services for Digital Transformation",
+    "description": "We provide comprehensive digital solutions including web development, app development, and mini-program development",
+    "cta": {
+      "primary": "Start Collaboration",
+      "secondary": "View Portfolio"
+    }
+  },
+  "features": {
+    "title": "Why Choose Us",
+    "subtitle": "Professional, Efficient, and Reliable Technology Partner",
+    "items": {
+      "quality": {
+        "title": "Quality Assurance",
+        "description": "Rigorous code review and testing processes to ensure project quality"
+      },
+      "speed": {
+        "title": "Fast Delivery",
+        "description": "Agile development process, quick response to requirement changes"
+      },
+      "support": {
+        "title": "Continuous Support",
+        "description": "Providing long-term technical support and maintenance services"
+      },
+      "innovation": {
+        "title": "Technical Innovation",
+        "description": "Using the latest technology stack to build modern applications"
+      }
+    }
+  },
+  "stats": {
+    "projects": "Successful Projects",
+    "clients": "Clients Served",
+    "experience": "Years Experience",
+    "satisfaction": "Client Satisfaction"
+  },
+  "cta": {
+    "title": "Ready to Start Your Project?",
+    "description": "Contact us now for free consultation and project quotation",
+    "button": "Free Consultation"
+  }
+}

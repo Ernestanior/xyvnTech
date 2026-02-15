@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "用技術創造無限可能",
+    "subtitle": "專業的軟體開發服務，助力企業數位化轉型",
+    "description": "我們提供網站開發、APP開發、小程式開發等全方位的數位化解決方案",
+    "cta": {
+      "primary": "開始合作",
+      "secondary": "查看案例"
+    }
+  },
+  "features": {
+    "title": "為什麼選擇我們",
+    "subtitle": "專業、高效、可靠的技術夥伴",
+    "items": {
+      "quality": {
+        "title": "品質保證",
+        "description": "嚴格的程式碼審查和測試流程，確保專案品質"
+      },
+      "speed": {
+        "title": "快速交付",
+        "description": "敏捷開發流程，快速回應需求變化"
+      },
+      "support": {
+        "title": "持續支援",
+        "description": "提供長期技術支援和維護服務"
+      },
+      "innovation": {
+        "title": "技術創新",
+        "description": "採用最新技術棧，打造現代化應用"
+      }
+    }
+  },
+  "stats": {
+    "projects": "成功專案",
+    "clients": "服務客戶",
+    "experience": "年經驗",
+    "satisfaction": "客戶滿意度"
+  },
+  "cta": {
+    "title": "準備開始您的專案了嗎？",
+    "description": "立即聯絡我們，獲取免費諮詢和專案報價",
+    "button": "免費諮詢"
+  }
+}
