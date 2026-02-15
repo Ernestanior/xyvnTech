@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useState, useTransition, useMemo } from 'react';
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,8 +14,22 @@ export default function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname(); // 完整路径，包含语言前缀，如 /zh-CN/about
 
+  // 从 pathname 中提取当前的 locale
+  const currentLocale = useMemo(() => {
+    const segments = pathname.split('/').filter(Boolean);
+    const firstSegment = segments[0];
+    
+    // 检查第一个 segment 是否是有效的 locale
+    if (locales.includes(firstSegment as any)) {
+      return firstSegment as Locale;
+    }
+    
+    // 如果没有找到，使用 useLocale 的值
+    return locale;
+  }, [pathname, locale]);
+
   const handleLocaleChange = (newLocale: Locale) => {
-    if (newLocale === locale) {
+    if (newLocale === currentLocale) {
       setIsOpen(false);
       return;
     }
@@ -68,7 +82,7 @@ export default function LanguageSwitcher() {
         aria-label="切换语言"
       >
         <Globe className="w-5 h-5" />
-        <span className="hidden md:inline">{localeNames[locale]}</span>
+        <span className="hidden md:inline">{localeNames[currentLocale]}</span>
         <ChevronDown
           className={`w-4 h-4 transition-transform ${
             isOpen ? 'rotate-180' : ''
@@ -99,7 +113,7 @@ export default function LanguageSwitcher() {
                   onClick={() => handleLocaleChange(loc)}
                   disabled={isPending}
                   className={`w-full flex items-center justify-between px-4 py-3 transition-colors ${
-                    locale === loc
+                    currentLocale === loc
                       ? 'bg-blue-500/20 text-blue-400'
                       : 'hover:bg-white/5 text-gray-300'
                   } ${isPending ? 'opacity-50 cursor-not-allowed' : ''}`}
@@ -108,7 +122,7 @@ export default function LanguageSwitcher() {
                     <span className="text-xl">{localeFlags[loc]}</span>
                     <span className="font-medium">{localeNames[loc]}</span>
                   </div>
-                  {locale === loc && <Check className="w-5 h-5" />}
+                  {currentLocale === loc && <Check className="w-5 h-5" />}
                 </button>
               ))}
             </motion.div>
