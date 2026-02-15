@@ -11,7 +11,13 @@
     "portfolio": "Portfolio",
     "blog": "Blog",
     "contact": "Contact",
-    "pricing": "Pricing"
+    "pricing": "Pricing",
+    "webDevelopment": "Web Development",
+    "webDevelopmentDesc": "Build modern web experiences",
+    "appDevelopment": "App Development",
+    "appDevelopmentDesc": "Native & cross-platform app development",
+    "miniprogram": "Mini Program",
+    "miniprogramDesc": "WeChat mini program development"
   },
   "footer": {
     "company": "Company",
@@ -26,6 +32,7 @@
     "learnMore": "Learn More",
     "getStarted": "Get Started",
     "contactUs": "Contact Us",
+    "startCollaboration": "Start Collaboration",
     "readMore": "Read More",
     "viewAll": "View All",
     "loading": "Loading...",

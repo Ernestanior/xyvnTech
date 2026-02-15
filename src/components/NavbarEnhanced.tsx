@@ -2,17 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
+import { Link, usePathname } from '@/i18n/routing';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
 import logo from '@/app/assets/logo.png';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function NavbarEnhanced() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+  const t = useTranslations();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,36 +25,36 @@ export default function NavbarEnhanced() {
   }, []);
 
   const navLinks = [
-    { href: '/', label: '首页' },
+    { href: '/', label: t('nav.home') },
     { 
       href: '/services', 
-      label: '服务',
+      label: t('nav.services'),
       dropdown: [
         { 
           href: '/services/web-development', 
-          label: '网站开发', 
+          label: t('nav.webDevelopment'), 
           icon: '🌐',
-          desc: '打造现代化的网站体验'
+          desc: t('nav.webDevelopmentDesc')
         },
         { 
           href: '/services/app-development', 
-          label: 'APP开发', 
+          label: t('nav.appDevelopment'), 
           icon: '📱',
-          desc: '原生与跨平台应用开发'
+          desc: t('nav.appDevelopmentDesc')
         },
         { 
           href: '/services/miniprogram', 
-          label: '小程序开发', 
+          label: t('nav.miniprogram'), 
           icon: '💬',
-          desc: '微信小程序定制开发'
+          desc: t('nav.miniprogramDesc')
         },
       ]
     },
-    { href: '/portfolio', label: '案例' },
-    { href: '/blog', label: '博客' },
-    { href: '/about', label: '关于' },
-    { href: '/pricing', label: '价格' },
-    { href: '/contact', label: '联系' },
+    { href: '/portfolio', label: t('nav.portfolio') },
+    { href: '/blog', label: t('nav.blog') },
+    { href: '/about', label: t('nav.about') },
+    { href: '/pricing', label: t('nav.pricing') },
+    { href: '/contact', label: t('nav.contact') },
   ];
 
   const isActive = (href: string) => {
@@ -184,11 +186,12 @@ export default function NavbarEnhanced() {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center gap-4">
+              <LanguageSwitcher />
               <Link
                 href="/contact"
                 className="relative px-6 py-2.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium overflow-hidden group"
               >
-                <span className="relative z-10">开始合作</span>
+                <span className="relative z-10">{t('common.startCollaboration')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform" />
               </Link>
@@ -291,8 +294,13 @@ export default function NavbarEnhanced() {
                   className="block w-full mt-8 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium text-center"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  开始合作
+                  {t('common.startCollaboration')}
                 </Link>
+
+                {/* Language Switcher for Mobile */}
+                <div className="mt-6 pt-6 border-t border-white/10">
+                  <LanguageSwitcher />
+                </div>
               </div>
             </motion.div>
           </>

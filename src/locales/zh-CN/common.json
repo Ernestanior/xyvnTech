@@ -11,7 +11,13 @@
     "portfolio": "案例展示",
     "blog": "博客",
     "contact": "联系我们",
-    "pricing": "价格方案"
+    "pricing": "价格方案",
+    "webDevelopment": "网站开发",
+    "webDevelopmentDesc": "打造现代化的网站体验",
+    "appDevelopment": "APP开发",
+    "appDevelopmentDesc": "原生与跨平台应用开发",
+    "miniprogram": "小程序开发",
+    "miniprogramDesc": "微信小程序定制开发"
   },
   "footer": {
     "company": "公司信息",
@@ -26,6 +32,7 @@
     "learnMore": "了解更多",
     "getStarted": "开始使用",
     "contactUs": "联系我们",
+    "startCollaboration": "开始合作",
     "readMore": "阅读更多",
     "viewAll": "查看全部",
     "loading": "加载中...",
