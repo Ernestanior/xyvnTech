@@ -1,67 +1,80 @@
-// Next.js 中间件 - 路由保护
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+// Next.js 中间件 - i18n 和路由保护
+import createMiddleware from 'next-intl/middleware';
+import { NextRequest, NextResponse } from 'next/server';
+import { routing } from './i18n/routing';
 
-export function middleware(request: NextRequest) {
+const i18nMiddleware = createMiddleware(routing);
+
+export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 检查是否是管理后台路径
-  if (pathname.startsWith('/admin')) {
-    // 检查会话 cookie
-    const sessionCookie = request.cookies.get('admin_session');
-
-    // 登录页面特殊处理
-    if (pathname === '/admin/login') {
-      // 如果已经登录，重定向到 dashboard
-      if (sessionCookie) {
-        try {
-          const sessionData = JSON.parse(sessionCookie.value);
-          if (sessionData.adminId && sessionData.email) {
-            const redirectTo = request.nextUrl.searchParams.get('redirect') || '/admin/dashboard';
-            return NextResponse.redirect(new URL(redirectTo, request.url));
-          }
-        } catch (error) {
-          // 会话无效，删除 cookie 并继续显示登录页
-          const response = NextResponse.next();
-          response.cookies.delete('admin_session');
-          return response;
-        }
-      }
-      return NextResponse.next();
-    }
-
-    if (!sessionCookie) {
-      // 未登录，重定向到登录页
-      const loginUrl = new URL('/admin/login', request.url);
-      loginUrl.searchParams.set('redirect', pathname);
-      return NextResponse.redirect(loginUrl);
-    }
-
-    try {
-      // 验证会话数据
-      const sessionData = JSON.parse(sessionCookie.value);
+  // 管理后台路径不应用 i18n 中间件
+  if (pathname.startsWith('/admin') || pathname.startsWith('/api')) {
+    // 保留原有的管理后台认证逻辑
+    if (pathname.startsWith('/admin')) {
+      const sessionCookie = request.cookies.get('admin_session');
       
-      if (!sessionData.adminId || !sessionData.email) {
-        throw new Error('Invalid session');
+      if (pathname === '/admin/login') {
+        if (sessionCookie) {
+          try {
+            const sessionData = JSON.parse(sessionCookie.value);
+            if (sessionData.adminId && sessionData.email) {
+              const redirectTo = request.nextUrl.searchParams.get('redirect') || '/admin/dashboard';
+              return NextResponse.redirect(new URL(redirectTo, request.url));
+            }
+          } catch (error) {
+            const response = NextResponse.next();
+            response.cookies.delete('admin_session');
+            return response;
+          }
+        }
+        return NextResponse.next();
       }
 
-      // 会话有效，继续
-      return NextResponse.next();
-    } catch (error) {
-      // 会话无效，重定向到登录页
-      const loginUrl = new URL('/admin/login', request.url);
-      loginUrl.searchParams.set('redirect', pathname);
-      const response = NextResponse.redirect(loginUrl);
-      response.cookies.delete('admin_session');
-      return response;
+      if (!sessionCookie) {
+        const loginUrl = new URL('/admin/login', request.url);
+        loginUrl.searchParams.set('redirect', pathname);
+        return NextResponse.redirect(loginUrl);
+      }
+
+      try {
+        const sessionData = JSON.parse(sessionCookie.value);
+        if (!sessionData.adminId || !sessionData.email) {
+          throw new Error('Invalid session');
+        }
+        return NextResponse.next();
+      } catch (error) {
+        const loginUrl = new URL('/admin/login', request.url);
+        loginUrl.searchParams.set('redirect', pathname);
+        const response = NextResponse.redirect(loginUrl);
+        response.cookies.delete('admin_session');
+        return response;
+      }
     }
+    
+    return NextResponse.next();
   }
 
-  return NextResponse.next();
+  // 应用 i18n 中间件到前台路由
+  const response = i18nMiddleware(request);
+  
+  // 设置语言 cookie（有效期 1 年）
+  const locale = request.nextUrl.pathname.split('/')[1];
+  if (routing.locales.includes(locale as any)) {
+    response.cookies.set('NEXT_LOCALE', locale, {
+      maxAge: 365 * 24 * 60 * 60, // 1 年
+      path: '/',
+    });
+  }
+  
+  return response;
 }
 
 export const config = {
   matcher: [
-    '/admin/:path*',
+    // 匹配所有路径，除了以下路径
+    '/((?!_next|_vercel|.*\\..*).*)',
+    // 包含 API 路由
+    '/api/:path*',
   ],
 };
