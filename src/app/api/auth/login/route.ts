@@ -1,6 +1,6 @@
 // 登录 API
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
+import { createServiceClient } from '@/lib/supabase/server';
 import { verifyPassword } from '@/lib/auth/password';
 import { createSession } from '@/lib/auth/session';
 import { loginSchema } from '@/lib/utils/validation';
@@ -13,8 +13,8 @@ export async function POST(request: NextRequest) {
     // 验证输入
     const validatedData = loginSchema.parse(body);
     
-    // 查询管理员
-    const supabase = createClient();
+    // 查询管理员（使用 service role key 绕过 RLS）
+    const supabase = createServiceClient();
     const { data: admin, error } = await supabase
       .from('admins')
       .select('*')

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
+import { createServiceClient } from '@/lib/supabase/server';
 import { getSession } from '@/lib/auth/session';
 import { hashPassword } from '@/lib/auth/password';
 
@@ -14,7 +14,7 @@ export async function GET(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const supabase = createClient();
+    const supabase = createServiceClient();
     const { data: admin, error } = await supabase
       .from('admins')
       .select('id, username, email, role, avatar_url, created_at, last_login_at, is_active')
@@ -55,7 +55,7 @@ export async function PATCH(
     const body = await request.json();
     const { username, email, password, role, is_active } = body;
 
-    const supabase = createClient();
+    const supabase = createServiceClient();
 
     // 构建更新数据
     const updateData: any = {};
@@ -128,7 +128,7 @@ export async function DELETE(
       );
     }
 
-    const supabase = createClient();
+    const supabase = createServiceClient();
 
     // 检查是否是最后一个 admin
     const { data: admins } = await supabase

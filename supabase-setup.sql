@@ -151,6 +151,7 @@ CREATE INDEX IF NOT EXISTS idx_comments_status ON comments(status);
 CREATE TABLE IF NOT EXISTS site_settings (
   key VARCHAR(100) PRIMARY KEY,
   value TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 

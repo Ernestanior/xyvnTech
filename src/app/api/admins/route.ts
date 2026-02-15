@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
+import { createServiceClient } from '@/lib/supabase/server';
 import { getSession } from '@/lib/auth/session';
 import { hashPassword } from '@/lib/auth/password';
 
@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
     }
 
-    const supabase = createClient();
+    const supabase = createServiceClient();
     const { data: admins, error } = await supabase
       .from('admins')
       .select('id, username, email, role, avatar_url, created_at, last_login_at, is_active')
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const supabase = createClient();
+    const supabase = createServiceClient();
 
     // 检查用户名是否已存在
     const { data: existingUser } = await supabase

@@ -1,7 +1,7 @@
 // 获取当前用户信息 API
 import { NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth/session';
-import { createClient } from '@/lib/supabase/server';
+import { createServiceClient } from '@/lib/supabase/server';
 import { Admin } from '@/types/database';
 
 export async function GET() {
@@ -15,8 +15,8 @@ export async function GET() {
       );
     }
 
-    // 获取完整的管理员信息
-    const supabase = createClient();
+    // 获取完整的管理员信息（使用 service role key）
+    const supabase = createServiceClient();
     const { data: admin, error } = await supabase
       .from('admins')
       .select('id, username, email, role, avatar_url, created_at, last_login_at')
