@@ -2,8 +2,7 @@
 
 import { useState, useTransition } from 'react';
 import { useLocale } from 'next-intl';
-import { usePathname as useI18nPathname } from '@/i18n/routing';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, Check, ChevronDown } from 'lucide-react';
 import { locales, localeNames, localeFlags, type Locale } from '@/i18n/config';
@@ -13,8 +12,7 @@ export default function LanguageSwitcher() {
   const [isPending, startTransition] = useTransition();
   const locale = useLocale() as Locale;
   const router = useRouter();
-  const pathname = usePathname(); // 完整路径，包含语言前缀
-  const i18nPathname = useI18nPathname(); // 不带语言前缀的路径
+  const pathname = usePathname(); // 完整路径，包含语言前缀，如 /zh-CN/about
 
   const handleLocaleChange = (newLocale: Locale) => {
     if (newLocale === locale) {
@@ -23,8 +21,13 @@ export default function LanguageSwitcher() {
     }
 
     startTransition(() => {
-      // 构建新的路径：新语言前缀 + 当前路径（不带语言前缀）
-      const newPath = `/${newLocale}${i18nPathname}`;
+      // 从当前路径中移除语言前缀
+      // pathname 格式: /zh-CN/about 或 /zh-CN
+      const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+      
+      // 构建新的路径：新语言前缀 + 路径（不带语言前缀）
+      const newPath = `/${newLocale}${pathWithoutLocale}`;
+      
       router.replace(newPath);
       setIsOpen(false);
     });
