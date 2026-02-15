@@ -1,6 +1,7 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { 
   Github, 
@@ -18,6 +19,7 @@ import { useState } from 'react';
 export default function FooterEnhanced() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const t = useTranslations();
 
   const currentYear = new Date().getFullYear();
 
@@ -32,30 +34,30 @@ export default function FooterEnhanced() {
 
   const footerLinks = {
     services: [
-      { label: '网站开发', href: '/services#web' },
-      { label: 'APP 开发', href: '/services#app' },
-      { label: '小程序开发', href: '/services#miniapp' },
-      { label: '技术咨询', href: '/services#consulting' },
+      { label: t('footer.webDevelopment'), href: '/services#web' },
+      { label: t('footer.appDevelopment'), href: '/services#app' },
+      { label: t('footer.miniprogramDevelopment'), href: '/services#miniapp' },
+      { label: t('footer.technicalConsulting'), href: '/services#consulting' },
     ],
     company: [
-      { label: '关于我们', href: '/about' },
-      { label: '成功案例', href: '/portfolio' },
-      { label: '服务价格', href: '/pricing' },
-      { label: '团队介绍', href: '/about#team' },
-      { label: '加入我们', href: '/about#careers' },
+      { label: t('footer.aboutUs'), href: '/about' },
+      { label: t('footer.successCases'), href: '/portfolio' },
+      { label: t('footer.servicePricing'), href: '/pricing' },
+      { label: t('footer.teamIntro'), href: '/about#team' },
+      { label: t('footer.joinUs'), href: '/about#careers' },
     ],
     resources: [
-      { label: '技术博客', href: '/blog' },
-      { label: '案例研究', href: '/case-studies' },
-      { label: '开发文档', href: '/docs' },
-      { label: '帮助中心', href: '/help' },
-      { label: 'API 文档', href: '/api-docs' },
+      { label: t('footer.techBlog'), href: '/blog' },
+      { label: t('footer.caseStudies'), href: '/case-studies' },
+      { label: t('footer.devDocs'), href: '/docs' },
+      { label: t('footer.helpCenter'), href: '/help' },
+      { label: t('footer.apiDocs'), href: '/api-docs' },
     ],
     legal: [
-      { label: '隐私政策', href: '/privacy' },
-      { label: '使用条款', href: '/terms' },
-      { label: '服务协议', href: '/agreement' },
-      { label: 'Cookie 政策', href: '/cookies' },
+      { label: t('footer.privacyPolicy'), href: '/privacy' },
+      { label: t('footer.termsOfUse'), href: '/terms' },
+      { label: t('footer.serviceAgreement'), href: '/agreement' },
+      { label: t('footer.cookiePolicy'), href: '/cookies' },
     ],
   };
 
@@ -88,18 +90,18 @@ export default function FooterEnhanced() {
                 </motion.h3>
               </Link>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                专注于打造卓越的数字体验，为企业提供专业的网站和 APP 开发服务。让技术赋能业务增长。
+                {t('footer.companyDescription')}
               </p>
 
               {/* 邮件订阅 */}
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-white mb-3">订阅我们的资讯</h4>
+                <h4 className="text-sm font-semibold text-white mb-3">{t('footer.subscribeNewsletter')}</h4>
                 <form onSubmit={handleSubscribe} className="relative">
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="输入您的邮箱"
+                    placeholder={t('footer.enterEmail')}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 transition-all"
                     required
                   />
@@ -116,14 +118,14 @@ export default function FooterEnhanced() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-sm text-green-400 mt-2"
                   >
-                    ✓ 订阅成功！感谢您的关注
+                    ✓ {t('footer.subscribeSuccess')}
                   </motion.p>
                 )}
               </div>
 
               {/* 社交媒体 */}
               <div>
-                <h4 className="text-sm font-semibold text-white mb-3">关注我们</h4>
+                <h4 className="text-sm font-semibold text-white mb-3">{t('footer.followUs')}</h4>
                 <div className="flex gap-3">
                   {socialLinks.map((social, idx) => (
                     <motion.a
@@ -149,7 +151,7 @@ export default function FooterEnhanced() {
               <div>
                 <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
                   <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
-                  服务
+                  {t('footer.services')}
                 </h4>
                 <ul className="space-y-3">
                   {footerLinks.services.map((link, idx) => (
@@ -170,7 +172,7 @@ export default function FooterEnhanced() {
               <div>
                 <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
                   <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
-                  公司
+                  {t('footer.company')}
                 </h4>
                 <ul className="space-y-3">
                   {footerLinks.company.map((link, idx) => (
@@ -191,7 +193,7 @@ export default function FooterEnhanced() {
               <div>
                 <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
                   <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
-                  资源
+                  {t('footer.resources')}
                 </h4>
                 <ul className="space-y-3">
                   {footerLinks.resources.map((link, idx) => (
@@ -212,7 +214,7 @@ export default function FooterEnhanced() {
               <div>
                 <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
                   <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
-                  联系
+                  {t('footer.contact')}
                 </h4>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-gray-400">
@@ -229,7 +231,7 @@ export default function FooterEnhanced() {
                   </li>
                   <li className="flex items-start gap-3 text-gray-400">
                     <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-blue-400" />
-                    <span>中国 · 深圳<br />南山区科技园</span>
+                    <span>{t('footer.location')}</span>
                   </li>
                 </ul>
               </div>
@@ -242,10 +244,10 @@ export default function FooterEnhanced() {
           {/* 底部信息 */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-gray-400 text-sm">
-              <span>© {currentYear} ARVIX. 保留所有权利.</span>
+              <span>{t('footer.copyright', { year: currentYear })}</span>
               <span className="hidden md:inline">|</span>
               <span className="flex items-center gap-1">
-                Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> in China
+                {t('footer.madeWith')} <Heart className="w-4 h-4 text-red-500 fill-red-500" /> {t('footer.madeIn')}
               </span>
             </div>
 
