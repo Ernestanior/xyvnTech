@@ -21,11 +21,33 @@ export default function LanguageSwitcher() {
     }
 
     startTransition(() => {
-      // 从当前路径中移除语言前缀
-      // pathname 格式: /zh-CN/about 或 /zh-CN
-      const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+      // 从 pathname 中提取当前的 locale
+      const segments = pathname.split('/').filter(Boolean);
+      const currentLocaleInPath = segments[0];
       
-      // 构建新的路径：新语言前缀 + 路径（不带语言前缀）
+      // 检查第一个 segment 是否是有效的 locale
+      const isValidLocale = locales.includes(currentLocaleInPath as any);
+      
+      let pathWithoutLocale: string;
+      if (isValidLocale) {
+        // 移除第一个 segment（locale）
+        pathWithoutLocale = '/' + segments.slice(1).join('/');
+      } else {
+        // 如果没有 locale 前缀，使用整个路径
+        pathWithoutLocale = pathname;
+      }
+      
+      // 确保路径以 / 开头
+      if (!pathWithoutLocale.startsWith('/')) {
+        pathWithoutLocale = '/' + pathWithoutLocale;
+      }
+      
+      // 如果路径为空，使用根路径
+      if (pathWithoutLocale === '/') {
+        pathWithoutLocale = '';
+      }
+      
+      // 构建新的路径
       const newPath = `/${newLocale}${pathWithoutLocale}`;
       
       router.replace(newPath);
