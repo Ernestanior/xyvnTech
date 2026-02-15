@@ -2,16 +2,13 @@ import { getRequestConfig } from 'next-intl/server';
 import { routing } from './routing';
 
 export default getRequestConfig(async ({ locale }) => {
-  // 验证语言是否有效
-  if (!routing.locales.includes(locale as any)) {
-    return {
-      locale: routing.defaultLocale,
-      messages: {},
-    };
-  }
+  // 验证语言是否有效，如果无效则使用默认语言
+  const validLocale: string = routing.locales.includes(locale as any)
+    ? (locale as string)
+    : routing.defaultLocale;
 
   return {
-    locale,
-    messages: (await import(`@/locales/${locale}/common.json`)).default,
+    locale: validLocale,
+    messages: (await import(`@/locales/${validLocale}/common.json`)).default,
   };
 });
