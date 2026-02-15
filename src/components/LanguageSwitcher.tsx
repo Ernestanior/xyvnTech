@@ -2,7 +2,8 @@
 
 import { useState, useTransition } from 'react';
 import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from '@/i18n/routing';
+import { usePathname as useI18nPathname } from '@/i18n/routing';
+import { useRouter, usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, Check, ChevronDown } from 'lucide-react';
 import { locales, localeNames, localeFlags, type Locale } from '@/i18n/config';
@@ -12,7 +13,8 @@ export default function LanguageSwitcher() {
   const [isPending, startTransition] = useTransition();
   const locale = useLocale() as Locale;
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePathname(); // 完整路径，包含语言前缀
+  const i18nPathname = useI18nPathname(); // 不带语言前缀的路径
 
   const handleLocaleChange = (newLocale: Locale) => {
     if (newLocale === locale) {
@@ -21,7 +23,9 @@ export default function LanguageSwitcher() {
     }
 
     startTransition(() => {
-      router.replace(pathname, { locale: newLocale });
+      // 构建新的路径：新语言前缀 + 当前路径（不带语言前缀）
+      const newPath = `/${newLocale}${i18nPathname}`;
+      router.replace(newPath);
       setIsOpen(false);
     });
   };
