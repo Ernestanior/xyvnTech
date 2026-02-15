@@ -45,7 +45,7 @@
     - **验证需求：2.2, 2.5**
 
 - [ ] 4. 创建语言路由布局
-  - [ ] 4.1 创建 app/[locale] 目录结构
+  - [-] 4.1 创建 app/[locale] 目录结构
     - 移动现有页面到 [locale] 目录下
     - 创建语言布局组件（layout.tsx）
     - 实现 generateStaticParams 函数
