@@ -1,0 +1,268 @@
+{
+  "page": {
+    "title": "我們的服務",
+    "subtitle": "為您提供全方位的數位化解決方案"
+  },
+  "web": {
+    "hero": {
+      "title": "打造高性能",
+      "titleHighlight": "現代化網站",
+      "description": "從企業官網到電商平台，從內容管理到 Web 應用",
+      "descriptionLine2": "我們用最新的技術棧為您打造快速、安全、易維護的網站",
+      "startConsulting": "開始諮詢",
+      "viewCases": "查看案例"
+    },
+    "features": {
+      "title": "為什麼選擇我們",
+      "subtitle": "專業的技術團隊，成熟的開發流程，保證項目質量",
+      "performance": {
+        "title": "極速性能",
+        "description": "採用 Next.js 14 最新特性，服務端渲染 + 靜態生成，首屏加載 < 1.5秒"
+      },
+      "seo": {
+        "title": "SEO 優化",
+        "description": "完善的 SEO 策略，結構化數據，sitemap 自動生成，讓您的網站更容易被搜索引擎發現"
+      },
+      "responsive": {
+        "title": "響應式設計",
+        "description": "完美適配所有設備，從手機到平板到桌面，提供一致的用戶體驗"
+      },
+      "security": {
+        "title": "安全可靠",
+        "description": "HTTPS 加密，XSS/CSRF 防護，定期安全審計，保護您的數據安全"
+      },
+      "scalable": {
+        "title": "易於擴展",
+        "description": "模塊化架構設計，組件化開發，方便後期功能迭代和維護"
+      },
+      "modern": {
+        "title": "現代技術棧",
+        "description": "TypeScript + React + Tailwind CSS，代碼質量有保障"
+      }
+    },
+    "techStack": {
+      "title": "技術棧",
+      "subtitle": "使用業界最先進的技術和工具",
+      "nextjs": "全棧框架",
+      "react": "前端框架",
+      "typescript": "類型安全",
+      "tailwind": "樣式方案",
+      "framer": "動畫庫",
+      "vercel": "部署平台"
+    },
+    "process": {
+      "title": "開發流程",
+      "subtitle": "標準化的開發流程，確保項目按時交付",
+      "step1": {
+        "title": "需求分析",
+        "description": "深入了解您的業務需求和目標用戶"
+      },
+      "step2": {
+        "title": "原型設計",
+        "description": "製作交互原型，確認功能和流程"
+      },
+      "step3": {
+        "title": "視覺設計",
+        "description": "打造符合品牌調性的視覺方案"
+      },
+      "step4": {
+        "title": "前端開發",
+        "description": "使用最新技術棧進行開發"
+      },
+      "step5": {
+        "title": "測試優化",
+        "description": "多端測試，性能優化，確保質量"
+      },
+      "step6": {
+        "title": "上線部署",
+        "description": "域名配置，SSL證書，正式上線"
+      }
+    }
+  },
+  "app": {
+    "hero": {
+      "title": "打造用戶喜愛的",
+      "titleHighlight": "移動應用",
+      "description": "原生性能，流暢體驗，支持 iOS 和 Android 雙平台",
+      "descriptionLine2": "從產品設計到上架發布，提供一站式移動應用開發服務",
+      "startConsulting": "開始諮詢",
+      "viewCases": "查看案例"
+    },
+    "features": {
+      "title": "核心優勢",
+      "subtitle": "專注移動端開發，打造高質量應用",
+      "native": {
+        "title": "原生體驗",
+        "description": "使用原生技術開發，確保應用流暢度和性能達到最佳狀態"
+      },
+      "crossPlatform": {
+        "title": "跨平台方案",
+        "description": "React Native 一套代碼，同時支持 iOS 和 Android，降低開發成本"
+      },
+      "performance": {
+        "title": "高性能優化",
+        "description": "啟動速度、響應速度、內存佔用全方位優化，提供絲滑體驗"
+      },
+      "ux": {
+        "title": "用戶體驗",
+        "description": "遵循 iOS HIG 和 Material Design 規範，符合用戶使用習慣"
+      },
+      "push": {
+        "title": "推送通知",
+        "description": "集成 APNs 和 FCM，實現精準的消息推送功能"
+      },
+      "security": {
+        "title": "數據安全",
+        "description": "本地加密存儲，HTTPS 通信，生物識別認證，保護用戶隱私"
+      }
+    },
+    "platforms": {
+      "title": "支持平台",
+      "subtitle": "根據您的需求選擇最合適的技術方案",
+      "ios": {
+        "name": "iOS 原生",
+        "desc": "Swift / SwiftUI",
+        "features": ["完美適配 iPhone/iPad", "App Store 上架", "支持最新 iOS 特性"]
+      },
+      "android": {
+        "name": "Android 原生",
+        "desc": "Kotlin / Jetpack Compose",
+        "features": ["Material Design 3", "Google Play 上架", "多設備適配"]
+      },
+      "reactNative": {
+        "name": "React Native",
+        "desc": "跨平台方案",
+        "features": ["一套代碼雙端運行", "熱更新支持", "降低開發成本"]
+      }
+    },
+    "process": {
+      "title": "開發流程",
+      "subtitle": "從想法到上架，全程專業指導",
+      "step1": {
+        "title": "產品規劃",
+        "description": "功能定義、用戶畫像、競品分析"
+      },
+      "step2": {
+        "title": "UI/UX 設計",
+        "description": "交互設計、視覺設計、設計規範"
+      },
+      "step3": {
+        "title": "技術選型",
+        "description": "原生 or 跨平台，架構設計"
+      },
+      "step4": {
+        "title": "開發實現",
+        "description": "前端開發、後端 API、數據庫設計"
+      },
+      "step5": {
+        "title": "測試優化",
+        "description": "功能測試、性能測試、兼容性測試"
+      },
+      "step6": {
+        "title": "上架發布",
+        "description": "App Store / Google Play 上架"
+      }
+    },
+    "cases": {
+      "title": "成功案例",
+      "subtitle": "我們開發的應用深受用戶喜愛",
+      "ecommerce": {
+        "name": "電商 APP",
+        "description": "商品瀏覽、購物車、支付、訂單管理",
+        "stats": "日活 10萬+"
+      },
+      "social": {
+        "name": "社交 APP",
+        "description": "即時通訊、動態發布、好友系統",
+        "stats": "用戶 50萬+"
+      },
+      "tool": {
+        "name": "工具 APP",
+        "description": "效率工具、數據同步、離線使用",
+        "stats": "評分 4.8"
+      }
+    }
+  },
+  "miniprogram": {
+    "hero": {
+      "title": "輕量級應用",
+      "titleHighlight": "即用即走",
+      "description": "微信、支付寶、抖音小程序開發",
+      "descriptionLine2": "無需下載，掃碼即用，快速觸達億級用戶",
+      "startConsulting": "開始諮詢"
+    },
+    "features": {
+      "title": "小程序優勢",
+      "subtitle": "為什麼選擇小程序",
+      "ecosystem": {
+        "title": "微信生態",
+        "description": "深度融入微信生態，利用社交關係鏈，實現病毒式傳播"
+      },
+      "instant": {
+        "title": "即用即走",
+        "description": "無需下載安裝，掃碼即用，降低用戶使用門檻"
+      },
+      "userBase": {
+        "title": "用戶基數大",
+        "description": "微信 12 億用戶，支付寶 10 億用戶，觸達更多潛在客戶"
+      },
+      "ecommerce": {
+        "title": "電商功能",
+        "description": "商品展示、購物車、支付、訂單管理，完整電商閉環"
+      },
+      "offline": {
+        "title": "線下引流",
+        "description": "二維碼掃碼，連接線上線下，提升門店客流轉化"
+      },
+      "analytics": {
+        "title": "數據分析",
+        "description": "用戶行為分析，轉化漏斗，幫助優化運營策略"
+      }
+    },
+    "platforms": {
+      "title": "支持平台",
+      "wechat": {
+        "name": "微信小程序",
+        "desc": "12億用戶生態",
+        "features": ["社交分享", "微信支付", "公眾號關聯", "朋友圈廣告"]
+      },
+      "alipay": {
+        "name": "支付寶小程序",
+        "desc": "10億用戶基礎",
+        "features": ["芝麻信用", "支付寶支付", "生活服務", "商家工具"]
+      },
+      "douyin": {
+        "name": "抖音小程序",
+        "desc": "短視頻流量",
+        "features": ["視頻掛載", "直播帶貨", "內容電商", "興趣推薦"]
+      }
+    },
+    "scenarios": {
+      "title": "應用場景",
+      "retail": {
+        "title": "電商零售",
+        "description": "商品展示、在線下單、會員管理、營銷活動"
+      },
+      "food": {
+        "title": "餐飲外賣",
+        "description": "菜單瀏覽、在線點餐、外賣配送、會員積分"
+      },
+      "education": {
+        "title": "教育培訓",
+        "description": "課程展示、在線報名、視頻學習、作業提交"
+      },
+      "booking": {
+        "title": "預約服務",
+        "description": "服務展示、在線預約、訂單管理、評價系統"
+      },
+      "community": {
+        "title": "社區團購",
+        "description": "團購活動、拼團功能、配送管理、分銷系統"
+      },
+      "enterprise": {
+        "title": "企業工具",
+        "description": "內部管理、審批流程、數據統計、移動辦公"
+      }
+    }
+  }
+}

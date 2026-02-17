@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "Creating",
+    "titleHighlight": "Infinite Possibilities",
+    "description": "We are a passionate tech team dedicated to providing high-quality digital product development services for businesses",
+    "descriptionLine2": "From concept to reality, we change the world with code and design",
+    "startCollaboration": "Start Collaboration"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "Through innovative technology and excellent design, we help businesses achieve digital transformation, create better user experiences and business value. Making every product a work that users love."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "To become an industry-leading digital product development team, focusing on technological innovation and user experience, creating continuous value for clients and driving industry progress."
+  },
+  "values": {
+    "title": "Core Values",
+    "subtitle": "These values guide every decision we make",
+    "excellence": {
+      "title": "Pursuit of Excellence",
+      "description": "Striving for perfection in every detail, never compromising on mediocrity"
+    },
+    "userFirst": {
+      "title": "User First",
+      "description": "Focusing on user experience to create truly valuable products"
+    },
+    "innovation": {
+      "title": "Continuous Innovation",
+      "description": "Embracing new technologies and constantly exploring better solutions"
+    },
+    "teamwork": {
+      "title": "Team Collaboration",
+      "description": "Open communication, mutual trust, and growing together"
+    }
+  },
+  "achievements": {
+    "awards": "Industry Awards",
+    "projects": "Successful Projects",
+    "clients": "Clients Served",
+    "satisfaction": "Client Satisfaction"
+  },
+  "team": {
+    "title": "Professional Team",
+    "subtitle": "Gathering industry elites to create excellent products",
+    "tech": {
+      "role": "Tech Team",
+      "count": "15+",
+      "description": "Senior Engineers",
+      "skills": ["Frontend Dev", "Backend Dev", "Mobile Dev", "DevOps"]
+    },
+    "design": {
+      "role": "Design Team",
+      "count": "8+",
+      "description": "UI/UX Designers",
+      "skills": ["User Research", "Interaction Design", "Visual Design", "Brand Design"]
+    },
+    "product": {
+      "role": "Product Team",
+      "count": "5+",
+      "description": "Product Managers",
+      "skills": ["Requirements Analysis", "Product Planning", "Project Management", "Data Analysis"]
+    }
+  },
+  "milestones": {
+    "title": "Our Journey",
+    "subtitle": "Thank you for being with us all the way",
+    "2020": {
+      "title": "Company Founded",
+      "description": "Established in Shenzhen, focusing on digital product development"
+    },
+    "2021": {
+      "title": "Team Expansion",
+      "description": "Team size expanded to 20+ members"
+    },
+    "2022": {
+      "title": "Business Breakthrough",
+      "description": "Served over 100 enterprise clients"
+    },
+    "2023": {
+      "title": "Technology Upgrade",
+      "description": "Fully adopted the latest technology stack"
+    },
+    "2024": {
+      "title": "Continuous Growth",
+      "description": "Project success rate reached 98%"
+    }
+  }
+}

@@ -12,55 +12,50 @@ import {
   TrendingUp 
 } from 'lucide-react';
 import ScrollReveal from '../ui/ScrollReveal';
+import { useTranslations } from 'next-intl';
 
 export default function FeaturesGrid() {
+  const t = useTranslations('home.featuresGrid');
+  
   const features = [
     {
       icon: Palette,
-      title: '精美设计',
-      description: '现代化的 UI/UX 设计，提升品牌形象',
+      titleKey: 'design',
       gradient: 'from-pink-500 to-rose-500',
     },
     {
       icon: Code2,
-      title: '代码质量',
-      description: '严格的代码规范，易于维护和扩展',
+      titleKey: 'quality',
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Smartphone,
-      title: '响应式设计',
-      description: '完美适配所有设备，提供一致体验',
+      titleKey: 'responsive',
       gradient: 'from-purple-500 to-pink-500',
     },
     {
       icon: Rocket,
-      title: '极速性能',
-      description: '优化加载速度，提升用户体验',
+      titleKey: 'performance',
       gradient: 'from-orange-500 to-red-500',
     },
     {
       icon: Shield,
-      title: '安全可靠',
-      description: '企业级安全防护，保障数据安全',
+      titleKey: 'security',
       gradient: 'from-green-500 to-emerald-500',
     },
     {
       icon: Zap,
-      title: '快速交付',
-      description: '敏捷开发流程，按时交付项目',
+      titleKey: 'delivery',
       gradient: 'from-yellow-500 to-orange-500',
     },
     {
       icon: Users,
-      title: '专业团队',
-      description: '经验丰富的技术专家，提供专业服务',
+      titleKey: 'team',
       gradient: 'from-indigo-500 to-purple-500',
     },
     {
       icon: TrendingUp,
-      title: '持续优化',
-      description: '长期技术支持，持续改进产品',
+      titleKey: 'optimization',
       gradient: 'from-teal-500 to-cyan-500',
     },
   ];
@@ -72,10 +67,10 @@ export default function FeaturesGrid() {
           <div className="text-center mb-16">
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              为什么选择我们
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              专业的技术团队，完善的服务体系，为您的项目保驾护航
+              {t('subtitle')}
             </p>
           </div>
         </ScrollReveal>
@@ -98,12 +93,12 @@ export default function FeaturesGrid() {
 
                   {/* 标题 */}
                   <h3 className="text-xl font-bold text-white mb-3">
-                    {feature.title}
+                    {t(`items.${feature.titleKey}.title`)}
                   </h3>
 
                   {/* 描述 */}
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    {feature.description}
+                    {t(`items.${feature.titleKey}.description`)}
                   </p>
 
                   {/* 装饰线 */}

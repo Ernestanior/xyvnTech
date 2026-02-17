@@ -16,7 +16,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-poppins)', 'var(--font-noto-sans-sc)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display': ['80px', { lineHeight: '1.05', fontWeight: '600' }],

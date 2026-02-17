@@ -56,18 +56,7 @@ export default function middleware(request: NextRequest) {
   }
 
   // 应用 i18n 中间件到前台路由
-  const response = i18nMiddleware(request);
-  
-  // 设置语言 cookie（有效期 1 年）
-  const locale = request.nextUrl.pathname.split('/')[1];
-  if (routing.locales.includes(locale as any)) {
-    response.cookies.set('NEXT_LOCALE', locale, {
-      maxAge: 365 * 24 * 60 * 60, // 1 年
-      path: '/',
-    });
-  }
-  
-  return response;
+  return i18nMiddleware(request);
 }
 
 export const config = {

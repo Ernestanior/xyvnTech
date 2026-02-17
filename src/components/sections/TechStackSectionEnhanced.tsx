@@ -12,12 +12,15 @@ import {
   Layers,
   GitBranch
 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function TechStackSectionEnhanced() {
+  const t = useTranslations('home.techStack');
+  
   const categories = [
     {
       icon: Code2,
-      title: '前端技术',
+      titleKey: 'frontend',
       color: 'from-blue-500 to-cyan-500',
       techs: [
         { name: 'React', level: 95, logo: '⚛️' },
@@ -29,7 +32,7 @@ export default function TechStackSectionEnhanced() {
     },
     {
       icon: Smartphone,
-      title: '移动开发',
+      titleKey: 'mobile',
       color: 'from-purple-500 to-pink-500',
       techs: [
         { name: 'React Native', level: 90, logo: '📱' },
@@ -41,7 +44,7 @@ export default function TechStackSectionEnhanced() {
     },
     {
       icon: Database,
-      title: '后端技术',
+      titleKey: 'backend',
       color: 'from-green-500 to-emerald-500',
       techs: [
         { name: 'Node.js', level: 93, logo: '🟢' },
@@ -53,7 +56,7 @@ export default function TechStackSectionEnhanced() {
     },
     {
       icon: Cloud,
-      title: '数据库',
+      titleKey: 'database',
       color: 'from-orange-500 to-red-500',
       techs: [
         { name: 'PostgreSQL', level: 90, logo: '🐘' },
@@ -65,7 +68,7 @@ export default function TechStackSectionEnhanced() {
     },
     {
       icon: Zap,
-      title: '云服务',
+      titleKey: 'cloud',
       color: 'from-yellow-500 to-orange-500',
       techs: [
         { name: 'AWS', level: 88, logo: '☁️' },
@@ -77,7 +80,7 @@ export default function TechStackSectionEnhanced() {
     },
     {
       icon: Shield,
-      title: 'AI & 数据',
+      titleKey: 'ai',
       color: 'from-indigo-500 to-purple-500',
       techs: [
         { name: 'TensorFlow', level: 80, logo: '🧠' },
@@ -96,6 +99,12 @@ export default function TechStackSectionEnhanced() {
     { name: 'Postman', icon: Zap },
   ];
 
+  const advantages = [
+    { key: 'learning', icon: '📚' },
+    { key: 'practices', icon: '✨' },
+    { key: 'performance', icon: '⚡' },
+  ];
+
   return (
     <section className="py-32 relative overflow-hidden">
       {/* 背景网格 */}
@@ -106,10 +115,10 @@ export default function TechStackSectionEnhanced() {
           <div className="text-center mb-16">
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              掌握前沿技术
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              使用业界领先的技术栈，为您打造高性能、可扩展的解决方案
+              {t('subtitle')}
             </p>
           </div>
         </ScrollReveal>
@@ -127,7 +136,7 @@ export default function TechStackSectionEnhanced() {
                   <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
                     <category.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{t(`categories.${category.titleKey}`)}</h3>
                 </div>
 
                 {/* 技术列表 */}
@@ -163,7 +172,7 @@ export default function TechStackSectionEnhanced() {
         {/* 开发工具 */}
         <ScrollReveal delay={0.4}>
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-8">开发工具</h3>
+            <h3 className="text-2xl font-bold text-white mb-8">{t('tools')}</h3>
             <div className="flex flex-wrap justify-center gap-6">
               {tools.map((tool, idx) => (
                 <motion.div
@@ -186,23 +195,7 @@ export default function TechStackSectionEnhanced() {
         {/* 技术优势 */}
         <ScrollReveal delay={0.5}>
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: '持续学习',
-                desc: '紧跟技术趋势，不断更新技术栈',
-                icon: '📚',
-              },
-              {
-                title: '最佳实践',
-                desc: '遵循行业标准，确保代码质量',
-                icon: '✨',
-              },
-              {
-                title: '性能优化',
-                desc: '注重性能，打造极致用户体验',
-                icon: '⚡',
-              },
-            ].map((item, idx) => (
+            {advantages.map((item, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
@@ -212,8 +205,8 @@ export default function TechStackSectionEnhanced() {
                 className="text-center p-6 bg-gradient-to-br from-white/5 to-white/0 border border-white/10 rounded-2xl"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-                <p className="text-sm text-gray-400">{item.desc}</p>
+                <h4 className="text-lg font-bold text-white mb-2">{t(`advantages.${item.key}.title`)}</h4>
+                <p className="text-sm text-gray-400">{t(`advantages.${item.key}.description`)}</p>
               </motion.div>
             ))}
           </div>

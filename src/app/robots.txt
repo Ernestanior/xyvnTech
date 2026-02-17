@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arvixai.com/sitemap.xml
+Sitemap: https://xyvnai.com/sitemap.xml

@@ -1,11 +1,65 @@
 {
   "hero": {
     "title": "Creating Infinite Possibilities with Technology",
-    "subtitle": "Professional Software Development Services for Digital Transformation",
+    "titleLine1": "Innovative Design",
+    "titleLine2": "Driving the Future",
+    "subtitle": "Focused on web development, app development, and mini-program development",
+    "subtitleLine2": "Empowering your brand with technology and creativity",
     "description": "We provide comprehensive digital solutions including web development, app development, and mini-program development",
     "cta": {
-      "primary": "Start Collaboration",
-      "secondary": "View Portfolio"
+      "primary": "Start Your Project",
+      "secondary": "View Cases"
+    },
+    "stats": {
+      "projects": {
+        "value": "150+",
+        "label": "Successful Projects"
+      },
+      "satisfaction": {
+        "value": "98%",
+        "label": "Client Satisfaction"
+      },
+      "response": {
+        "value": "24h",
+        "label": "Quick Response"
+      }
+    }
+  },
+  "valueProposition": {
+    "title": "Our",
+    "titleHighlight": "Core Advantages",
+    "subtitle": "Professional Team · Innovative Technology · Excellent Quality · Dedicated Service",
+    "advantages": {
+      "fastDelivery": {
+        "title": "Fast Delivery",
+        "desc": "Agile development process, reducing average project cycle by 40%",
+        "features": ["Agile Development", "Rapid Iteration", "On-Time Delivery", "Flexible Adjustment"]
+      },
+      "qualityAssurance": {
+        "title": "Quality Assurance",
+        "desc": "Strict quality control to ensure every project meets the highest standards",
+        "features": ["Code Review", "Automated Testing", "Performance Optimization", "Security Hardening"]
+      },
+      "professionalTeam": {
+        "title": "Professional Team",
+        "desc": "80+ senior engineers with an average of 7 years of industry experience",
+        "features": ["Full-Stack Development", "Design Team", "Product Managers", "Technical Consultants"]
+      },
+      "continuousOptimization": {
+        "title": "Continuous Optimization",
+        "desc": "Continuous tracking and optimization after project launch to ensure long-term success",
+        "features": ["Data Analysis", "User Feedback", "Feature Iteration", "Performance Monitoring"]
+      },
+      "industryRecognition": {
+        "title": "Industry Recognition",
+        "desc": "Multiple industry awards, 98% customer satisfaction",
+        "features": ["Design Awards", "Technical Innovation", "Customer Reviews", "Industry Benchmark"]
+      },
+      "support247": {
+        "title": "24/7 Support",
+        "desc": "Round-the-clock technical support, rapid response to customer needs",
+        "features": ["Instant Response", "Remote Support", "Problem Solving", "Technical Training"]
+      }
     }
   },
   "features": {
@@ -14,7 +68,7 @@
     "items": {
       "quality": {
         "title": "Quality Assurance",
-        "description": "Rigorous code review and testing processes to ensure project quality"
+        "description": "Strict code review and testing processes to ensure project quality"
       },
       "speed": {
         "title": "Fast Delivery",
@@ -33,12 +87,387 @@
   "stats": {
     "projects": "Successful Projects",
     "clients": "Clients Served",
-    "experience": "Years Experience",
-    "satisfaction": "Client Satisfaction"
+    "experience": "Years of Experience",
+    "satisfaction": "Customer Satisfaction"
   },
   "cta": {
     "title": "Ready to Start Your Project?",
     "description": "Contact us now for free consultation and project quotation",
     "button": "Free Consultation"
+  },
+  "featuresGrid": {
+    "title": "Why Choose Us",
+    "subtitle": "Professional technical team, comprehensive service system, safeguarding your project",
+    "items": {
+      "design": {
+        "title": "Beautiful Design",
+        "description": "Modern UI/UX design to enhance brand image"
+      },
+      "quality": {
+        "title": "Code Quality",
+        "description": "Strict code standards, easy to maintain and extend"
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Perfect adaptation to all devices, providing consistent experience"
+      },
+      "performance": {
+        "title": "Blazing Performance",
+        "description": "Optimized loading speed, enhanced user experience"
+      },
+      "security": {
+        "title": "Secure & Reliable",
+        "description": "Enterprise-level security protection, data safety guaranteed"
+      },
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "Agile development process, on-time project delivery"
+      },
+      "team": {
+        "title": "Professional Team",
+        "description": "Experienced technical experts providing professional services"
+      },
+      "optimization": {
+        "title": "Continuous Optimization",
+        "description": "Long-term technical support, continuous product improvement"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive digital product development services, from design to launch one-stop solution",
+    "items": {
+      "web": {
+        "title": "Web Development",
+        "description": "Build high-performance websites with the latest tech stack, ensuring speed, security, and maintainability",
+        "features": ["Next.js Full-Stack", "TypeScript", "Automated Deployment"],
+        "link": "View Details"
+      },
+      "app": {
+        "title": "APP Development",
+        "description": "Perfect combination of native and cross-platform, creating smooth mobile app experience",
+        "features": ["iOS/Android", "React Native", "Offline Support"],
+        "link": "View Details"
+      },
+      "miniprogram": {
+        "title": "Mini-Program Development",
+        "description": "Quickly reach hundreds of millions of users, deeply integrated into social ecosystems",
+        "features": ["WeChat Mini-Program", "Alipay", "TikTok"],
+        "link": "View Details"
+      }
+    }
+  },
+  "statsSection": {
+    "title": "Proven by Numbers",
+    "subtitle": "Years of industry experience, creating real value for clients",
+    "items": {
+      "projects": {
+        "label": "Successful Projects",
+        "description": "Quality projects delivered to clients"
+      },
+      "clients": {
+        "label": "Partner Clients",
+        "description": "Trust from various industries"
+      },
+      "satisfaction": {
+        "label": "Client Satisfaction",
+        "description": "Continuous high-quality service"
+      },
+      "response": {
+        "label": "Response Time",
+        "description": "Quick response to client needs"
+      }
+    },
+    "note": "* Data as of February 2026, continuously updated"
+  },
+  "process": {
+    "title": "Professional Development Process",
+    "subtitle": "From requirements to launch, every step carefully controlled to ensure project success",
+    "items": {
+      "communication": {
+        "title": "Requirements Communication",
+        "description": "Deep understanding of your business goals and project needs",
+        "details": ["Requirements Analysis", "Goal Setting", "Budget Assessment"]
+      },
+      "design": {
+        "title": "Solution Design",
+        "description": "Develop the most suitable technical and design solutions",
+        "details": ["Prototype Design", "Technology Selection", "Architecture Planning"]
+      },
+      "development": {
+        "title": "Development Implementation",
+        "description": "Efficient development, regular progress sync and demos",
+        "details": ["Agile Development", "Code Review", "Progress Tracking"]
+      },
+      "testing": {
+        "title": "Testing & Optimization",
+        "description": "Comprehensive testing to ensure product quality and performance",
+        "details": ["Functional Testing", "Performance Optimization", "Compatibility Testing"]
+      },
+      "launch": {
+        "title": "Launch & Deployment",
+        "description": "Smooth launch, ensuring stable operation",
+        "details": ["Deployment", "Data Migration", "Monitoring Setup"]
+      },
+      "support": {
+        "title": "Continuous Support",
+        "description": "Providing long-term technical support and maintenance services",
+        "details": ["Technical Support", "Feature Iteration", "Performance Monitoring"]
+      }
+    },
+    "cta": {
+      "question": "Want to learn more about our workflow?",
+      "button": "Contact Us for Consultation"
+    }
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "subtitle": "Excellent digital products created for clients across industries",
+    "categories": {
+      "all": "All Projects",
+      "website": "Web Development",
+      "app": "APP Development",
+      "ecommerce": "E-commerce Platform",
+      "enterprise": "Enterprise System"
+    },
+    "highlights": "Key Highlights",
+    "viewDetails": "View Details",
+    "cta": {
+      "question": "Want to learn more about our case studies?",
+      "button": "Contact Us for Consultation"
+    }
+  },
+  "techStack": {
+    "title": "Mastering Cutting-Edge Technology",
+    "subtitle": "Using industry-leading tech stack to build high-performance, scalable solutions for you",
+    "categories": {
+      "frontend": "Frontend Technology",
+      "mobile": "Mobile Development",
+      "backend": "Backend Technology",
+      "database": "Database",
+      "cloud": "Cloud Services",
+      "ai": "AI & Data"
+    },
+    "tools": "Development Tools",
+    "advantages": {
+      "learning": {
+        "title": "Continuous Learning",
+        "description": "Following tech trends, constantly updating tech stack"
+      },
+      "practices": {
+        "title": "Best Practices",
+        "description": "Following industry standards, ensuring code quality"
+      },
+      "performance": {
+        "title": "Performance Optimization",
+        "description": "Focusing on performance, creating ultimate user experience"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Client Trust Drives Us Forward",
+    "subtitle": "Real feedback from clients across industries",
+    "stats": {
+      "clients": "Satisfied Clients",
+      "satisfaction": "Client Satisfaction",
+      "rating": "Average Rating",
+      "recommendation": "Recommendation Rate"
+    }
+  },
+  "pricing": {
+    "title": "Choose the Right Plan for You",
+    "subtitle": "Transparent pricing, professional service, providing the best value for your project",
+    "popular": "Most Popular",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "price": "From $50K",
+        "description": "Suitable for startups and small projects",
+        "features": [
+          "Responsive website design",
+          "5-10 pages",
+          "Basic SEO optimization",
+          "Mobile adaptation",
+          "3 months free maintenance",
+          "Basic data analytics"
+        ]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "From $100K",
+        "description": "Suitable for growing businesses and medium projects",
+        "features": [
+          "Advanced custom design",
+          "10-20 pages",
+          "Advanced SEO optimization",
+          "Animation and interactive effects",
+          "6 months free maintenance",
+          "Advanced data analysis",
+          "Content management system",
+          "Multi-language support"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "From $200K",
+        "description": "Suitable for large enterprises and complex projects",
+        "features": [
+          "Fully custom development",
+          "Unlimited pages",
+          "Enterprise-level SEO",
+          "Advanced animation effects",
+          "12 months free maintenance",
+          "Real-time data dashboard",
+          "Advanced CMS system",
+          "Multi-language + Multi-site",
+          "API integration",
+          "Dedicated technical consultant"
+        ]
+      }
+    },
+    "button": "Contact Now",
+    "notes": {
+      "pricing": "* Prices above are reference starting prices, specific costs based on project requirements",
+      "support": "Custom development support · Flexible payment methods · Long-term technical support"
+    }
+  },
+  "faq": {
+    "title": "Questions You May Want to Know",
+    "subtitle": "We've compiled the most common client questions, feel free to contact us for more",
+    "items": [
+      {
+        "question": "How long does development typically take?",
+        "answer": "Development time depends on project complexity and requirements. Generally, simple showcase websites take 2-4 weeks, medium complexity websites take 4-8 weeks, and complex apps or platforms take 8-16 weeks. We'll provide a detailed timeline during the requirements phase."
+      },
+      {
+        "question": "How are project costs calculated?",
+        "answer": "We offer two payment models: [One-time Purchase] Pay full development cost upfront, project fully owned by you, suitable for clients with sufficient budget who need complete control; [Subscription] Pay lower initial fee, subscribe monthly/yearly including cloud hosting, maintenance updates, technical support, etc., 20-30% lower total cost over 3 years, suitable for clients wanting lower upfront investment and continuous service. See pricing page or contact us for detailed quotes."
+      },
+      {
+        "question": "What's the difference between subscription and one-time purchase?",
+        "answer": "[One-time Purchase]: Pay full cost once (e.g., corporate website NT$80,000-250,000), source code and ownership are yours, future maintenance requires separate payment. [Subscription]: Pay lower initial setup fee (e.g., NT$8,000-25,000) + monthly fee (NT$1,299-3,999/month), includes cloud hosting, SSL certificate, CDN acceleration, daily backups, technical support, feature updates, etc., lower total cost over 3 years, no worries about servers and maintenance. Subscription is more suitable for most SMEs."
+      },
+      {
+        "question": "What does the subscription service include?",
+        "answer": "Subscription includes: 1) Cloud hosting and server management; 2) SSL certificate and CDN acceleration; 3) Daily automatic backups; 4) 7×24 technical support; 5) Security updates and bug fixes; 6) Feature optimization and performance improvements; 7) Depending on service type: payment gateway for e-commerce, app store publishing for apps, mini-program review submission, etc. You don't need to worry about any technical issues, just focus on business development."
+      },
+      {
+        "question": "Can I cancel the subscription anytime?",
+        "answer": "Yes. The subscription service uses a flexible subscription mechanism, you can cancel anytime, and we'll stop service after the current billing cycle ends. If you choose annual payment, enjoy 17% discount (equivalent to 10 months' price). After cancellation, we'll assist with data export and migration to ensure business continuity."
+      },
+      {
+        "question": "What tech stack do you use?",
+        "answer": "We use the most advanced tech stack in the industry. Frontend: React, Next.js, Vue, TypeScript; Backend: Node.js, Python, Go; Mobile: React Native, Flutter; Database: PostgreSQL, MongoDB, Redis. We'll choose the most suitable technical solution based on project requirements."
+      },
+      {
+        "question": "How do you ensure project quality?",
+        "answer": "We have a strict quality assurance process: 1) Code review and standards; 2) Automated testing; 3) Performance optimization; 4) Security testing; 5) Multi-device compatibility testing; 6) User experience testing. Each stage has quality checkpoints to ensure high-quality product delivery."
+      },
+      {
+        "question": "Can I see development progress?",
+        "answer": "Of course! We use agile development and regularly (usually weekly) show you development progress and results. You can view progress in real-time through project management tools, and we'll organize regular demo meetings to ensure the project progresses as expected."
+      },
+      {
+        "question": "What payment methods are supported?",
+        "answer": "We support multiple payment methods: bank transfer, Alipay, WeChat Pay, corporate transfer, etc. [One-time Purchase] payment is usually divided into: down payment (30-50%), mid-term payment (30-40%), final payment (20-30%). [Subscription] initial setup fee paid once, monthly/annual fees can be auto-deducted or transferred regularly. Specific payment methods can be negotiated based on project situation."
+      },
+      {
+        "question": "What's your team size?",
+        "answer": "We have an experienced professional team including: product managers, UI/UX designers, frontend engineers, backend engineers, mobile engineers, test engineers, etc. Team members have an average of 5+ years of industry experience and have participated in multiple large projects."
+      }
+    ],
+    "cta": {
+      "question": "Didn't find the answer you're looking for?",
+      "button": "Contact Us Directly"
+    }
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Start Your Project",
+    "subtitle": "Tell us your ideas, let's create excellent digital products together",
+    "heading": "Let's Talk",
+    "description": "Whether it's new project consultation, technical support, or business cooperation, we look forward to communicating with you.",
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "hours": "Working Hours"
+    },
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Please enter your name",
+        "required": true
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "your@email.com",
+        "required": true
+      },
+      "company": {
+        "label": "Company Name",
+        "placeholder": "Your company name"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+65 9156 1413"
+      },
+      "projectType": {
+        "label": "Project Type",
+        "required": true,
+        "options": {
+          "website": "Website Development",
+          "app": "APP Development",
+          "both": "Website + APP",
+          "redesign": "Website Redesign",
+          "maintenance": "Maintenance & Optimization",
+          "other": "Other"
+        }
+      },
+      "budget": {
+        "label": "Budget Range",
+        "placeholder": "Please select budget range",
+        "options": {
+          "under50k": "Under $50K",
+          "50kto100k": "$50K-$100K",
+          "100kto200k": "$100K-$200K",
+          "over200k": "Over $200K"
+        }
+      },
+      "message": {
+        "label": "Project Description",
+        "placeholder": "Please describe your project requirements, goals, timeline, etc...",
+        "required": true
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "success": "Sent successfully! We'll contact you soon",
+      "error": "Failed to send, please try again later",
+      "privacy": "By submitting this form, you agree to our privacy policy. We promise to protect your personal information."
+    }
+  },
+  "ctaSection": {
+    "title": "Ready to Create",
+    "titleHighlight": "Excellent Experience",
+    "titleEnd": "?",
+    "subtitle": "Whether it's a new project or existing product optimization, we can provide professional solutions for you",
+    "buttons": {
+      "primary": "Contact Now",
+      "secondary": "View Cases"
+    },
+    "stats": {
+      "projects": {
+        "value": "100+",
+        "label": "Successful Projects"
+      },
+      "clients": {
+        "value": "50+",
+        "label": "Partner Clients"
+      },
+      "satisfaction": {
+        "value": "98%",
+        "label": "Client Satisfaction"
+      }
+    }
   }
 }

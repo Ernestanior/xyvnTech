@@ -3,49 +3,40 @@
 import { motion } from 'framer-motion';
 import { MessageSquare, Lightbulb, Code, TestTube, Rocket, HeadphonesIcon } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import { useTranslations } from 'next-intl';
 
 export default function ProcessSectionEnhanced() {
+  const t = useTranslations('home.process');
+  
   const steps = [
     {
       icon: MessageSquare,
-      title: '需求沟通',
-      description: '深入了解您的业务需求和目标，制定初步方案',
-      details: ['需求分析', '目标确定', '预算评估', '时间规划'],
+      key: 'communication',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Lightbulb,
-      title: '方案设计',
-      description: '创意策划和原型设计，确保方案符合预期',
-      details: ['创意策划', '原型设计', '技术选型', '方案确认'],
+      key: 'design',
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: Code,
-      title: '开发实现',
-      description: '敏捷开发，定期交付，保持透明沟通',
-      details: ['敏捷开发', '代码审查', '定期交付', '进度跟踪'],
+      key: 'development',
       color: 'from-pink-500 to-rose-500',
     },
     {
       icon: TestTube,
-      title: '测试优化',
-      description: '全面测试，性能优化，确保质量',
-      details: ['功能测试', '性能测试', '安全测试', '兼容测试'],
+      key: 'testing',
       color: 'from-orange-500 to-red-500',
     },
     {
       icon: Rocket,
-      title: '上线部署',
-      description: '平滑上线，数据迁移，监控运行',
-      details: ['部署上线', '数据迁移', '性能监控', '问题修复'],
+      key: 'launch',
       color: 'from-green-500 to-emerald-500',
     },
     {
       icon: HeadphonesIcon,
-      title: '持续支持',
-      description: '技术支持，功能迭代，长期维护',
-      details: ['技术支持', '功能迭代', '性能优化', '安全更新'],
+      key: 'support',
       color: 'from-indigo-500 to-purple-500',
     },
   ];
@@ -60,10 +51,10 @@ export default function ProcessSectionEnhanced() {
           <div className="text-center mb-20">
             
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              专业的开发流程
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              6个步骤，确保项目高质量交付
+              {t('subtitle')}
             </p>
           </div>
         </ScrollReveal>
@@ -102,17 +93,17 @@ export default function ProcessSectionEnhanced() {
 
                     {/* 标题 */}
                     <h3 className="text-2xl font-bold text-white mb-3">
-                      {step.title}
+                      {t(`items.${step.key}.title`)}
                     </h3>
 
                     {/* 描述 */}
                     <p className="text-gray-400 mb-6 leading-relaxed">
-                      {step.description}
+                      {t(`items.${step.key}.description`)}
                     </p>
 
                     {/* 详细列表 */}
                     <ul className="space-y-2">
-                      {step.details.map((detail, idx) => (
+                      {(t.raw(`items.${step.key}.details`) as string[]).map((detail, idx) => (
                         <motion.li
                           key={idx}
                           initial={{ opacity: 0, x: -10 }}
@@ -135,32 +126,6 @@ export default function ProcessSectionEnhanced() {
             ))}
           </div>
         </div>
-
-        {/* 底部说明 */}
-        <ScrollReveal delay={0.6}>
-          <div className="mt-20 text-center">
-            <div className="inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-3xl">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                为什么选择我们的流程？
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                {[
-                  { title: '透明沟通', desc: '每个阶段保持密切沟通' },
-                  { title: '质量保证', desc: '严格的测试和审查流程' },
-                  { title: '按时交付', desc: '合理规划，准时完成' },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2" />
-                    <div>
-                      <div className="text-white font-semibold mb-1">{item.title}</div>
-                      <div className="text-sm text-gray-400">{item.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );

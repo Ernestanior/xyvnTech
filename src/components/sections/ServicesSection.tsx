@@ -1,32 +1,29 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code, Smartphone, Palette, MessageSquare, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { Code, Smartphone, MessageSquare, ArrowRight } from 'lucide-react';
+import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
 export default function ServicesSection() {
+  const t = useTranslations('home.services');
+  
   const services = [
     {
       icon: Code,
-      title: '网站开发',
-      description: '采用最新技术栈打造高性能网站，确保快速、安全、易维护',
-      features: ['Next.js 全栈', 'TypeScript', '自动化部署'],
+      serviceKey: 'web',
       gradient: 'from-blue-500 to-cyan-500',
       link: '/services/web-development',
     },
     {
       icon: Smartphone,
-      title: 'APP 开发',
-      description: '原生与跨平台完美结合，打造流畅的移动应用体验',
-      features: ['iOS/Android', 'React Native', '离线支持'],
+      serviceKey: 'app',
       gradient: 'from-purple-500 to-pink-500',
       link: '/services/app-development',
     },
     {
       icon: MessageSquare,
-      title: '小程序开发',
-      description: '快速触达亿级用户，深度融入社交生态',
-      features: ['微信小程序', '支付宝', '抖音'],
+      serviceKey: 'miniprogram',
       gradient: 'from-green-500 to-emerald-500',
       link: '/services/miniprogram',
     },
@@ -50,10 +47,10 @@ export default function ServicesSection() {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            我们的服务
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            提供全方位的数字产品开发服务，从设计到上线一站式解决
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -79,17 +76,17 @@ export default function ServicesSection() {
 
                   {/* 标题 */}
                   <h3 className="relative text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
-                    {service.title}
+                    {t(`items.${service.serviceKey}.title`)}
                   </h3>
 
                   {/* 描述 */}
                   <p className="relative text-gray-400 mb-6 leading-relaxed">
-                    {service.description}
+                    {t(`items.${service.serviceKey}.description`)}
                   </p>
 
                   {/* 特性标签 */}
                   <div className="relative flex flex-wrap gap-2 mb-6">
-                    {service.features.map((feature, i) => (
+                    {(t.raw(`items.${service.serviceKey}.features`) as string[]).map((feature, i) => (
                       <span
                         key={i}
                         className="px-3 py-1 text-xs bg-white/5 border border-white/10 rounded-full text-gray-400"
@@ -101,7 +98,7 @@ export default function ServicesSection() {
 
                   {/* 查看详情 */}
                   <div className="relative flex items-center gap-2 text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
-                    <span>查看详情</span>
+                    <span>{t(`items.${service.serviceKey}.link`)}</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>

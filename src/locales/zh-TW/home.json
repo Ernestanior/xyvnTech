@@ -1,11 +1,65 @@
 {
   "hero": {
     "title": "用技術創造無限可能",
-    "subtitle": "專業的軟體開發服務，助力企業數位化轉型",
+    "titleLine1": "創新設計",
+    "titleLine2": "驅動未來",
+    "subtitle": "專注於網站開發、APP 開發和小程式開發",
+    "subtitleLine2": "用技術和創意為您的品牌賦能",
     "description": "我們提供網站開發、APP開發、小程式開發等全方位的數位化解決方案",
     "cta": {
-      "primary": "開始合作",
+      "primary": "開始您的專案",
       "secondary": "查看案例"
+    },
+    "stats": {
+      "projects": {
+        "value": "150+",
+        "label": "成功專案"
+      },
+      "satisfaction": {
+        "value": "98%",
+        "label": "客戶滿意度"
+      },
+      "response": {
+        "value": "24h",
+        "label": "快速回應"
+      }
+    }
+  },
+  "valueProposition": {
+    "title": "我們的",
+    "titleHighlight": "核心優勢",
+    "subtitle": "專業團隊 · 創新技術 · 卓越品質 · 貼心服務",
+    "advantages": {
+      "fastDelivery": {
+        "title": "快速交付",
+        "desc": "敏捷開發流程，平均專案週期縮短 40%",
+        "features": ["敏捷開發", "快速迭代", "按時交付", "靈活調整"]
+      },
+      "qualityAssurance": {
+        "title": "品質保證",
+        "desc": "嚴格的品質控制，確保每個專案都達到最高標準",
+        "features": ["程式碼審查", "自動化測試", "效能優化", "安全加固"]
+      },
+      "professionalTeam": {
+        "title": "專業團隊",
+        "desc": "80+ 資深工程師，平均 7 年行業經驗",
+        "features": ["全端開發", "設計團隊", "產品經理", "技術顧問"]
+      },
+      "continuousOptimization": {
+        "title": "持續優化",
+        "desc": "專案上線後持續追蹤優化，確保長期成功",
+        "features": ["數據分析", "用戶反饋", "功能迭代", "效能監控"]
+      },
+      "industryRecognition": {
+        "title": "行業認可",
+        "desc": "多次獲得行業大獎，客戶滿意度 98%",
+        "features": ["設計大獎", "技術創新", "客戶好評", "行業標竿"]
+      },
+      "support247": {
+        "title": "7x24 支援",
+        "desc": "全天候技術支援，快速回應客戶需求",
+        "features": ["即時回應", "遠端支援", "問題解決", "技術培訓"]
+      }
     }
   },
   "features": {
@@ -40,5 +94,380 @@
     "title": "準備開始您的專案了嗎？",
     "description": "立即聯絡我們，獲取免費諮詢和專案報價",
     "button": "免費諮詢"
+  },
+  "featuresGrid": {
+    "title": "為什麼選擇我們",
+    "subtitle": "專業的技術團隊，完善的服務體系，為您的專案保駕護航",
+    "items": {
+      "design": {
+        "title": "精美設計",
+        "description": "現代化的 UI/UX 設計，提升品牌形象"
+      },
+      "quality": {
+        "title": "程式碼品質",
+        "description": "嚴格的程式碼規範，易於維護和擴展"
+      },
+      "responsive": {
+        "title": "響應式設計",
+        "description": "完美適配所有裝置，提供一致體驗"
+      },
+      "performance": {
+        "title": "極速效能",
+        "description": "優化載入速度，提升使用者體驗"
+      },
+      "security": {
+        "title": "安全可靠",
+        "description": "企業級安全防護，保障資料安全"
+      },
+      "delivery": {
+        "title": "快速交付",
+        "description": "敏捷開發流程，按時交付專案"
+      },
+      "team": {
+        "title": "專業團隊",
+        "description": "經驗豐富的技術專家，提供專業服務"
+      },
+      "optimization": {
+        "title": "持續優化",
+        "description": "長期技術支援，持續改進產品"
+      }
+    }
+  },
+  "services": {
+    "title": "我們的服務",
+    "subtitle": "提供全方位的數位產品開發服務，從設計到上線一站式解決",
+    "items": {
+      "web": {
+        "title": "網站開發",
+        "description": "採用最新技術棧打造高效能網站，確保快速、安全、易維護",
+        "features": ["Next.js 全端", "TypeScript", "自動化部署"],
+        "link": "查看詳情"
+      },
+      "app": {
+        "title": "APP 開發",
+        "description": "原生與跨平台完美結合，打造流暢的行動應用體驗",
+        "features": ["iOS/Android", "React Native", "離線支援"],
+        "link": "查看詳情"
+      },
+      "miniprogram": {
+        "title": "小程式開發",
+        "description": "快速觸達億級使用者，深度融入社交生態",
+        "features": ["微信小程式", "支付寶", "抖音"],
+        "link": "查看詳情"
+      }
+    }
+  },
+  "statsSection": {
+    "title": "用數字證明實力",
+    "subtitle": "多年的行業經驗，為客戶創造真實價值",
+    "items": {
+      "projects": {
+        "label": "成功專案",
+        "description": "為客戶交付的優質專案"
+      },
+      "clients": {
+        "label": "合作客戶",
+        "description": "來自各行業的信任"
+      },
+      "satisfaction": {
+        "label": "客戶滿意度",
+        "description": "持續的高品質服務"
+      },
+      "response": {
+        "label": "回應時間",
+        "description": "快速回應客戶需求"
+      }
+    },
+    "note": "* 數據統計截至 2026 年 2 月，持續更新中"
+  },
+  "process": {
+    "title": "專業的開發流程",
+    "subtitle": "從需求到上線，每一步都精心把控，確保專案成功",
+    "items": {
+      "communication": {
+        "title": "需求溝通",
+        "description": "深入了解您的業務目標和專案需求",
+        "details": ["需求分析", "目標確定", "預算評估"]
+      },
+      "design": {
+        "title": "方案設計",
+        "description": "制定最適合的技術方案和設計方案",
+        "details": ["原型設計", "技術選型", "架構規劃"]
+      },
+      "development": {
+        "title": "開發實現",
+        "description": "高效開發，定期同步進度和演示",
+        "details": ["敏捷開發", "程式碼審查", "進度追蹤"]
+      },
+      "testing": {
+        "title": "測試優化",
+        "description": "全面測試，確保產品品質和效能",
+        "details": ["功能測試", "效能優化", "相容測試"]
+      },
+      "launch": {
+        "title": "上線部署",
+        "description": "平滑上線，確保穩定運行",
+        "details": ["部署上線", "資料遷移", "監控配置"]
+      },
+      "support": {
+        "title": "持續支援",
+        "description": "提供長期技術支援和維護服務",
+        "details": ["技術支援", "功能迭代", "效能監控"]
+      }
+    },
+    "cta": {
+      "question": "想了解更多關於我們的工作流程？",
+      "button": "聯絡我們諮詢"
+    }
+  },
+  "portfolio": {
+    "title": "我們的作品",
+    "subtitle": "為各行業客戶打造的優秀數位產品",
+    "categories": {
+      "all": "全部專案",
+      "website": "網站開發",
+      "app": "APP開發",
+      "ecommerce": "電商平台",
+      "enterprise": "企業系統"
+    },
+    "highlights": "核心亮點",
+    "viewDetails": "查看詳情",
+    "cta": {
+      "question": "想要了解更多案例詳情？",
+      "button": "聯絡我們諮詢"
+    }
+  },
+  "techStack": {
+    "title": "掌握前沿技術",
+    "subtitle": "使用業界領先的技術棧，為您打造高效能、可擴展的解決方案",
+    "categories": {
+      "frontend": "前端技術",
+      "mobile": "行動開發",
+      "backend": "後端技術",
+      "database": "資料庫",
+      "cloud": "雲端服務",
+      "ai": "AI & 數據"
+    },
+    "tools": "開發工具",
+    "advantages": {
+      "learning": {
+        "title": "持續學習",
+        "description": "緊跟技術趨勢，不斷更新技術棧"
+      },
+      "practices": {
+        "title": "最佳實踐",
+        "description": "遵循行業標準，確保程式碼品質"
+      },
+      "performance": {
+        "title": "效能優化",
+        "description": "注重效能，打造極致使用者體驗"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "客戶的信任是我們前進的動力",
+    "subtitle": "來自各行業客戶的真實反饋",
+    "stats": {
+      "clients": "滿意客戶",
+      "satisfaction": "客戶滿意度",
+      "rating": "平均評分",
+      "recommendation": "推薦率"
+    }
+  },
+  "pricing": {
+    "title": "選擇適合您的方案",
+    "subtitle": "透明的價格，專業的服務，為您的專案提供最佳性價比",
+    "popular": "最受歡迎",
+    "plans": {
+      "basic": {
+        "name": "基礎版",
+        "price": "5萬起",
+        "description": "適合初創企業和小型專案",
+        "features": [
+          "響應式網站設計",
+          "5-10 個頁面",
+          "基礎 SEO 優化",
+          "行動端適配",
+          "3 個月免費維護",
+          "基礎數據統計"
+        ]
+      },
+      "professional": {
+        "name": "專業版",
+        "price": "10萬起",
+        "description": "適合成長型企業和中型專案",
+        "features": [
+          "高級定製設計",
+          "10-20 個頁面",
+          "高級 SEO 優化",
+          "動畫和互動效果",
+          "6 個月免費維護",
+          "高級數據分析",
+          "內容管理系統",
+          "多語言支援"
+        ]
+      },
+      "enterprise": {
+        "name": "企業版",
+        "price": "20萬起",
+        "description": "適合大型企業和複雜專案",
+        "features": [
+          "完全定製開發",
+          "無限頁面",
+          "企業級 SEO",
+          "高級動畫特效",
+          "12 個月免費維護",
+          "即時數據看板",
+          "高級 CMS 系統",
+          "多語言 + 多站點",
+          "API 整合",
+          "專屬技術顧問"
+        ]
+      }
+    },
+    "button": "立即諮詢",
+    "notes": {
+      "pricing": "* 以上價格為參考起步價，具體費用根據專案需求評估",
+      "support": "支援定製開發 · 靈活付款方式 · 長期技術支援"
+    }
+  },
+  "faq": {
+    "title": "您可能想了解的問題",
+    "subtitle": "我們整理了客戶最關心的問題，如有其他疑問歡迎隨時聯絡",
+    "items": [
+      {
+        "question": "你們的開發週期一般需要多久？",
+        "answer": "開發週期取決於專案的複雜度和需求。一般來說，簡單的展示型網站需要 2-4 週，中等複雜度的網站需要 4-8 週，複雜的 APP 或平台需要 8-16 週。我們會在需求溝通階段給出詳細的時間規劃。"
+      },
+      {
+        "question": "專案費用如何計算？",
+        "answer": "我們提供兩種付費模式：【買斷制】一次性支付開發費用，專案完全歸您所有，適合預算充足、需要完全掌控的客戶；【訂閱制】支付較低的初始費用，按月/年訂閱服務，包含雲端託管、維護更新、技術支援等，3年總成本比買斷制節省20-30%，適合希望降低初期投入、享受持續服務的客戶。具體價格請查看定價頁面或聯絡我們獲取詳細報價。"
+      },
+      {
+        "question": "訂閱制和買斷制有什麼區別？",
+        "answer": "【買斷制】：一次性支付全部費用（如企業官網 NT$80,000-250,000），專案原始碼和所有權歸您，後續維護需另外付費。【訂閱制】：支付較低的初始設定費（如 NT$8,000-25,000）+ 月費（NT$1,299-3,999/月），包含雲端託管、SSL憑證、CDN加速、每日備份、技術支援、功能更新等服務，3年總成本更低，且無需擔心伺服器和維護問題。訂閱制更適合大多數中小企業。"
+      },
+      {
+        "question": "訂閱服務包含哪些內容？",
+        "answer": "訂閱服務包含：1) 雲端託管和伺服器管理；2) SSL憑證和CDN加速；3) 每日自動備份；4) 7×24小時技術支援；5) 安全更新和Bug修復；6) 功能優化和效能提升；7) 根據服務類型還包含：電商的支付閘道、APP的應用商店發布、小程式的審核提交等。您無需擔心任何技術問題，專注於業務發展即可。"
+      },
+      {
+        "question": "訂閱服務可以隨時取消嗎？",
+        "answer": "可以的。訂閱服務採用靈活的訂閱機制，您可以隨時取消訂閱，我們會在當前計費週期結束後停止服務。如果選擇年付，可享受17%的折扣（相當於10個月的價格）。取消訂閱後，我們會協助您進行資料匯出和遷移，確保業務不受影響。"
+      },
+      {
+        "question": "你們使用什麼技術棧？",
+        "answer": "我們使用業界最先進的技術棧。前端：React、Next.js、Vue、TypeScript；後端：Node.js、Python、Go；行動端：React Native、Flutter；資料庫：PostgreSQL、MongoDB、Redis。我們會根據專案需求選擇最合適的技術方案。"
+      },
+      {
+        "question": "如何保證專案品質？",
+        "answer": "我們有嚴格的品質保證流程：1) 程式碼審查和規範；2) 自動化測試；3) 效能優化；4) 安全檢測；5) 多裝置相容性測試；6) 使用者體驗測試。每個階段都有品質檢查點，確保交付高品質產品。"
+      },
+      {
+        "question": "可以看到開發進度嗎？",
+        "answer": "當然可以！我們採用敏捷開發模式，會定期（通常每週）向您展示開發進度和成果。您可以透過專案管理工具即時查看進度，我們也會定期組織演示會議，確保專案按預期推進。"
+      },
+      {
+        "question": "支援哪些付款方式？",
+        "answer": "我們支援多種付款方式：銀行轉帳、支付寶、微信支付、對公轉帳等。【買斷制】付款通常分為：首付款（30-50%）、中期款（30-40%）、尾款（20-30%）。【訂閱制】初始設定費一次性支付，月費/年費可選擇自動扣款或定期轉帳。具體付款方式可以根據專案情況協商。"
+      },
+      {
+        "question": "你們的團隊規模如何？",
+        "answer": "我們有一支經驗豐富的專業團隊，包括：產品經理、UI/UX 設計師、前端工程師、後端工程師、行動端工程師、測試工程師等。團隊成員平均有 5+ 年行業經驗，參與過多個大型專案。"
+      }
+    ],
+    "cta": {
+      "question": "沒有找到您想要的答案？",
+      "button": "直接聯絡我們"
+    }
+  },
+  "contact": {
+    "badge": "聯絡我們",
+    "title": "開始您的專案",
+    "subtitle": "告訴我們您的想法，讓我們一起創造卓越的數位產品",
+    "heading": "讓我們聊聊",
+    "description": "無論是新專案諮詢、技術支援，還是商務合作，我們都期待與您交流。",
+    "info": {
+      "email": "郵箱",
+      "phone": "電話",
+      "address": "地址",
+      "hours": "工作時間"
+    },
+    "form": {
+      "name": {
+        "label": "姓名",
+        "placeholder": "請輸入您的姓名",
+        "required": true
+      },
+      "email": {
+        "label": "郵箱",
+        "placeholder": "your@email.com",
+        "required": true
+      },
+      "company": {
+        "label": "公司名稱",
+        "placeholder": "您的公司名稱"
+      },
+      "phone": {
+        "label": "聯絡電話",
+        "placeholder": "+886 912 345 678"
+      },
+      "projectType": {
+        "label": "專案類型",
+        "required": true,
+        "options": {
+          "website": "網站開發",
+          "app": "APP 開發",
+          "both": "網站 + APP",
+          "redesign": "網站重構",
+          "maintenance": "維護優化",
+          "other": "其他"
+        }
+      },
+      "budget": {
+        "label": "預算範圍",
+        "placeholder": "請選擇預算範圍",
+        "options": {
+          "under50k": "5萬以下",
+          "50kto100k": "5-10萬",
+          "100kto200k": "10-20萬",
+          "over200k": "20萬以上"
+        }
+      },
+      "message": {
+        "label": "專案描述",
+        "placeholder": "請描述您的專案需求、目標、時間要求等...",
+        "required": true
+      },
+      "submit": "發送諮詢",
+      "submitting": "發送中...",
+      "success": "發送成功！我們會盡快聯絡您",
+      "error": "發送失敗，請稍後重試",
+      "privacy": "提交表單即表示您同意我們的隱私政策。我們承諾保護您的個人資訊安全。"
+    }
+  },
+  "ctaSection": {
+    "title": "準備好創造",
+    "titleHighlight": "卓越體驗",
+    "titleEnd": "了嗎？",
+    "subtitle": "無論是全新專案還是現有產品優化，我們都能為您提供專業的解決方案",
+    "buttons": {
+      "primary": "立即諮詢",
+      "secondary": "查看案例"
+    },
+    "stats": {
+      "projects": {
+        "value": "100+",
+        "label": "成功專案"
+      },
+      "clients": {
+        "value": "50+",
+        "label": "合作客戶"
+      },
+      "satisfaction": {
+        "value": "98%",
+        "label": "客戶滿意度"
+      }
+    }
   }
 }

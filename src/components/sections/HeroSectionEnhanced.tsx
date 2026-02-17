@@ -2,9 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
 export default function HeroSectionEnhanced() {
+  const t = useTranslations('home.hero');
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0f] pt-32 md:pt-40">
       {/* 精致背景渐变 */}
@@ -28,10 +31,10 @@ export default function HeroSectionEnhanced() {
               className="text-7xl md:text-8xl lg:text-9xl font-bold leading-[1.05] tracking-tight mb-6"
             >
               <span className="block text-white mb-3">
-                创新设计
+                {t('titleLine1')}
               </span>
               <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                驱动未来
+                {t('titleLine2')}
               </span>
             </motion.h1>
 
@@ -42,9 +45,9 @@ export default function HeroSectionEnhanced() {
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light"
             >
-              专注于网站开发、APP 开发和小程序开发
+              {t('subtitle')}
               <br className="hidden md:block" />
-              用技术和创意为您的品牌赋能
+              {t('subtitleLine2')}
             </motion.p>
           </div>
 
@@ -62,7 +65,7 @@ export default function HeroSectionEnhanced() {
                 className="group relative px-8 py-4 bg-white text-black rounded-xl font-medium text-lg overflow-hidden transition-all hover:shadow-2xl hover:shadow-purple-500/20"
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  开始您的项目
+                  {t('cta.primary')}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </motion.button>
@@ -75,7 +78,7 @@ export default function HeroSectionEnhanced() {
                 className="group px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 text-white rounded-xl font-medium text-lg hover:bg-white/10 hover:border-white/20 transition-all"
               >
                 <span className="flex items-center gap-2">
-                  查看案例
+                  {t('cta.secondary')}
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </span>
               </motion.button>
@@ -89,23 +92,19 @@ export default function HeroSectionEnhanced() {
             transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-wrap justify-center items-center gap-16 text-center"
           >
-            {[
-              { value: '150+', label: '成功项目' },
-              { value: '98%', label: '客户满意度' },
-              { value: '24h', label: '快速响应' },
-            ].map((stat, index) => (
+            {['projects', 'satisfaction', 'response'].map((key, index) => (
               <motion.div
-                key={index}
+                key={key}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
                 className="group cursor-default"
               >
                 <div className="text-5xl md:text-6xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                  {stat.value}
+                  {t(`stats.${key}.value`)}
                 </div>
                 <div className="text-sm text-gray-500 uppercase tracking-wider">
-                  {stat.label}
+                  {t(`stats.${key}.label`)}
                 </div>
               </motion.div>
             ))}

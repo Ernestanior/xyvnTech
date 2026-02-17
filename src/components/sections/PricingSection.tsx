@@ -4,60 +4,27 @@ import { motion } from 'framer-motion';
 import { Check, Star, Zap, Crown } from 'lucide-react';
 import ScrollReveal from '../ui/ScrollReveal';
 import Button from '../ui/Button';
+import { useTranslations } from 'next-intl';
 
 export default function PricingSection() {
+  const t = useTranslations('home.pricing');
+  
   const plans = [
     {
-      name: '基础版',
       icon: Star,
-      price: '5万起',
-      description: '适合初创企业和小型项目',
-      features: [
-        '响应式网站设计',
-        '5-10 个页面',
-        '基础 SEO 优化',
-        '移动端适配',
-        '3 个月免费维护',
-        '基础数据统计',
-      ],
+      planKey: 'basic',
       color: 'from-blue-500 to-cyan-500',
       popular: false,
     },
     {
-      name: '专业版',
       icon: Zap,
-      price: '10万起',
-      description: '适合成长型企业和中型项目',
-      features: [
-        '高级定制设计',
-        '10-20 个页面',
-        '高级 SEO 优化',
-        '动画和交互效果',
-        '6 个月免费维护',
-        '高级数据分析',
-        '内容管理系统',
-        '多语言支持',
-      ],
+      planKey: 'professional',
       color: 'from-purple-500 to-pink-500',
       popular: true,
     },
     {
-      name: '企业版',
       icon: Crown,
-      price: '20万起',
-      description: '适合大型企业和复杂项目',
-      features: [
-        '完全定制开发',
-        '无限页面',
-        '企业级 SEO',
-        '高级动画特效',
-        '12 个月免费维护',
-        '实时数据看板',
-        '高级 CMS 系统',
-        '多语言 + 多站点',
-        'API 集成',
-        '专属技术顾问',
-      ],
+      planKey: 'enterprise',
       color: 'from-orange-500 to-red-500',
       popular: false,
     },
@@ -76,10 +43,10 @@ export default function PricingSection() {
           <div className="text-center mb-16">
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              选择适合您的方案
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              透明的价格，专业的服务，为您的项目提供最佳性价比
+              {t('subtitle')}
             </p>
           </div>
         </ScrollReveal>
@@ -94,7 +61,7 @@ export default function PricingSection() {
                 {/* 热门标签 */}
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium rounded-full shadow-lg z-10">
-                    最受欢迎
+                    {t('popular')}
                   </div>
                 )}
 
@@ -112,24 +79,24 @@ export default function PricingSection() {
 
                   {/* 标题 */}
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    {plan.name}
+                    {t(`plans.${plan.planKey}.name`)}
                   </h3>
 
                   {/* 描述 */}
                   <p className="text-gray-400 text-sm mb-6">
-                    {plan.description}
+                    {t(`plans.${plan.planKey}.description`)}
                   </p>
 
                   {/* 价格 */}
                   <div className="mb-8">
                     <span className={`text-4xl font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
-                      {plan.price}
+                      {t(`plans.${plan.planKey}.price`)}
                     </span>
                   </div>
 
                   {/* 功能列表 */}
                   <ul className="space-y-4 mb-8 flex-grow">
-                    {plan.features.map((feature, idx) => (
+                    {(t.raw(`plans.${plan.planKey}.features`) as string[]).map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.color} flex items-center justify-center flex-shrink-0 mt-0.5`}>
                           <Check className="w-3 h-3 text-white" />
@@ -150,7 +117,7 @@ export default function PricingSection() {
                       }
                     }}
                   >
-                    立即咨询
+                    {t('button')}
                   </Button>
                 </div>
               </motion.div>
@@ -162,10 +129,10 @@ export default function PricingSection() {
         <ScrollReveal delay={0.4}>
           <div className="mt-16 text-center space-y-4">
             <p className="text-gray-400">
-              * 以上价格为参考起步价，具体费用根据项目需求评估
+              {t('notes.pricing')}
             </p>
             <p className="text-gray-500 text-sm">
-              支持定制开发 · 灵活付款方式 · 长期技术支持
+              {t('notes.support')}
             </p>
           </div>
         </ScrollReveal>

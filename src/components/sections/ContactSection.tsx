@@ -4,30 +4,33 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import ContactForm from '../ContactForm';
 import ScrollReveal from '../ui/ScrollReveal';
+import { useTranslations } from 'next-intl';
 
 export default function ContactSection() {
+  const t = useTranslations('home.contact');
+  
   const contactInfo = [
     {
       icon: Mail,
-      title: '邮箱',
+      titleKey: 'email',
       content: 'ern@xyvnai.com',
       link: 'mailto:ern@xyvnai.com',
     },
     {
       icon: Phone,
-      title: '电话',
+      titleKey: 'phone',
       content: '+65 9156 1413',
       link: 'tel:+6591561413',
     },
     {
       icon: MapPin,
-      title: '地址',
+      titleKey: 'address',
       content: '1 Jln Membina, Singapore 169479',
       link: null,
     },
     {
       icon: Clock,
-      title: '工作时间',
+      titleKey: 'hours',
       content: 'Monday - Friday 9:00-18:00',
       link: null,
     },
@@ -44,13 +47,13 @@ export default function ContactSection() {
               viewport={{ once: true }}
               className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4"
             >
-              <span className="text-blue-400 text-sm font-medium">联系我们</span>
+              <span className="text-blue-400 text-sm font-medium">{t('badge')}</span>
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              开始您的项目
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              告诉我们您的想法，让我们一起创造卓越的数字产品
+              {t('subtitle')}
             </p>
           </div>
         </ScrollReveal>
@@ -61,10 +64,10 @@ export default function ContactSection() {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">
-                  让我们聊聊
+                  {t('heading')}
                 </h3>
                 <p className="text-gray-400 mb-8">
-                  无论是新项目咨询、技术支持，还是商务合作，我们都期待与您交流。
+                  {t('description')}
                 </p>
               </div>
 
@@ -89,7 +92,7 @@ export default function ContactSection() {
                           <item.icon className="w-6 h-6 text-blue-400" />
                         </div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">{item.title}</h4>
+                          <h4 className="text-white font-medium mb-1">{t(`info.${item.titleKey}`)}</h4>
                           <p className="text-gray-400 group-hover:text-blue-400 transition-colors">
                             {item.content}
                           </p>
@@ -101,7 +104,7 @@ export default function ContactSection() {
                           <item.icon className="w-6 h-6 text-blue-400" />
                         </div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">{item.title}</h4>
+                          <h4 className="text-white font-medium mb-1">{t(`info.${item.titleKey}`)}</h4>
                           <p className="text-gray-400">{item.content}</p>
                         </div>
                       </div>

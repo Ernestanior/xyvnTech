@@ -5,16 +5,18 @@ import { motion } from 'framer-motion';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import Image from 'next/image';
 import { ExternalLink, TrendingUp, Users, Award } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function PortfolioSectionEnhanced() {
+  const t = useTranslations('home.portfolio');
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
-    { id: 'all', label: '全部项目' },
-    { id: 'website', label: '网站开发' },
-    { id: 'app', label: 'APP开发' },
-    { id: 'ecommerce', label: '电商平台' },
-    { id: 'enterprise', label: '企业系统' },
+    { id: 'all', label: t('categories.all') },
+    { id: 'website', label: t('categories.website') },
+    { id: 'app', label: t('categories.app') },
+    { id: 'ecommerce', label: t('categories.ecommerce') },
+    { id: 'enterprise', label: t('categories.enterprise') },
   ];
 
   const projects = [
@@ -207,10 +209,10 @@ export default function PortfolioSectionEnhanced() {
           <div className="text-center mb-16">
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              我们的作品
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              为各行业客户打造的优秀数字产品
+              {t('subtitle')}
             </p>
           </div>
         </ScrollReveal>
@@ -287,7 +289,7 @@ export default function PortfolioSectionEnhanced() {
 
                   {/* 核心亮点 */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3">核心亮点</h4>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-3">{t('highlights')}</h4>
                     <div className="grid grid-cols-2 gap-2">
                       {project.highlights.map((highlight, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-500">
@@ -327,7 +329,7 @@ export default function PortfolioSectionEnhanced() {
 
                   {/* 查看详情按钮 */}
                   <button className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors group/btn">
-                    <span>查看详情</span>
+                    <span>{t('viewDetails')}</span>
                     <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </button>
                 </div>
@@ -343,7 +345,7 @@ export default function PortfolioSectionEnhanced() {
         <ScrollReveal delay={0.4}>
           <div className="mt-16 text-center">
             <p className="text-gray-400 mb-6">
-              想要了解更多案例详情？
+              {t('cta.question')}
             </p>
             <button
               onClick={() => {
@@ -354,7 +356,7 @@ export default function PortfolioSectionEnhanced() {
               }}
               className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all"
             >
-              联系我们咨询
+              {t('cta.button')}
             </button>
           </div>
         </ScrollReveal>

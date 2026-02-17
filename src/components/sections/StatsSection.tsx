@@ -4,39 +4,38 @@ import { motion } from 'framer-motion';
 import { TrendingUp, Users, Award, Zap } from 'lucide-react';
 import ScrollReveal from '../ui/ScrollReveal';
 import AnimatedCounter from '../AnimatedCounter';
+import { useTranslations } from 'next-intl';
 
 export default function StatsSection() {
+  const t = useTranslations('home.statsSection');
+  
   const stats = [
     {
       icon: TrendingUp,
       value: 150,
       suffix: '+',
-      label: '成功项目',
-      description: '为客户交付的优质项目',
+      statKey: 'projects',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Users,
       value: 80,
       suffix: '+',
-      label: '合作客户',
-      description: '来自各行业的信任',
+      statKey: 'clients',
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: Award,
       value: 98,
       suffix: '%',
-      label: '客户满意度',
-      description: '持续的高质量服务',
+      statKey: 'satisfaction',
       color: 'from-orange-500 to-red-500',
     },
     {
       icon: Zap,
       value: 24,
       suffix: 'h',
-      label: '响应时间',
-      description: '快速响应客户需求',
+      statKey: 'response',
       color: 'from-green-500 to-emerald-500',
     },
   ];
@@ -51,10 +50,10 @@ export default function StatsSection() {
           <div className="text-center mb-16">
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              用数字证明实力
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              多年的行业经验，为客户创造真实价值
+              {t('subtitle')}
             </p>
           </div>
         </ScrollReveal>
@@ -89,12 +88,12 @@ export default function StatsSection() {
 
                   {/* 标签 */}
                   <h3 className="text-xl font-semibold text-white mb-2">
-                    {stat.label}
+                    {t(`items.${stat.statKey}.label`)}
                   </h3>
 
                   {/* 描述 */}
                   <p className="text-gray-400 text-sm">
-                    {stat.description}
+                    {t(`items.${stat.statKey}.description`)}
                   </p>
 
                   {/* 装饰线 */}
@@ -109,7 +108,7 @@ export default function StatsSection() {
         <ScrollReveal delay={0.5}>
           <div className="mt-16 text-center">
             <p className="text-gray-500 text-sm">
-              * 数据统计截至 2026 年 2 月，持续更新中
+              {t('note')}
             </p>
           </div>
         </ScrollReveal>

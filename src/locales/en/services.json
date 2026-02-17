@@ -1,0 +1,268 @@
+{
+  "page": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive digital solutions for your business"
+  },
+  "web": {
+    "hero": {
+      "title": "Build High-Performance",
+      "titleHighlight": "Modern Websites",
+      "description": "From corporate websites to e-commerce platforms, from CMS to web applications",
+      "descriptionLine2": "We build fast, secure, and maintainable websites with the latest tech stack",
+      "startConsulting": "Start Consulting",
+      "viewCases": "View Cases"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "subtitle": "Professional tech team and mature development process ensure project quality",
+      "performance": {
+        "title": "Blazing Fast",
+        "description": "Using Next.js 14 latest features, SSR + SSG, first load < 1.5s"
+      },
+      "seo": {
+        "title": "SEO Optimized",
+        "description": "Complete SEO strategy, structured data, auto-generated sitemap for better search visibility"
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Perfect adaptation across all devices, from mobile to tablet to desktop"
+      },
+      "security": {
+        "title": "Secure & Reliable",
+        "description": "HTTPS encryption, XSS/CSRF protection, regular security audits"
+      },
+      "scalable": {
+        "title": "Easy to Scale",
+        "description": "Modular architecture, component-based development for easy maintenance"
+      },
+      "modern": {
+        "title": "Modern Tech Stack",
+        "description": "TypeScript + React + Tailwind CSS for guaranteed code quality"
+      }
+    },
+    "techStack": {
+      "title": "Tech Stack",
+      "subtitle": "Using industry-leading technologies and tools",
+      "nextjs": "Full-stack Framework",
+      "react": "Frontend Framework",
+      "typescript": "Type Safety",
+      "tailwind": "Styling Solution",
+      "framer": "Animation Library",
+      "vercel": "Deployment Platform"
+    },
+    "process": {
+      "title": "Development Process",
+      "subtitle": "Standardized process ensures on-time delivery",
+      "step1": {
+        "title": "Requirements Analysis",
+        "description": "Deep understanding of your business needs and target users"
+      },
+      "step2": {
+        "title": "Prototype Design",
+        "description": "Create interactive prototypes to confirm features and flows"
+      },
+      "step3": {
+        "title": "Visual Design",
+        "description": "Craft visual solutions that match your brand"
+      },
+      "step4": {
+        "title": "Frontend Development",
+        "description": "Development with the latest tech stack"
+      },
+      "step5": {
+        "title": "Testing & Optimization",
+        "description": "Multi-device testing, performance optimization"
+      },
+      "step6": {
+        "title": "Launch & Deploy",
+        "description": "Domain setup, SSL certificate, go live"
+      }
+    }
+  },
+  "app": {
+    "hero": {
+      "title": "Build Apps",
+      "titleHighlight": "Users Love",
+      "description": "Native performance, smooth experience, supporting both iOS and Android",
+      "descriptionLine2": "From product design to app store launch, one-stop mobile app development service",
+      "startConsulting": "Start Consulting",
+      "viewCases": "View Cases"
+    },
+    "features": {
+      "title": "Core Advantages",
+      "subtitle": "Focused on mobile development, building high-quality apps",
+      "native": {
+        "title": "Native Experience",
+        "description": "Native technology ensures optimal app smoothness and performance"
+      },
+      "crossPlatform": {
+        "title": "Cross-Platform",
+        "description": "React Native - one codebase for iOS and Android, reducing development costs"
+      },
+      "performance": {
+        "title": "High Performance",
+        "description": "Optimized startup speed, response time, and memory usage for smooth experience"
+      },
+      "ux": {
+        "title": "User Experience",
+        "description": "Following iOS HIG and Material Design guidelines"
+      },
+      "push": {
+        "title": "Push Notifications",
+        "description": "Integrated APNs and FCM for precise message delivery"
+      },
+      "security": {
+        "title": "Data Security",
+        "description": "Local encryption, HTTPS communication, biometric authentication"
+      }
+    },
+    "platforms": {
+      "title": "Supported Platforms",
+      "subtitle": "Choose the best technical solution for your needs",
+      "ios": {
+        "name": "iOS Native",
+        "desc": "Swift / SwiftUI",
+        "features": ["Perfect for iPhone/iPad", "App Store Ready", "Latest iOS Features"]
+      },
+      "android": {
+        "name": "Android Native",
+        "desc": "Kotlin / Jetpack Compose",
+        "features": ["Material Design 3", "Google Play Ready", "Multi-device Support"]
+      },
+      "reactNative": {
+        "name": "React Native",
+        "desc": "Cross-platform",
+        "features": ["One Codebase", "Hot Updates", "Lower Costs"]
+      }
+    },
+    "process": {
+      "title": "Development Process",
+      "subtitle": "From idea to launch, professional guidance throughout",
+      "step1": {
+        "title": "Product Planning",
+        "description": "Feature definition, user personas, competitive analysis"
+      },
+      "step2": {
+        "title": "UI/UX Design",
+        "description": "Interaction design, visual design, design system"
+      },
+      "step3": {
+        "title": "Tech Selection",
+        "description": "Native or cross-platform, architecture design"
+      },
+      "step4": {
+        "title": "Development",
+        "description": "Frontend dev, backend API, database design"
+      },
+      "step5": {
+        "title": "Testing & Optimization",
+        "description": "Functional, performance, and compatibility testing"
+      },
+      "step6": {
+        "title": "Launch",
+        "description": "App Store / Google Play submission"
+      }
+    },
+    "cases": {
+      "title": "Success Stories",
+      "subtitle": "Our apps are loved by users",
+      "ecommerce": {
+        "name": "E-commerce App",
+        "description": "Product browsing, cart, payment, order management",
+        "stats": "100K+ DAU"
+      },
+      "social": {
+        "name": "Social App",
+        "description": "Instant messaging, posts, friend system",
+        "stats": "500K+ Users"
+      },
+      "tool": {
+        "name": "Utility App",
+        "description": "Productivity tools, data sync, offline support",
+        "stats": "4.8 Rating"
+      }
+    }
+  },
+  "miniprogram": {
+    "hero": {
+      "title": "Lightweight Apps",
+      "titleHighlight": "Instant Access",
+      "description": "WeChat, Alipay, Douyin mini-program development",
+      "descriptionLine2": "No download needed, scan and use, reach hundreds of millions of users",
+      "startConsulting": "Start Consulting"
+    },
+    "features": {
+      "title": "Mini-Program Advantages",
+      "subtitle": "Why choose mini-programs",
+      "ecosystem": {
+        "title": "WeChat Ecosystem",
+        "description": "Deep integration with WeChat, leveraging social networks for viral growth"
+      },
+      "instant": {
+        "title": "Instant Access",
+        "description": "No download or installation, scan and use, lower user barriers"
+      },
+      "userBase": {
+        "title": "Large User Base",
+        "description": "1.2B WeChat users, 1B Alipay users, reach more potential customers"
+      },
+      "ecommerce": {
+        "title": "E-commerce Features",
+        "description": "Product display, cart, payment, order management - complete e-commerce loop"
+      },
+      "offline": {
+        "title": "Offline Traffic",
+        "description": "QR code scanning, connecting online and offline, boosting store conversions"
+      },
+      "analytics": {
+        "title": "Data Analytics",
+        "description": "User behavior analysis, conversion funnels to optimize operations"
+      }
+    },
+    "platforms": {
+      "title": "Supported Platforms",
+      "wechat": {
+        "name": "WeChat Mini-Program",
+        "desc": "1.2B user ecosystem",
+        "features": ["Social Sharing", "WeChat Pay", "Official Account Link", "Moments Ads"]
+      },
+      "alipay": {
+        "name": "Alipay Mini-Program",
+        "desc": "1B user base",
+        "features": ["Sesame Credit", "Alipay", "Life Services", "Merchant Tools"]
+      },
+      "douyin": {
+        "name": "Douyin Mini-Program",
+        "desc": "Short video traffic",
+        "features": ["Video Attachment", "Live Commerce", "Content E-commerce", "Interest Recommendation"]
+      }
+    },
+    "scenarios": {
+      "title": "Use Cases",
+      "retail": {
+        "title": "E-commerce Retail",
+        "description": "Product display, online orders, membership, marketing campaigns"
+      },
+      "food": {
+        "title": "Food Delivery",
+        "description": "Menu browsing, online ordering, delivery, loyalty points"
+      },
+      "education": {
+        "title": "Education",
+        "description": "Course display, registration, video learning, homework submission"
+      },
+      "booking": {
+        "title": "Booking Services",
+        "description": "Service display, online booking, order management, review system"
+      },
+      "community": {
+        "title": "Community Buying",
+        "description": "Group buying, team purchase, delivery management, distribution"
+      },
+      "enterprise": {
+        "title": "Enterprise Tools",
+        "description": "Internal management, approval workflows, data stats, mobile office"
+      }
+    }
+  }
+}

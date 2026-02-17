@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "用技術創造",
+    "titleHighlight": "無限可能",
+    "description": "我們是一支充滿激情的技術團隊，專注於為企業提供高質量的數位產品開發服務",
+    "descriptionLine2": "從創意到實現，我們用代碼和設計改變世界",
+    "startCollaboration": "開始合作"
+  },
+  "mission": {
+    "title": "我們的使命",
+    "description": "通過創新的技術和卓越的設計，幫助企業實現數位化轉型，創造更好的用戶體驗和商業價值。讓每一個產品都成為用戶喜愛的作品。"
+  },
+  "vision": {
+    "title": "我們的願景",
+    "description": "成為行業領先的數位產品開發團隊，以技術創新和用戶體驗為核心，為客戶創造持續的價值，推動行業進步。"
+  },
+  "values": {
+    "title": "核心價值觀",
+    "subtitle": "這些價值觀指引著我們的每一個決策",
+    "excellence": {
+      "title": "專注極致",
+      "description": "追求每一個細節的完美，不妥協於平庸"
+    },
+    "userFirst": {
+      "title": "用戶至上",
+      "description": "以用戶體驗為核心，創造真正有價值的產品"
+    },
+    "innovation": {
+      "title": "持續創新",
+      "description": "擁抱新技術，不斷探索更好的解決方案"
+    },
+    "teamwork": {
+      "title": "團隊協作",
+      "description": "開放溝通，互相信任，共同成長"
+    }
+  },
+  "achievements": {
+    "awards": "行業獎項",
+    "projects": "成功項目",
+    "clients": "服務客戶",
+    "satisfaction": "客戶滿意度"
+  },
+  "team": {
+    "title": "專業團隊",
+    "subtitle": "匯聚行業精英，打造卓越產品",
+    "tech": {
+      "role": "技術團隊",
+      "count": "15+",
+      "description": "資深工程師",
+      "skills": ["前端開發", "後端開發", "移動開發", "DevOps"]
+    },
+    "design": {
+      "role": "設計團隊",
+      "count": "8+",
+      "description": "UI/UX 設計師",
+      "skills": ["用戶研究", "交互設計", "視覺設計", "品牌設計"]
+    },
+    "product": {
+      "role": "產品團隊",
+      "count": "5+",
+      "description": "產品經理",
+      "skills": ["需求分析", "產品規劃", "項目管理", "數據分析"]
+    }
+  },
+  "milestones": {
+    "title": "發展歷程",
+    "subtitle": "一路走來，感謝有你",
+    "2020": {
+      "title": "公司成立",
+      "description": "在深圳創立，專注數位產品開發"
+    },
+    "2021": {
+      "title": "團隊擴張",
+      "description": "團隊規模擴大到 20+ 人"
+    },
+    "2022": {
+      "title": "業務突破",
+      "description": "服務客戶超過 100 家企業"
+    },
+    "2023": {
+      "title": "技術升級",
+      "description": "全面採用最新技術棧"
+    },
+    "2024": {
+      "title": "持續增長",
+      "description": "項目成功率達 98%"
+    }
+  }
+}

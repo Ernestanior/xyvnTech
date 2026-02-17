@@ -5,8 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import { Quote, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function TestimonialsSectionEnhanced() {
+  const t = useTranslations('home.testimonials');
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -112,10 +114,10 @@ export default function TestimonialsSectionEnhanced() {
           <div className="text-center mb-16">
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              客户的信任是我们前进的动力
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              来自各行业客户的真实反馈
+              {t('subtitle')}
             </p>
           </div>
         </ScrollReveal>
@@ -230,10 +232,10 @@ export default function TestimonialsSectionEnhanced() {
         <ScrollReveal delay={0.3}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { value: '500+', label: '满意客户' },
-              { value: '98%', label: '客户满意度' },
-              { value: '4.9', label: '平均评分' },
-              { value: '95%', label: '推荐率' },
+              { value: '500+', key: 'clients' },
+              { value: '98%', key: 'satisfaction' },
+              { value: '4.9', key: 'rating' },
+              { value: '95%', key: 'recommendation' },
             ].map((stat, idx) => (
               <motion.div
                 key={idx}
@@ -246,7 +248,7 @@ export default function TestimonialsSectionEnhanced() {
                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
+                <div className="text-sm text-gray-400">{t(`stats.${stat.key}`)}</div>
               </motion.div>
             ))}
           </div>

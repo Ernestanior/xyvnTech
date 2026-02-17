@@ -1,0 +1,268 @@
+{
+  "page": {
+    "title": "我们的服务",
+    "subtitle": "为您提供全方位的数字化解决方案"
+  },
+  "web": {
+    "hero": {
+      "title": "打造高性能",
+      "titleHighlight": "现代化网站",
+      "description": "从企业官网到电商平台，从内容管理到 Web 应用",
+      "descriptionLine2": "我们用最新的技术栈为您打造快速、安全、易维护的网站",
+      "startConsulting": "开始咨询",
+      "viewCases": "查看案例"
+    },
+    "features": {
+      "title": "为什么选择我们",
+      "subtitle": "专业的技术团队，成熟的开发流程，保证项目质量",
+      "performance": {
+        "title": "极速性能",
+        "description": "采用 Next.js 14 最新特性，服务端渲染 + 静态生成，首屏加载 < 1.5秒"
+      },
+      "seo": {
+        "title": "SEO 优化",
+        "description": "完善的 SEO 策略，结构化数据，sitemap 自动生成，让您的网站更容易被搜索引擎发现"
+      },
+      "responsive": {
+        "title": "响应式设计",
+        "description": "完美适配所有设备，从手机到平板到桌面，提供一致的用户体验"
+      },
+      "security": {
+        "title": "安全可靠",
+        "description": "HTTPS 加密，XSS/CSRF 防护，定期安全审计，保护您的数据安全"
+      },
+      "scalable": {
+        "title": "易于扩展",
+        "description": "模块化架构设计，组件化开发，方便后期功能迭代和维护"
+      },
+      "modern": {
+        "title": "现代技术栈",
+        "description": "TypeScript + React + Tailwind CSS，代码质量有保障"
+      }
+    },
+    "techStack": {
+      "title": "技术栈",
+      "subtitle": "使用业界最先进的技术和工具",
+      "nextjs": "全栈框架",
+      "react": "前端框架",
+      "typescript": "类型安全",
+      "tailwind": "样式方案",
+      "framer": "动画库",
+      "vercel": "部署平台"
+    },
+    "process": {
+      "title": "开发流程",
+      "subtitle": "标准化的开发流程，确保项目按时交付",
+      "step1": {
+        "title": "需求分析",
+        "description": "深入了解您的业务需求和目标用户"
+      },
+      "step2": {
+        "title": "原型设计",
+        "description": "制作交互原型，确认功能和流程"
+      },
+      "step3": {
+        "title": "视觉设计",
+        "description": "打造符合品牌调性的视觉方案"
+      },
+      "step4": {
+        "title": "前端开发",
+        "description": "使用最新技术栈进行开发"
+      },
+      "step5": {
+        "title": "测试优化",
+        "description": "多端测试，性能优化，确保质量"
+      },
+      "step6": {
+        "title": "上线部署",
+        "description": "域名配置，SSL证书，正式上线"
+      }
+    }
+  },
+  "app": {
+    "hero": {
+      "title": "打造用户喜爱的",
+      "titleHighlight": "移动应用",
+      "description": "原生性能，流畅体验，支持 iOS 和 Android 双平台",
+      "descriptionLine2": "从产品设计到上架发布，提供一站式移动应用开发服务",
+      "startConsulting": "开始咨询",
+      "viewCases": "查看案例"
+    },
+    "features": {
+      "title": "核心优势",
+      "subtitle": "专注移动端开发，打造高质量应用",
+      "native": {
+        "title": "原生体验",
+        "description": "使用原生技术开发，确保应用流畅度和性能达到最佳状态"
+      },
+      "crossPlatform": {
+        "title": "跨平台方案",
+        "description": "React Native 一套代码，同时支持 iOS 和 Android，降低开发成本"
+      },
+      "performance": {
+        "title": "高性能优化",
+        "description": "启动速度、响应速度、内存占用全方位优化，提供丝滑体验"
+      },
+      "ux": {
+        "title": "用户体验",
+        "description": "遵循 iOS HIG 和 Material Design 规范，符合用户使用习惯"
+      },
+      "push": {
+        "title": "推送通知",
+        "description": "集成 APNs 和 FCM，实现精准的消息推送功能"
+      },
+      "security": {
+        "title": "数据安全",
+        "description": "本地加密存储，HTTPS 通信，生物识别认证，保护用户隐私"
+      }
+    },
+    "platforms": {
+      "title": "支持平台",
+      "subtitle": "根据您的需求选择最合适的技术方案",
+      "ios": {
+        "name": "iOS 原生",
+        "desc": "Swift / SwiftUI",
+        "features": ["完美适配 iPhone/iPad", "App Store 上架", "支持最新 iOS 特性"]
+      },
+      "android": {
+        "name": "Android 原生",
+        "desc": "Kotlin / Jetpack Compose",
+        "features": ["Material Design 3", "Google Play 上架", "多设备适配"]
+      },
+      "reactNative": {
+        "name": "React Native",
+        "desc": "跨平台方案",
+        "features": ["一套代码双端运行", "热更新支持", "降低开发成本"]
+      }
+    },
+    "process": {
+      "title": "开发流程",
+      "subtitle": "从想法到上架，全程专业指导",
+      "step1": {
+        "title": "产品规划",
+        "description": "功能定义、用户画像、竞品分析"
+      },
+      "step2": {
+        "title": "UI/UX 设计",
+        "description": "交互设计、视觉设计、设计规范"
+      },
+      "step3": {
+        "title": "技术选型",
+        "description": "原生 or 跨平台，架构设计"
+      },
+      "step4": {
+        "title": "开发实现",
+        "description": "前端开发、后端 API、数据库设计"
+      },
+      "step5": {
+        "title": "测试优化",
+        "description": "功能测试、性能测试、兼容性测试"
+      },
+      "step6": {
+        "title": "上架发布",
+        "description": "App Store / Google Play 上架"
+      }
+    },
+    "cases": {
+      "title": "成功案例",
+      "subtitle": "我们开发的应用深受用户喜爱",
+      "ecommerce": {
+        "name": "电商 APP",
+        "description": "商品浏览、购物车、支付、订单管理",
+        "stats": "日活 10万+"
+      },
+      "social": {
+        "name": "社交 APP",
+        "description": "即时通讯、动态发布、好友系统",
+        "stats": "用户 50万+"
+      },
+      "tool": {
+        "name": "工具 APP",
+        "description": "效率工具、数据同步、离线使用",
+        "stats": "评分 4.8"
+      }
+    }
+  },
+  "miniprogram": {
+    "hero": {
+      "title": "轻量级应用",
+      "titleHighlight": "即用即走",
+      "description": "微信、支付宝、抖音小程序开发",
+      "descriptionLine2": "无需下载，扫码即用，快速触达亿级用户",
+      "startConsulting": "开始咨询"
+    },
+    "features": {
+      "title": "小程序优势",
+      "subtitle": "为什么选择小程序",
+      "ecosystem": {
+        "title": "微信生态",
+        "description": "深度融入微信生态，利用社交关系链，实现病毒式传播"
+      },
+      "instant": {
+        "title": "即用即走",
+        "description": "无需下载安装，扫码即用，降低用户使用门槛"
+      },
+      "userBase": {
+        "title": "用户基数大",
+        "description": "微信 12 亿用户，支付宝 10 亿用户，触达更多潜在客户"
+      },
+      "ecommerce": {
+        "title": "电商功能",
+        "description": "商品展示、购物车、支付、订单管理，完整电商闭环"
+      },
+      "offline": {
+        "title": "线下引流",
+        "description": "二维码扫码，连接线上线下，提升门店客流转化"
+      },
+      "analytics": {
+        "title": "数据分析",
+        "description": "用户行为分析，转化漏斗，帮助优化运营策略"
+      }
+    },
+    "platforms": {
+      "title": "支持平台",
+      "wechat": {
+        "name": "微信小程序",
+        "desc": "12亿用户生态",
+        "features": ["社交分享", "微信支付", "公众号关联", "朋友圈广告"]
+      },
+      "alipay": {
+        "name": "支付宝小程序",
+        "desc": "10亿用户基础",
+        "features": ["芝麻信用", "支付宝支付", "生活服务", "商家工具"]
+      },
+      "douyin": {
+        "name": "抖音小程序",
+        "desc": "短视频流量",
+        "features": ["视频挂载", "直播带货", "内容电商", "兴趣推荐"]
+      }
+    },
+    "scenarios": {
+      "title": "应用场景",
+      "retail": {
+        "title": "电商零售",
+        "description": "商品展示、在线下单、会员管理、营销活动"
+      },
+      "food": {
+        "title": "餐饮外卖",
+        "description": "菜单浏览、在线点餐、外卖配送、会员积分"
+      },
+      "education": {
+        "title": "教育培训",
+        "description": "课程展示、在线报名、视频学习、作业提交"
+      },
+      "booking": {
+        "title": "预约服务",
+        "description": "服务展示、在线预约、订单管理、评价系统"
+      },
+      "community": {
+        "title": "社区团购",
+        "description": "团购活动、拼团功能、配送管理、分销系统"
+      },
+      "enterprise": {
+        "title": "企业工具",
+        "description": "内部管理、审批流程、数据统计、移动办公"
+      }
+    }
+  }
+}

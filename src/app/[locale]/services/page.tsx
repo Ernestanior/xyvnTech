@@ -1,14 +1,13 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useTranslations } from 'next-intl';
 import ServicesSection from '@/components/sections/ServicesSection';
 import ProcessSection from '@/components/sections/ProcessSection';
 import CTASection from '@/components/sections/CTASection';
 
-export const metadata: Metadata = {
-  title: '我们的服务 - ARVIX',
-  description: '提供专业的网站开发、APP开发、小程序开发等服务',
-};
-
 export default function ServicesPage() {
+  const t = useTranslations('services.page');
+  
   return (
     <>
       {/* 页面标题 */}
@@ -16,10 +15,10 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              我们的服务
+              {t('title')}
             </h1>
             <p className="text-xl text-gray-400">
-              为您提供全方位的数字化解决方案
+              {t('subtitle')}
             </p>
           </div>
         </div>

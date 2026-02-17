@@ -1,150 +1,132 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
-import NavbarEnhanced from '@/components/NavbarEnhanced';
-import FooterEnhanced from '@/components/FooterEnhanced';
-import { CheckCircle2, Zap, HeadphonesIcon, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Sparkles, TrendingUp, Users, Award, Zap, Shield, Clock, CheckCircle2, Star, Quote, Play, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
+import HeroSectionEnhanced from '@/components/sections/HeroSectionEnhanced'
+import FeaturesGrid from '@/components/sections/FeaturesGrid'
+import ServicesSection from '@/components/sections/ServicesSection'
+import StatsSection from '@/components/sections/StatsSection'
+import ProcessSection from '@/components/sections/ProcessSection'
+import PortfolioSectionEnhanced from '@/components/sections/PortfolioSectionEnhanced'
+import TechStackSectionEnhanced from '@/components/sections/TechStackSectionEnhanced'
+import TestimonialsSectionEnhanced from '@/components/sections/TestimonialsSectionEnhanced'
+import PricingSection from '@/components/sections/PricingSection'
+import FAQSection from '@/components/sections/FAQSection'
+import ContactSection from '@/components/sections/ContactSection'
+import CTASection from '@/components/sections/CTASection'
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState('innovation');
   const t = useTranslations();
-
-  const features = [
-    {
-      icon: CheckCircle2,
-      title: t('features.items.quality.title'),
-      description: t('features.items.quality.description'),
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      icon: Zap,
-      title: t('features.items.speed.title'),
-      description: t('features.items.speed.description'),
-      color: 'from-purple-500 to-pink-500',
-    },
-    {
-      icon: HeadphonesIcon,
-      title: t('features.items.support.title'),
-      description: t('features.items.support.description'),
-      color: 'from-green-500 to-emerald-500',
-    },
-    {
-      icon: Sparkles,
-      title: t('features.items.innovation.title'),
-      description: t('features.items.innovation.description'),
-      color: 'from-orange-500 to-red-500',
-    },
-  ];
-
-  const stats = [
-    { value: '200+', label: t('stats.projects') },
-    { value: '150+', label: t('stats.clients') },
-    { value: '8+', label: t('stats.experience') },
-    { value: '98%', label: t('stats.satisfaction') },
-  ];
 
   return (
     <>
-      <NavbarEnhanced />
-      
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
-        
+      <HeroSectionEnhanced />
+
+      {/* Value Proposition */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-pink-500/10" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              {t('hero.title')}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              {t('hero.subtitle')}
-            </p>
-            <p className="text-lg text-gray-400 mb-12">
-              {t('hero.description')}
-            </p>
-            
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all"
-              >
-                {t('hero.cta.primary')}
-              </Link>
-              <Link
-                href="/portfolio"
-                className="px-8 py-4 bg-white/10 border border-white/20 text-white rounded-full font-medium hover:bg-white/20 transition-all"
-              >
-                {t('hero.cta.secondary')}
-              </Link>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                {t('home.valueProposition.title')}
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  {' '}{t('home.valueProposition.titleHighlight')}
+                </span>
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                {t('home.valueProposition.subtitle')}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Zap,
+                  key: 'fastDelivery',
+                  color: 'from-yellow-500 to-orange-500',
+                },
+                {
+                  icon: Shield,
+                  key: 'qualityAssurance',
+                  color: 'from-blue-500 to-cyan-500',
+                },
+                {
+                  icon: Users,
+                  key: 'professionalTeam',
+                  color: 'from-purple-500 to-pink-500',
+                },
+                {
+                  icon: TrendingUp,
+                  key: 'continuousOptimization',
+                  color: 'from-green-500 to-emerald-500',
+                },
+                {
+                  icon: Award,
+                  key: 'industryRecognition',
+                  color: 'from-pink-500 to-rose-500',
+                },
+                {
+                  icon: Clock,
+                  key: 'support247',
+                  color: 'from-indigo-500 to-purple-500',
+                },
+              ].map((advantage, index) => (
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <motion.div
+                    whileHover={{ y: -10, scale: 1.02 }}
+                    className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all group overflow-hidden"
+                  >
+                    {/* 背景装饰 */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${advantage.color} opacity-0 group-hover:opacity-10 transition-opacity`} />
+                    
+                    {/* 图标 */}
+                    <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${advantage.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                      <advantage.icon className="w-8 h-8 text-white" />
+                    </div>
+
+                    {/* 内容 */}
+                    <h3 className="relative text-2xl font-bold text-white mb-3">
+                      {t(`home.valueProposition.advantages.${advantage.key}.title`)}
+                    </h3>
+                    <p className="relative text-gray-400 mb-6 leading-relaxed">
+                      {t(`home.valueProposition.advantages.${advantage.key}.desc`)}
+                    </p>
+
+                    {/* 特性列表 */}
+                    <ul className="relative space-y-2">
+                      {(t.raw(`home.valueProposition.advantages.${advantage.key}.features`) as string[]).map((feature, idx) => (
+                        <li key={idx} className="flex items-center gap-2 text-sm text-gray-500">
+                          <CheckCircle2 className="w-4 h-4 text-green-400" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                </ScrollReveal>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              {t('features.title')}
-            </h2>
-            <p className="text-xl text-gray-400">
-              {t('features.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all"
-              >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4`}>
-                  <feature.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900/50 to-purple-900/50">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-400">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-3xl p-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              {t('cta.title')}
-            </h2>
-            <p className="text-xl text-gray-400 mb-8">
-              {t('cta.description')}
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all"
-            >
-              {t('cta.button')}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <FooterEnhanced />
+      <FeaturesGrid />
+      <ServicesSection />
+      <StatsSection />
+      <ProcessSection />
+      <PortfolioSectionEnhanced />
+      <TechStackSectionEnhanced />
+      <TestimonialsSectionEnhanced />
+      <PricingSection />
+      <FAQSection />
+      <ContactSection />
+      <CTASection />
     </>
   );
 }
