@@ -2,9 +2,9 @@ export default function StructuredData() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'XYVN',
-    url: 'https://xyvn.com',
-    logo: 'https://xyvn.com/logo.png',
+    name: 'ARVIX',
+    url: 'https://arvixai.com',
+    logo: 'https://arvixai.com/logo.png',
     description: '专注网站开发、APP开发和小程序开发的科技公司',
     address: {
       '@type': 'PostalAddress',
@@ -16,7 +16,7 @@ export default function StructuredData() {
       '@type': 'ContactPoint',
       telephone: '+86-138-0000-0000',
       contactType: '客户服务',
-      email: 'hello@xyvn.com',
+      email: 'ern@xyvnai.com',
     },
     sameAs: [
       'https://github.com/xyvn',
@@ -28,12 +28,12 @@ export default function StructuredData() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'XYVN',
-    url: 'https://xyvn.com',
+    name: 'ARVIX',
+    url: 'https://arvixai.com',
     description: '打造卓越数字体验',
     publisher: {
       '@type': 'Organization',
-      name: 'XYVN',
+      name: 'ARVIX',
     },
   };
 
@@ -43,7 +43,7 @@ export default function StructuredData() {
     serviceType: '网站开发与APP开发',
     provider: {
       '@type': 'Organization',
-      name: 'XYVN',
+      name: 'ARVIX',
     },
     areaServed: 'CN',
     hasOfferCatalog: {

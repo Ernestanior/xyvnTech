@@ -17,7 +17,7 @@ function question(query: string): Promise<string> {
 }
 
 async function main() {
-  console.log('=== XYVN 管理员账号初始化 ===\n');
+  console.log('=== ARVIX 管理员账号初始化 ===\n');
 
   // 检查环境变量
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;

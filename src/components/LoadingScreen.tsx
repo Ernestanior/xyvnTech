@@ -41,7 +41,7 @@ export default function LoadingScreen() {
               className="mb-8"
             >
               <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                XYVN
+                ARVIX
               </h1>
             </motion.div>
 

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { locales } from '@/i18n/config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://xyvnai.com'
+  const baseUrl = 'https://arvixai.com'
   
   // 定义所有页面路径
   const pages = [

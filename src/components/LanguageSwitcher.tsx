@@ -5,7 +5,7 @@ import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, Check, ChevronDown } from 'lucide-react';
-import { locales, localeNames, localeFlags, type Locale } from '@/i18n/config';
+import { locales, localeNames, type Locale } from '@/i18n/config';
 
 export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
@@ -119,7 +119,6 @@ export default function LanguageSwitcher() {
                   } ${isPending ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-xl">{localeFlags[loc]}</span>
                     <span className="font-medium">{localeNames[loc]}</span>
                   </div>
                   {currentLocale === loc && <Check className="w-5 h-5" />}

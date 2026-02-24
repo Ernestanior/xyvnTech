@@ -85,7 +85,7 @@ export default function AdminInitPage() {
             </div>
           </motion.div>
           <h1 className="text-3xl font-bold text-white mb-2">创建管理员账号</h1>
-          <p className="text-gray-400">XYVN 博客管理系统初始化</p>
+          <p className="text-gray-400">ARVIX 博客管理系统初始化</p>
         </div>
 
         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">

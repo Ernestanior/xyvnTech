@@ -8,19 +8,19 @@ export default function TestimonialsSection() {
     {
       name: '张总',
       company: '某科技公司 CEO',
-      content: 'XYVN 团队的专业度和执行力令人印象深刻，他们不仅按时交付了高质量的产品，还提供了很多有价值的建议。',
+      content: 'ARVIX 团队的专业度和执行力令人印象深刻，他们不仅按时交付了高质量的产品，还提供了很多有价值的建议。',
       rating: 5,
     },
     {
       name: '李经理',
       company: '某电商平台负责人',
-      content: '与 XYVN 合作是一次非常愉快的经历。他们的技术实力强，沟通顺畅，完全理解我们的需求。',
+      content: '与 ARVIX 合作是一次非常愉快的经历。他们的技术实力强，沟通顺畅，完全理解我们的需求。',
       rating: 5,
     },
     {
       name: '王总监',
       company: '某互联网公司产品总监',
-      content: '项目上线后，用户反馈非常好。XYVN 在细节把控和用户体验方面做得很出色。',
+      content: '项目上线后，用户反馈非常好。ARVIX 在细节把控和用户体验方面做得很出色。',
       rating: 5,
     },
   ]

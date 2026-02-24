@@ -46,15 +46,15 @@ export async function generateMetadata({
     },
     description: t('siteDescription'),
     keywords: t('keywords'),
-    authors: [{ name: 'XYVN Tech' }],
-    creator: 'XYVN Tech',
-    publisher: 'XYVN Tech',
+    authors: [{ name: 'ARVIX Tech' }],
+    creator: 'ARVIX Tech',
+    publisher: 'ARVIX Tech',
     formatDetection: {
       email: false,
       address: false,
       telephone: false,
     },
-    metadataBase: new URL('https://xyvnai.com'),
+    metadataBase: new URL('https://arvixai.com'),
     alternates: {
       canonical: `/${locale}`,
       languages: {
@@ -67,7 +67,7 @@ export async function generateMetadata({
     openGraph: {
       title: t('siteTitle'),
       description: t('siteDescription'),
-      url: `https://xyvnai.com/${locale}`,
+      url: `https://arvixai.com/${locale}`,
       siteName: t('siteName'),
       locale: locale,
       alternateLocale: locales.filter(l => l !== locale),
@@ -86,7 +86,7 @@ export async function generateMetadata({
       title: t('siteTitle'),
       description: t('siteDescription'),
       images: ['/og-image.png'],
-      creator: '@xyvntech',
+      creator: '@arvixtech',
     },
     robots: {
       index: true,
