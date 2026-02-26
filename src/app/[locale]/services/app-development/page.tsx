@@ -175,7 +175,7 @@ export default function AppDevelopmentPage() {
                 <h3 className="text-3xl font-bold text-white mb-2">{platform.name}</h3>
                 <p className="text-orange-400 mb-6">{platform.tech}</p>
                 <ul className="space-y-3">
-                  {platform.features.map((feature, idx) => (
+                  {platform.features.map((feature:any, idx:any) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-400">
                       <div className="w-1.5 h-1.5 rounded-full bg-orange-400" />
                       {feature}

@@ -171,7 +171,7 @@ export default function MiniprogramPage() {
                 <h3 className="text-3xl font-bold text-white mb-2">{type.name}</h3>
                 <p className="text-amber-400 mb-6">{type.desc}</p>
                 <ul className="space-y-3">
-                  {type.features.map((feature, idx) => (
+                  {type.features.map((feature:any, idx:any) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-400">
                       <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                       {feature}
