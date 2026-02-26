@@ -21,7 +21,7 @@ export default function TechStackSectionEnhanced() {
     {
       icon: Code2,
       titleKey: 'frontend',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-amber-500 to-orange-500',
       techs: [
         { name: 'React', level: 95, logo: '⚛️' },
         { name: 'Next.js', level: 90, logo: '▲' },
@@ -33,7 +33,7 @@ export default function TechStackSectionEnhanced() {
     {
       icon: Smartphone,
       titleKey: 'mobile',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-orange-500 to-red-500',
       techs: [
         { name: 'React Native', level: 90, logo: '📱' },
         { name: 'Flutter', level: 85, logo: '🦋' },
@@ -57,7 +57,7 @@ export default function TechStackSectionEnhanced() {
     {
       icon: Cloud,
       titleKey: 'database',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-cyan-500 to-teal-500',
       techs: [
         { name: 'PostgreSQL', level: 90, logo: '🐘' },
         { name: 'MongoDB', level: 92, logo: '🍃' },
@@ -81,7 +81,7 @@ export default function TechStackSectionEnhanced() {
     {
       icon: Shield,
       titleKey: 'ai',
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-violet-500 to-purple-500',
       techs: [
         { name: 'TensorFlow', level: 80, logo: '🧠' },
         { name: 'OpenAI', level: 85, logo: '🤖' },
@@ -184,7 +184,7 @@ export default function TechStackSectionEnhanced() {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   className="flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/10 transition-all cursor-pointer"
                 >
-                  <tool.icon className="w-5 h-5 text-blue-400" />
+                  <tool.icon className="w-5 h-5 text-amber-400" />
                   <span className="text-gray-300 font-medium">{tool.name}</span>
                 </motion.div>
               ))}

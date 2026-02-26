@@ -21,11 +21,11 @@ export default function HeroSectionUltimate() {
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* 动态背景网格 */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(245,158,11,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(245,158,11,0.05)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
       
       {/* 渐变光晕 */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/30 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -37,7 +37,7 @@ export default function HeroSectionUltimate() {
         }}
       />
       <motion.div
-        className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl"
+        className="absolute top-1/3 right-1/4 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl"
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.5, 0.3, 0.5],
@@ -52,7 +52,7 @@ export default function HeroSectionUltimate() {
 
       {/* 浮动装饰元素 */}
       <motion.div
-        className="absolute top-20 left-20 text-blue-400/20"
+        className="absolute top-20 left-20 text-amber-400/20"
         animate={{
           y: [0, -20, 0],
           rotate: [0, 10, 0],
@@ -66,7 +66,7 @@ export default function HeroSectionUltimate() {
         <Sparkles size={40} />
       </motion.div>
       <motion.div
-        className="absolute top-40 right-40 text-purple-400/20"
+        className="absolute top-40 right-40 text-orange-400/20"
         animate={{
           y: [0, 20, 0],
           rotate: [0, -10, 0],
@@ -81,7 +81,7 @@ export default function HeroSectionUltimate() {
         <Zap size={50} />
       </motion.div>
       <motion.div
-        className="absolute bottom-40 left-1/3 text-pink-400/20"
+        className="absolute bottom-40 left-1/3 text-red-400/20"
         animate={{
           y: [0, -15, 0],
           rotate: [0, 15, 0],
@@ -106,24 +106,24 @@ export default function HeroSectionUltimate() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-full mb-8 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-full mb-8 backdrop-blur-sm"
         >
-          <Sparkles className="w-4 h-4 text-blue-400" />
-          <span className="text-sm font-medium text-blue-400">
+          <Sparkles className="w-4 h-4 text-amber-400" />
+          <span className="text-sm font-medium text-amber-400">
             打造卓越数字体验
           </span>
-          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+          <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
         </motion.div>
 
         {/* 主标题 - 使用文字逐字显示 */}
         <TextReveal className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-          <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-white via-amber-100 to-orange-100 bg-clip-text text-transparent">
             重新定义
           </span>
         </TextReveal>
         
         <TextReveal delay={0.3} className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8">
-          <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
             数字化体验
           </span>
         </TextReveal>
@@ -148,7 +148,7 @@ export default function HeroSectionUltimate() {
           className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
         >
           <MagneticButton
-            className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium text-lg overflow-hidden"
+            className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium text-lg overflow-hidden"
             onClick={() => {
               const contactSection = document.getElementById('contact');
               if (contactSection) {
@@ -160,7 +160,7 @@ export default function HeroSectionUltimate() {
               开始项目
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity" />
           </MagneticButton>
 
           <MagneticButton
@@ -204,13 +204,13 @@ export default function HeroSectionUltimate() {
               transition={{ duration: 0.5, delay: 1.4 + idx * 0.1 }}
               className="relative group"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
               <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">
                 <div className="text-3xl md:text-4xl font-bold mb-2">
                   <NumberTicker
                     value={stat.value}
                     suffix={stat.suffix}
-                    className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                    className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent"
                   />
                 </div>
                 <div className="text-sm text-gray-400">{stat.label}</div>

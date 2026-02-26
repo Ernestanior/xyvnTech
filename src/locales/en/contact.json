@@ -1,0 +1,105 @@
+{
+  "title": "Let's",
+  "subtitle": "Create Together",
+  "description": "Whether it's new project consultation, technical support, or business collaboration\nWe look forward to connecting with you to build exceptional digital products",
+  "status": {
+    "online": "Online Now",
+    "offline": "Off Hours"
+  },
+  "contactUs": "Contact Us",
+  "whatsappContact": "WhatsApp",
+  "whyChooseUs": "Why Choose Us",
+  "partnerDescription": "Professional, Efficient, Reliable Partner",
+  "contactMethodsTitle": "Contact Methods",
+  "contactMethodsSubtitle": "Choose the best way to reach us",
+  "available": "Available",
+  "offline": "Offline",
+  "officeTitle": "Office Location",
+  "officeSubtitle": "Our Singapore Office",
+  "reasons": {
+    "fastResponse": {
+      "title": "Fast Response",
+      "desc": "1 hour response during working hours",
+      "stat": "< 1h"
+    },
+    "professionalTeam": {
+      "title": "Professional Team",
+      "desc": "Average 8 years industry experience",
+      "stat": "8+ years"
+    },
+    "qualityGuarantee": {
+      "title": "Quality Guarantee",
+      "desc": "98% customer satisfaction",
+      "stat": "98%"
+    },
+    "successCases": {
+      "title": "Success Stories",
+      "desc": "200+ completed projects",
+      "stat": "200+"
+    }
+  },
+  "contactMethods": {
+    "whatsapp": {
+      "title": "WhatsApp",
+      "desc": "Contact us via WhatsApp",
+      "responseTime": "Instant reply"
+    },
+    "email": {
+      "title": "Email",
+      "desc": "Send detailed requirements via email",
+      "responseTime": "Reply within 12 hours"
+    }
+  },
+  "faqs": {
+    "title": "FAQs",
+    "subtitle": "Quickly learn about our services",
+    "q1": {
+      "question": "How long does project development usually take?",
+      "answer": "Depending on project complexity, websites typically take 1-3 weeks, apps 4-8 weeks, and mini programs 3-6 weeks."
+    },
+    "q2": {
+      "question": "How do you ensure project quality?",
+      "answer": "We have strict code review and testing processes, and provide a free maintenance period."
+    },
+    "q3": {
+      "question": "What payment methods do you support?",
+      "answer": "We support installment payments, milestone payments, monthly subscriptions, and more."
+    },
+    "q4": {
+      "question": "Do you provide after-sales service?",
+      "answer": "We provide 3-12 months free maintenance and lifetime technical support."
+    },
+    "q5": {
+      "question": "Can I see your portfolio first?",
+      "answer": "Absolutely! We have a rich collection of successful cases. Welcome to view our portfolio."
+    },
+    "q6": {
+      "question": "How do I start working with you?",
+      "answer": "After contacting us, we'll arrange a free consultation and provide a detailed proposal."
+    }
+  },
+  "office": {
+    "title": "Singapore Office",
+    "address": "1 Jln Membina, Singapore 169479",
+    "hours": "Monday - Friday 9:00-18:00"
+  },
+  "form": {
+    "title": "Send Message",
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "company": "Company Name (Optional)",
+    "service": "Service of Interest",
+    "budget": "Budget Range",
+    "message": "Project Description",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent! We will contact you soon."
+  },
+  "cta": {
+    "title": "Ready to start your project?",
+    "subtitle": "Contact us now for free consultation and project quote",
+    "freeConsult": "Free Consultation",
+    "phoneConsult": "Phone Consultation"
+  }
+}

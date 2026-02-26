@@ -1,0 +1,17 @@
+{
+  "title": "Tech Blog",
+  "subtitle": "Sharing Technical Insights, Exploring Development Paths",
+  "searchPlaceholder": "Search articles...",
+  "noArticles": "No articles yet",
+  "previousPage": "Previous",
+  "nextPage": "Next",
+  "comments": {
+    "pageTitle": "Page Header",
+    "searchBox": "Search Box",
+    "articleList": "Article List",
+    "coverImage": "Cover Image",
+    "content": "Content",
+    "metaInfo": "Meta Info",
+    "pagination": "Pagination"
+  }
+}

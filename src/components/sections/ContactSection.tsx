@@ -45,9 +45,9 @@ export default function ContactSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4"
+              className="inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-4"
             >
-              <span className="text-blue-400 text-sm font-medium">{t('badge')}</span>
+              <span className="text-amber-400 text-sm font-medium">{t('badge')}</span>
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {t('title')}
@@ -86,22 +86,22 @@ export default function ContactSection() {
                     {item.link ? (
                       <a
                         href={item.link}
-                        className="flex items-start gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-blue-500/50 transition-all"
+                        className="flex items-start gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-amber-500/50 transition-all"
                       >
-                        <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/20 transition-colors">
-                          <item.icon className="w-6 h-6 text-blue-400" />
+                        <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-amber-500/20 transition-colors">
+                          <item.icon className="w-6 h-6 text-amber-400" />
                         </div>
                         <div>
                           <h4 className="text-white font-medium mb-1">{t(`info.${item.titleKey}`)}</h4>
-                          <p className="text-gray-400 group-hover:text-blue-400 transition-colors">
+                          <p className="text-gray-400 group-hover:text-amber-400 transition-colors">
                             {item.content}
                           </p>
                         </div>
                       </a>
                     ) : (
                       <div className="flex items-start gap-4 p-4 bg-white/5 border border-white/10 rounded-xl">
-                        <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <item.icon className="w-6 h-6 text-blue-400" />
+                        <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <item.icon className="w-6 h-6 text-amber-400" />
                         </div>
                         <div>
                           <h4 className="text-white font-medium mb-1">{t(`info.${item.titleKey}`)}</h4>

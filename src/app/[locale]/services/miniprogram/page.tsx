@@ -1,89 +1,92 @@
 'use client';
 
 import { MessageSquare, Zap, Users, ShoppingCart, QrCode, TrendingUp } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import CTASection from '@/components/sections/CTASection';
 
 export default function MiniprogramPage() {
+  const t = useTranslations('services.miniprogram');
+
   const features = [
     {
       icon: MessageSquare,
-      title: '微信生态',
-      description: '深度融入微信生态，利用社交关系链，实现病毒式传播',
+      title: t('features.ecosystem.title'),
+      description: t('features.ecosystem.description'),
     },
     {
       icon: Zap,
-      title: '即用即走',
-      description: '无需下载安装，扫码即用，降低用户使用门槛',
+      title: t('features.instant.title'),
+      description: t('features.instant.description'),
     },
     {
       icon: Users,
-      title: '用户基数大',
-      description: '微信 12 亿用户，支付宝 10 亿用户，触达更多潜在客户',
+      title: t('features.userBase.title'),
+      description: t('features.userBase.description'),
     },
     {
       icon: ShoppingCart,
-      title: '电商功能',
-      description: '商品展示、购物车、支付、订单管理，完整电商闭环',
+      title: t('features.ecommerce.title'),
+      description: t('features.ecommerce.description'),
     },
     {
       icon: QrCode,
-      title: '线下引流',
-      description: '二维码扫码，连接线上线下，提升门店客流转化',
+      title: t('features.offline.title'),
+      description: t('features.offline.description'),
     },
     {
       icon: TrendingUp,
-      title: '数据分析',
-      description: '用户行为分析，转化漏斗，帮助优化运营策略',
+      title: t('features.analytics.title'),
+      description: t('features.analytics.description'),
     },
   ];
 
   const types = [
     {
-      name: '微信小程序',
-      desc: '12亿用户生态',
-      features: ['社交分享', '微信支付', '公众号关联', '朋友圈广告'],
+      name: t('platforms.wechat.name'),
+      desc: t('platforms.wechat.desc'),
+      features: t.raw('platforms.wechat.features'),
     },
     {
-      name: '支付宝小程序',
-      desc: '10亿用户基础',
-      features: ['芝麻信用', '支付宝支付', '生活服务', '商家工具'],
+      name: t('platforms.alipay.name'),
+      desc: t('platforms.alipay.desc'),
+      features: t.raw('platforms.alipay.features'),
     },
     {
-      name: '抖音小程序',
-      desc: '短视频流量',
-      features: ['视频挂载', '直播带货', '内容电商', '兴趣推荐'],
+      name: t('platforms.douyin.name'),
+      desc: t('platforms.douyin.desc'),
+      features: t.raw('platforms.douyin.features'),
     },
   ];
 
   const scenarios = [
     {
-      title: '电商零售',
-      desc: '商品展示、在线下单、会员管理、营销活动',
+      title: t('scenarios.retail.title'),
+      desc: t('scenarios.retail.description'),
       icon: '🛍️',
     },
     {
-      title: '餐饮外卖',
-      desc: '菜单浏览、在线点餐、外卖配送、会员积分',
+      title: t('scenarios.food.title'),
+      desc: t('scenarios.food.description'),
       icon: '🍜',
     },
     {
-      title: '教育培训',
-      desc: '课程展示、在线报名、视频学习、作业提交',
+      title: t('scenarios.education.title'),
+      desc: t('scenarios.education.description'),
       icon: '📚',
     },
     {
-      title: '预约服务',
-      desc: '服务展示、在线预约、订单管理、评价系统',
+      title: t('scenarios.booking.title'),
+      desc: t('scenarios.booking.description'),
       icon: '📅',
     },
     {
-      title: '社区团购',
-      desc: '团购活动、拼团功能、配送管理、分销系统',
+      title: t('scenarios.community.title'),
+      desc: t('scenarios.community.description'),
       icon: '👥',
     },
     {
-      title: '企业工具',
-      desc: '内部管理、审批流程、数据统计、移动办公',
+      title: t('scenarios.enterprise.title'),
+      desc: t('scenarios.enterprise.description'),
       icon: '💼',
     },
   ];
@@ -92,19 +95,19 @@ export default function MiniprogramPage() {
     <>
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-emerald-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-orange-500/10" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              轻量级应用
-              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                {' '}即用即走
+              {t('hero.title')}
+              <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+                {' '}{t('hero.titleHighlight')}
               </span>
             </h1>
             <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-              微信、支付宝、抖音小程序开发
+              {t('hero.description')}
               <br />
-              无需下载，扫码即用，快速触达亿级用户
+              {t('hero.descriptionLine2')}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button
@@ -114,9 +117,9 @@ export default function MiniprogramPage() {
                     contactSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-green-500/50 transition-all"
+                className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-amber-500/50 transition-all"
               >
-                开始咨询
+                {t('hero.startConsulting')}
               </button>
             </div>
           </div>
@@ -128,10 +131,10 @@ export default function MiniprogramPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              小程序优势
+              {t('features.title')}
             </h2>
             <p className="text-xl text-gray-400">
-              为什么选择小程序
+              {t('features.subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -140,7 +143,7 @@ export default function MiniprogramPage() {
                 key={index}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all group"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
@@ -156,7 +159,7 @@ export default function MiniprogramPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              支持平台
+              {t('platforms.title')}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -166,11 +169,11 @@ export default function MiniprogramPage() {
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
               >
                 <h3 className="text-3xl font-bold text-white mb-2">{type.name}</h3>
-                <p className="text-green-400 mb-6">{type.desc}</p>
+                <p className="text-amber-400 mb-6">{type.desc}</p>
                 <ul className="space-y-3">
                   {type.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-400">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                       {feature}
                     </li>
                   ))}
@@ -186,7 +189,7 @@ export default function MiniprogramPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              应用场景
+              {t('scenarios.title')}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

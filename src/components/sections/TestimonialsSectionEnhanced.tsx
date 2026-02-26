@@ -15,58 +15,58 @@ export default function TestimonialsSectionEnhanced() {
   const testimonials = [
     {
       id: 1,
-      name: '张明',
-      position: 'CEO',
-      company: '某知名零售品牌',
+      name: t('items.1.name'),
+      position: t('items.1.position'),
+      company: t('items.1.company'),
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
       rating: 5,
-      content: 'ARVIX 团队的专业能力令人印象深刻。他们不仅按时交付了高质量的电商平台，还提供了许多创新的解决方案。转化率提升了 230%，这个成果超出了我们的预期。',
-      project: '智慧零售电商平台',
-      tags: ['电商平台', '高转化率', '创新方案'],
+      content: t('items.1.content'),
+      project: t('items.1.project'),
+      tags: t.raw('items.1.tags'),
     },
     {
       id: 2,
-      name: '李华',
-      position: 'CTO',
-      company: '某上市科技公司',
+      name: t('items.2.name'),
+      position: t('items.2.position'),
+      company: t('items.2.company'),
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
       rating: 5,
-      content: '从需求分析到系统上线，整个过程非常顺畅。团队对技术的把控能力很强，微服务架构设计合理，系统稳定性达到了 99.9%。这是我们合作过最专业的开发团队。',
-      project: '企业级 SaaS 管理平台',
-      tags: ['企业系统', '高稳定性', '专业团队'],
+      content: t('items.2.content'),
+      project: t('items.2.project'),
+      tags: t.raw('items.2.tags'),
     },
     {
       id: 3,
-      name: '王芳',
-      position: '产品总监',
-      company: '某健身连锁品牌',
+      name: t('items.3.name'),
+      position: t('items.3.position'),
+      company: t('items.3.company'),
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80',
       rating: 5,
-      content: 'AI 动作识别功能的实现效果非常好，用户反馈很积极。APP 的设计也很精美，用户留存率达到了 85%。XYVN 真正理解了我们的需求，并给出了最佳的技术方案。',
-      project: '智能健身 APP',
-      tags: ['AI技术', '用户体验', '高留存'],
+      content: t('items.3.content'),
+      project: t('items.3.project'),
+      tags: t.raw('items.3.tags'),
     },
     {
       id: 4,
-      name: '陈强',
-      position: '运营总监',
-      company: '某知名教育机构',
+      name: t('items.4.name'),
+      position: t('items.4.position'),
+      company: t('items.4.company'),
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
       rating: 5,
-      content: '在线教育平台的直播功能非常稳定，支持上万人同时在线。学习路径规划功能帮助我们大幅提升了完课率。这个项目的成功离不开 XYVN 团队的努力。',
-      project: '在线教育平台',
-      tags: ['在线教育', '直播技术', '高完课率'],
+      content: t('items.4.content'),
+      project: t('items.4.project'),
+      tags: t.raw('items.4.tags'),
     },
     {
       id: 5,
-      name: '刘洋',
-      position: '技术负责人',
-      company: '某金融科技公司',
+      name: t('items.5.name'),
+      position: t('items.5.position'),
+      company: t('items.5.company'),
       avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80',
       rating: 5,
-      content: '安全性是金融产品的重中之重，ARVIX 在这方面做得非常出色。多重身份验证、数据加密等安全措施都很到位。产品上线后获得了 AAA 安全等级认证。',
-      project: '金融科技 APP',
-      tags: ['金融安全', 'AAA认证', '专业可靠'],
+      content: t('items.5.content'),
+      project: t('items.5.project'),
+      tags: t.raw('items.5.tags'),
     },
   ];
 
@@ -105,9 +105,9 @@ export default function TestimonialsSectionEnhanced() {
   return (
     <section className="py-32 relative overflow-hidden">
       {/* 背景装饰 */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent" />
-      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/5 to-transparent" />
+      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
         <ScrollReveal>
@@ -148,9 +148,9 @@ export default function TestimonialsSectionEnhanced() {
                           src={testimonials[activeIndex].avatar}
                           alt={testimonials[activeIndex].name}
                           fill
-                          className="rounded-full object-cover border-4 border-blue-500/30"
+                          className="rounded-full object-cover border-4 border-amber-500/30"
                         />
-                        <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                        <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center">
                           <Quote className="w-5 h-5 text-white" />
                         </div>
                       </div>
@@ -160,7 +160,7 @@ export default function TestimonialsSectionEnhanced() {
                       <p className="text-sm text-gray-400 mb-1">
                         {testimonials[activeIndex].position}
                       </p>
-                      <p className="text-sm text-blue-400 mb-4">
+                      <p className="text-sm text-amber-400 mb-4">
                         {testimonials[activeIndex].company}
                       </p>
                       <div className="flex justify-center md:justify-start gap-1 mb-4">
@@ -168,7 +168,7 @@ export default function TestimonialsSectionEnhanced() {
                           <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                         ))}
                       </div>
-                      <div className="inline-block px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-400">
+                      <div className="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-xs text-amber-400">
                         {testimonials[activeIndex].project}
                       </div>
                     </div>
@@ -220,7 +220,7 @@ export default function TestimonialsSectionEnhanced() {
                 }}
                 className={`h-2 rounded-full transition-all ${
                   idx === activeIndex
-                    ? 'w-8 bg-gradient-to-r from-blue-500 to-purple-500'
+                    ? 'w-8 bg-gradient-to-r from-amber-500 to-orange-500'
                     : 'w-2 bg-white/20 hover:bg-white/40'
                 }`}
               />

@@ -82,16 +82,17 @@
   "app": {
     "hero": {
       "title": "Build Apps",
-      "titleHighlight": "Users Love",
-      "description": "Native performance, smooth experience, supporting both iOS and Android",
-      "descriptionLine2": "From product design to app store launch, one-stop mobile app development service",
-      "startConsulting": "Start Consulting",
-      "viewCases": "View Cases"
+      "highlight": "Users Love",
+      "subtitle": "Native performance, smooth experience, supporting both iOS and Android\\nFrom product design to app store launch, one-stop mobile app development service",
+      "cta": {
+        "primary": "Start Consulting",
+        "secondary": "View Cases"
+      }
     },
     "features": {
       "title": "Core Advantages",
       "subtitle": "Focused on mobile development, building high-quality apps",
-      "native": {
+      "nativeExperience": {
         "title": "Native Experience",
         "description": "Native technology ensures optimal app smoothness and performance"
       },
@@ -99,19 +100,19 @@
         "title": "Cross-Platform",
         "description": "React Native - one codebase for iOS and Android, reducing development costs"
       },
-      "performance": {
+      "highPerformance": {
         "title": "High Performance",
         "description": "Optimized startup speed, response time, and memory usage for smooth experience"
       },
-      "ux": {
+      "userExperience": {
         "title": "User Experience",
         "description": "Following iOS HIG and Material Design guidelines"
       },
-      "push": {
+      "pushNotifications": {
         "title": "Push Notifications",
         "description": "Integrated APNs and FCM for precise message delivery"
       },
-      "security": {
+      "dataSecurity": {
         "title": "Data Security",
         "description": "Local encryption, HTTPS communication, biometric authentication"
       }
@@ -166,17 +167,17 @@
     "cases": {
       "title": "Success Stories",
       "subtitle": "Our apps are loved by users",
-      "ecommerce": {
+      "ecommerceApp": {
         "name": "E-commerce App",
         "description": "Product browsing, cart, payment, order management",
         "stats": "100K+ DAU"
       },
-      "social": {
+      "socialApp": {
         "name": "Social App",
         "description": "Instant messaging, posts, friend system",
         "stats": "500K+ Users"
       },
-      "tool": {
+      "utilityApp": {
         "name": "Utility App",
         "description": "Productivity tools, data sync, offline support",
         "stats": "4.8 Rating"

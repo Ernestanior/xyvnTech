@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { Calculator, TrendingDown, DollarSign, Clock } from 'lucide-react';
 import { Currency, formatPrice } from '@/data/currencyData';
 
@@ -11,6 +12,7 @@ interface CostComparisonCalculatorProps {
 }
 
 export default function CostComparisonCalculator({ currency, category }: CostComparisonCalculatorProps) {
+  const t = useTranslations('pricing');
   const [years, setYears] = useState(3);
   
   // 根据类别获取对应的价格数据
@@ -143,20 +145,20 @@ export default function CostComparisonCalculator({ currency, category }: CostCom
   const breakEvenMonths = Math.ceil(oneTimeCost.initial / pricing.subscription.monthly);
 
   return (
-    <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-3xl p-8">
+    <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-3xl p-8">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
           <Calculator className="w-6 h-6 text-white" />
         </div>
         <div>
-          <h3 className="text-2xl font-bold text-white">成本对比计算器</h3>
-          <p className="text-gray-400 text-sm">对比买断制与订阅制的长期成本</p>
+          <h3 className="text-2xl font-bold text-white">{t('costCalculator')}</h3>
+          <p className="text-gray-400 text-sm">{t('costCalculatorDesc')}</p>
         </div>
       </div>
 
       {/* 时间选择器 */}
       <div className="mb-8">
-        <label className="text-white font-medium mb-3 block">使用年限：{years} 年</label>
+        <label className="text-white font-medium mb-3 block">{t('yearsLabel', { years })}</label>
         <input
           type="range"
           min="1"
@@ -169,11 +171,11 @@ export default function CostComparisonCalculator({ currency, category }: CostCom
           }}
         />
         <div className="flex justify-between text-xs text-gray-500 mt-1">
-          <span>1年</span>
-          <span>2年</span>
-          <span>3年</span>
-          <span>4年</span>
-          <span>5年</span>
+          <span>1{t('year')}</span>
+          <span>2{t('year')}</span>
+          <span>3{t('year')}</span>
+          <span>4{t('year')}</span>
+          <span>5{t('year')}</span>
         </div>
       </div>
 
@@ -183,29 +185,29 @@ export default function CostComparisonCalculator({ currency, category }: CostCom
         <div className="bg-white/5 rounded-2xl p-6">
           <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
             <DollarSign className="w-5 h-5 text-orange-400" />
-            买断制
+            {t('mode.oneTime')}
           </h4>
           <div className="space-y-3 text-sm mb-4">
             <div className="flex justify-between">
-              <span className="text-gray-400">初始开发</span>
+              <span className="text-gray-400">{t('initialDev')}</span>
               <span className="text-white">{formatPrice(oneTimeCost.initial, currency)}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-400">年度维护 ({years}年)</span>
+              <span className="text-gray-400">{t('annualMaint', { years })}</span>
               <span className="text-white">{formatPrice(oneTimeCost.maintenance, currency)}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-400">服务器托管 ({years}年)</span>
+              <span className="text-gray-400">{t('hostingFee', { years })}</span>
               <span className="text-white">{formatPrice(oneTimeCost.hosting, currency)}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-400">功能更新 ({years}年)</span>
+              <span className="text-gray-400">{t('featureUpdates', { years })}</span>
               <span className="text-white">{formatPrice(oneTimeCost.updates, currency)}</span>
             </div>
           </div>
           <div className="pt-3 border-t border-white/10">
             <div className="flex justify-between items-center">
-              <span className="text-gray-400 font-medium">总计</span>
+              <span className="text-gray-400 font-medium">{t('total')}</span>
               <span className="text-2xl font-bold text-white">{formatPrice(oneTimeTotal, currency)}</span>
             </div>
           </div>
@@ -215,29 +217,29 @@ export default function CostComparisonCalculator({ currency, category }: CostCom
         <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6">
           <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
             <TrendingDown className="w-5 h-5 text-green-400" />
-            订阅制
+            {t('mode.subscription')}
           </h4>
           <div className="space-y-3 text-sm mb-4">
             <div className="flex justify-between">
-              <span className="text-gray-400">初装费</span>
+              <span className="text-gray-400">{t('setupFee')}</span>
               <span className="text-white">{formatPrice(subscriptionCost.setup, currency)}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-400">月费 ({years}年)</span>
+              <span className="text-gray-400">{t('monthlyFee', { years })}</span>
               <span className="text-white">{formatPrice(subscriptionCost.monthly, currency)}</span>
             </div>
             <div className="flex justify-between text-green-400">
-              <span>✓ 包含服务器</span>
-              <span>已包含</span>
+              <span>✓ {t('includesHosting')}</span>
+              <span>{t('included')}</span>
             </div>
             <div className="flex justify-between text-green-400">
-              <span>✓ 包含维护更新</span>
-              <span>已包含</span>
+              <span>✓ {t('includesUpdates')}</span>
+              <span>{t('included')}</span>
             </div>
           </div>
           <div className="pt-3 border-t border-white/20">
             <div className="flex justify-between items-center">
-              <span className="text-gray-400 font-medium">总计</span>
+              <span className="text-gray-400 font-medium">{t('total')}</span>
               <span className="text-2xl font-bold text-white">{formatPrice(subscriptionTotal, currency)}</span>
             </div>
           </div>
@@ -256,37 +258,37 @@ export default function CostComparisonCalculator({ currency, category }: CostCom
               <TrendingDown className="w-5 h-5 text-green-400" />
             </div>
             <div>
-              <h4 className="text-lg font-bold text-white">订阅制更划算</h4>
-              <p className="text-sm text-gray-400">{years}年总成本对比</p>
+              <h4 className="text-lg font-bold text-white">{t('subscriptionBetter')}</h4>
+              <p className="text-sm text-gray-400">{t('yearsComparison', { years })}</p>
             </div>
           </div>
           <div className="text-right">
             <div className="text-3xl font-bold text-green-400">
               {formatPrice(savings, currency)}
             </div>
-            <div className="text-sm text-gray-400">节省 {savingsPercentage}%</div>
+            <div className="text-sm text-gray-400">{t('save')} {savingsPercentage}%</div>
           </div>
         </div>
         
         <div className="flex items-center gap-2 text-sm text-gray-300">
-          <Clock className="w-4 h-4 text-blue-400" />
-          <span>买断制需要 {breakEvenMonths} 个月才能回本，而订阅制从第一天就开始节省成本</span>
+          <Clock className="w-4 h-4 text-amber-400" />
+          <span>{t('breakEven', { months: breakEvenMonths })}</span>
         </div>
       </motion.div>
 
       {/* 额外优势 */}
       <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-white/5 rounded-xl p-4">
-          <div className="text-blue-400 font-medium mb-1">✓ 零初始投入</div>
-          <div className="text-xs text-gray-400">无需大额前期投资</div>
+          <div className="text-amber-400 font-medium mb-1">✓ {t('zeroInitial')}</div>
+          <div className="text-xs text-gray-400">{t('noLargeInvestment')}</div>
         </div>
         <div className="bg-white/5 rounded-xl p-4">
-          <div className="text-purple-400 font-medium mb-1">✓ 持续更新</div>
-          <div className="text-xs text-gray-400">免费功能升级</div>
+          <div className="text-orange-400 font-medium mb-1">✓ {t('continuousUpdates')}</div>
+          <div className="text-xs text-gray-400">{t('freeUpgrades')}</div>
         </div>
         <div className="bg-white/5 rounded-xl p-4">
-          <div className="text-green-400 font-medium mb-1">✓ 灵活扩展</div>
-          <div className="text-xs text-gray-400">随时升级套餐</div>
+          <div className="text-green-400 font-medium mb-1">✓ {t('flexibleScale')}</div>
+          <div className="text-xs text-gray-400">{t('upgradeAnytime')}</div>
         </div>
       </div>
     </div>

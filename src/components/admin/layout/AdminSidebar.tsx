@@ -56,7 +56,7 @@ export default function AdminSidebar() {
       {/* Logo */}
       <div className="p-6 border-b border-gray-800">
         <Link href="/admin/dashboard" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
             <span className="text-xl font-bold text-white">X</span>
           </div>
           <div>
@@ -79,7 +79,7 @@ export default function AdminSidebar() {
                   whileHover={{ x: 4 }}
                   className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
                     active
-                      ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20'
+                      ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
                       : 'text-gray-400 hover:bg-white/5 hover:text-white'
                   }`}
                 >
@@ -109,7 +109,7 @@ export default function AdminSidebar() {
                 whileHover={{ x: 4 }}
                 className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
                   active
-                    ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20'
+                    ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
                     : 'text-gray-400 hover:bg-white/5 hover:text-white'
                 }`}
               >
@@ -135,7 +135,7 @@ export default function AdminSidebar() {
       {user && (
         <div className="p-4 border-t border-gray-800">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center">
               <span className="text-sm font-bold text-white">
                 {user.username.charAt(0).toUpperCase()}
               </span>

@@ -63,7 +63,7 @@ export default function FooterEnhanced() {
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com', label: 'GitHub', color: 'hover:text-gray-400' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter', color: 'hover:text-blue-400' },
+    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter', color: 'hover:text-amber-400' },
     { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn', color: 'hover:text-blue-600' },
     { icon: Mail, href: 'mailto:contact@arvixai.com', label: 'Email', color: 'hover:text-red-400' },
   ];
@@ -71,9 +71,9 @@ export default function FooterEnhanced() {
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-black text-white overflow-hidden">
       {/* 背景装饰 */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(245,158,11,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(245,158,11,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
 
       <div className="relative z-10">
         {/* 主要内容区 */}
@@ -83,7 +83,7 @@ export default function FooterEnhanced() {
             <div className="lg:col-span-4">
               <Link href="/" className="inline-block mb-6">
                 <motion.h3 
-                  className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  className="text-3xl font-bold bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent"
                   whileHover={{ scale: 1.05 }}
                 >
                   ARVIX
@@ -102,12 +102,12 @@ export default function FooterEnhanced() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={t('footer.enterEmail')}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 transition-all"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-amber-500/50 transition-all"
                     required
                   />
                   <button
                     type="submit"
-                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all group"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all group"
                   >
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -150,7 +150,7 @@ export default function FooterEnhanced() {
               {/* 服务 */}
               <div>
                 <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
-                  <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
+                  <div className="w-1 h-4 bg-gradient-to-b from-amber-500 to-orange-500 rounded-full" />
                   {t('footer.services')}
                 </h4>
                 <ul className="space-y-3">
@@ -171,7 +171,7 @@ export default function FooterEnhanced() {
               {/* 公司 */}
               <div>
                 <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
-                  <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
+                  <div className="w-1 h-4 bg-gradient-to-b from-amber-500 to-orange-500 rounded-full" />
                   {t('footer.company')}
                 </h4>
                 <ul className="space-y-3">
@@ -192,7 +192,7 @@ export default function FooterEnhanced() {
               {/* 资源 */}
               <div>
                 <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
-                  <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
+                  <div className="w-1 h-4 bg-gradient-to-b from-amber-500 to-orange-500 rounded-full" />
                   {t('footer.resources')}
                 </h4>
                 <ul className="space-y-3">
@@ -213,24 +213,24 @@ export default function FooterEnhanced() {
               {/* 联系方式 */}
               <div>
                 <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
-                  <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
+                  <div className="w-1 h-4 bg-gradient-to-b from-amber-500 to-orange-500 rounded-full" />
                   {t('footer.contact')}
                 </h4>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-gray-400">
-                    <Mail className="w-4 h-4 mt-1 flex-shrink-0 text-blue-400" />
+                    <Mail className="w-4 h-4 mt-1 flex-shrink-0 text-amber-400" />
                     <a href="mailto:contact@arvixai.com" className="hover:text-white transition-colors">
                       contact@arvixai.com
                     </a>
                   </li>
                   <li className="flex items-start gap-3 text-gray-400">
-                    <Phone className="w-4 h-4 mt-1 flex-shrink-0 text-blue-400" />
+                    <Phone className="w-4 h-4 mt-1 flex-shrink-0 text-amber-400" />
                     <a href="tel:+8613800138000" className="hover:text-white transition-colors">
                       +86 138 0013 8000
                     </a>
                   </li>
                   <li className="flex items-start gap-3 text-gray-400">
-                    <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-blue-400" />
+                    <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-amber-400" />
                     <span>{t('footer.location')}</span>
                   </li>
                 </ul>
@@ -263,7 +263,7 @@ export default function FooterEnhanced() {
         </div>
 
         {/* 底部装饰条 */}
-        <div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" />
+        <div className="h-1 bg-gradient-to-r from-amber-500 via-orange-500 to-red-500" />
       </div>
     </footer>
   );

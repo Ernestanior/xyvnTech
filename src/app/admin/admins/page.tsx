@@ -144,7 +144,7 @@ export default function AdminsPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-500"></div>
       </div>
     );
   }
@@ -174,8 +174,8 @@ export default function AdminsPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-blue-500/20 rounded-lg">
-              <Users className="w-6 h-6 text-blue-400" />
+            <div className="p-3 bg-amber-500/20 rounded-lg">
+              <Users className="w-6 h-6 text-amber-400" />
             </div>
             <div>
               <p className="text-gray-400 text-sm">总管理员</p>
@@ -186,8 +186,8 @@ export default function AdminsPage() {
 
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-purple-500/20 rounded-lg">
-              <Shield className="w-6 h-6 text-purple-400" />
+            <div className="p-3 bg-orange-500/20 rounded-lg">
+              <Shield className="w-6 h-6 text-orange-400" />
             </div>
             <div>
               <p className="text-gray-400 text-sm">超级管理员</p>
@@ -240,13 +240,13 @@ export default function AdminsPage() {
                 >
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-semibold">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white font-semibold">
                         {admin.username.charAt(0).toUpperCase()}
                       </div>
                       <div>
                         <p className="text-white font-medium">{admin.username}</p>
                         {admin.id === user?.id && (
-                          <span className="text-xs text-blue-400">(当前用户)</span>
+                          <span className="text-xs text-amber-400">(当前用户)</span>
                         )}
                       </div>
                     </div>
@@ -260,8 +260,8 @@ export default function AdminsPage() {
                   <td className="px-6 py-4">
                     <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium ${
                       admin.role === 'admin'
-                        ? 'bg-purple-500/20 text-purple-400'
-                        : 'bg-blue-500/20 text-blue-400'
+                        ? 'bg-orange-500/20 text-orange-400'
+                        : 'bg-amber-500/20 text-amber-400'
                     }`}>
                       <Shield className="w-3 h-3" />
                       {admin.role === 'admin' ? '超级管理员' : '编辑'}
@@ -293,7 +293,7 @@ export default function AdminsPage() {
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           onClick={() => handleEdit(admin)}
-                          className="p-2 text-blue-400 hover:bg-blue-500/20 rounded-lg transition-colors"
+                          className="p-2 text-amber-400 hover:bg-amber-500/20 rounded-lg transition-colors"
                         >
                           <Edit2 className="w-4 h-4" />
                         </motion.button>

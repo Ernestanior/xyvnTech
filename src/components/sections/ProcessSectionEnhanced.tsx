@@ -12,32 +12,32 @@ export default function ProcessSectionEnhanced() {
     {
       icon: MessageSquare,
       key: 'communication',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-amber-500 to-orange-500',
     },
     {
       icon: Lightbulb,
       key: 'design',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-orange-500 to-red-500',
     },
     {
       icon: Code,
       key: 'development',
-      color: 'from-pink-500 to-rose-500',
+      color: 'from-green-500 to-emerald-500',
     },
     {
       icon: TestTube,
       key: 'testing',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-cyan-500 to-teal-500',
     },
     {
       icon: Rocket,
       key: 'launch',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-yellow-500 to-orange-500',
     },
     {
       icon: HeadphonesIcon,
       key: 'support',
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-violet-500 to-purple-500',
     },
   ];
 
@@ -62,7 +62,7 @@ export default function ProcessSectionEnhanced() {
         {/* 流程时间线 */}
         <div className="relative max-w-6xl mx-auto">
           {/* 连接线 */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 -translate-y-1/2" />
 
           {/* 步骤网格 */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -77,7 +77,7 @@ export default function ProcessSectionEnhanced() {
                   className="relative"
                 >
                   {/* 步骤编号 */}
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10">
+                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10">
                     {index + 1}
                   </div>
 

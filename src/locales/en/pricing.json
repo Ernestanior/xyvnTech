@@ -1,0 +1,313 @@
+{
+  "title": "Transparent Pricing",
+  "subtitle": "Flexible Options",
+  "description": "No hidden fees, clear pricing structure to keep your budget under control",
+  "description2": "Choose the service package that best suits you and start your digital journey",
+  "viewPackages": "View Packages",
+  "priceCalculator": "Price Calculator",
+  "subscriptionCalculator": "Subscription Calculator",
+  "calculatorDesc": "Select project type and features to calculate price in real-time",
+  "subscriptionCalculatorDesc": "Calculate your total subscription cost",
+  "selectServiceType": "Select Service Type",
+  "selectServiceTypeDesc": "Choose the appropriate service type based on your needs",
+  "corporate-website": "Corporate Website",
+  "ecommerce": "E-commerce",
+  "landing-page": "Landing Page",
+  "admin-system": "Admin System",
+  "cross-platform-app": "App Development",
+  "miniprogram": "Mini Program",
+  "noSubscriptionTitle": "No subscription packages for this service type",
+  "comingSoon": "Coming Soon",
+  "comingSoonDesc": "We're launching subscription packages for more service types. Stay tuned!",
+  "viewOneTimePackages": "View One-Time Packages",
+  "whySubscription": "Why Subscription?",
+  "subscriptionComparison": "Compared to one-time purchase, subscription can save you more",
+  "advantages": {
+    "transparent": {
+      "title": "Transparent Pricing",
+      "desc": "No hidden fees, all costs clearly visible"
+    },
+    "ontime": {
+      "title": "On-Time Delivery",
+      "desc": "Strict adherence to project timelines with punctual delivery"
+    },
+    "dedicated": {
+      "title": "Dedicated Team",
+      "desc": "Professional team assigned to provide full-service support"
+    },
+    "continuous": {
+      "title": "Continuous Optimization",
+      "desc": "Ongoing optimization and support after project launch"
+    }
+  },
+  "subscribeNow": "Subscribe Now",
+  "contactQuote": "Contact for Quote",
+  "selectPackage": "Select Package",
+  "billing": {
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save": "Save {discount}%"
+  },
+  "mode": {
+    "subscription": "Subscription",
+    "oneTime": "One-Time"
+  },
+  "currency": {
+    "select": "Select Currency",
+    "USD": "US Dollar",
+    "SGD": "Singapore Dollar",
+    "CNY": "Chinese Yuan",
+    "JPY": "Japanese Yen",
+    "TWD": "Taiwan Dollar",
+    "HKD": "Hong Kong Dollar",
+    "EUR": "Euro",
+    "KRW": "Korean Won"
+  },
+  "bestFor": "Best for:",
+  "suitableFor": "Suitable for",
+  "startingAt": "Starting at",
+  "month": "month",
+  "year": "year",
+  "oneTime": "One-time",
+  "popular": "Popular",
+  "save": "Save",
+  "off": "off",
+  "originalPrice": "Original Price",
+  "discountedPrice": "Discounted Price",
+  "close": "Close",
+  "monthlyPrice": "month",
+  "annualSavings": "Annual savings",
+  "setupFee": "Setup fee",
+  "transactionFee": "Transaction fee",
+  "limits": {
+    "pages": "Pages",
+    "products": "Products",
+    "orders": "Orders",
+    "storage": "Storage",
+    "bandwidth": "Bandwidth",
+    "users": "Users"
+  },
+  "support": {
+    "label": "Technical Support",
+    "email": "Email",
+    "emailPhone": "Email + Phone",
+    "priority": "Priority",
+    "dedicated": "Dedicated"
+  },
+  "responseTime": "Response time",
+  "recommended": "Recommended",
+  "bestValue": "Best Value",
+  "priceDisclaimer": "Estimated range, final price based on requirements",
+  "costCalculator": "Cost Comparison Calculator",
+  "costCalculatorDesc": "Compare long-term costs between one-time and subscription",
+  "yearsLabel": "Usage period: {years} years",
+  "initialDev": "Initial Development",
+  "annualMaint": "Annual Maintenance ({years} years)",
+  "hostingFee": "Server Hosting ({years} years)",
+  "featureUpdates": "Feature Updates ({years} years)",
+  "total": "Total",
+  "monthlyFee": "Monthly Fee ({years} years)",
+  "includesHosting": "Includes Hosting",
+  "included": "Included",
+  "includesUpdates": "Includes Maintenance",
+  "subscriptionBetter": "Subscription is Better Value",
+  "yearsComparison": "{years} Year Cost Comparison",
+  "breakEven": "One-time needs {months} months to break even, subscription saves from day one",
+  "zeroInitial": "Zero Initial Investment",
+  "noLargeInvestment": "No large upfront investment needed",
+  "continuousUpdates": "Continuous Updates",
+  "freeUpgrades": "Free feature upgrades",
+  "flexibleScale": "Flexible Scaling",
+  "upgradeAnytime": "Upgrade anytime",
+  "features": {
+    "pages": "{count} Pages",
+    "templateDesign": "Template Custom Design",
+    "originalDesign": "Original Design",
+    "premiumDesign": "Premium Custom Design",
+    "responsive": "Responsive Design",
+    "fullDevice": "Full Device Adaptation",
+    "seoBasic": "Basic SEO Optimization",
+    "seoAdvanced": "Advanced SEO Optimization",
+    "seoPro": "Professional SEO Optimization",
+    "cloudHosting": "Cloud Server Hosting",
+    "vps": "VPS Server",
+    "dedicated": "Dedicated Server",
+    "ssl": "SSL Certificate",
+    "cdn": "CDN Acceleration",
+    "backup": "Daily Auto Backup",
+    "updates": "Content Updates",
+    "supportEmail": "Email Technical Support",
+    "supportEmailPhone": "Email + Phone Support",
+    "supportPriority": "Priority Technical Support",
+    "cms": "CMS Backend",
+    "cmsBasic": "Basic CMS Backend",
+    "cmsAdvanced": "Advanced CMS Backend",
+    "multilang": "Multilingual",
+    "bilingual": "Bilingual",
+    "trilingual": "Trilingual",
+    "analytics": "Data Analytics",
+    "analyticsPro": "Professional Data Analytics",
+    "training": "Online Training",
+    "contactForm": "Contact Form",
+    "wordpress": "WordPress Backend",
+    "blog": "Blog System",
+    "animation": "Advanced Animation Effects",
+    "3dEffects": "3D/WebGL Effects",
+    "news": "Blog + News System",
+    "liveChat": "Live Chat",
+    "customCms": "Custom CMS",
+    "serverDeploy": "Free Server Deployment",
+    "monitoring": "Performance Monitoring",
+    "domain": "Free Domain + SSL",
+    "maintenance3": "3 Months Free Maintenance",
+    "maintenance6": "6 Months Free Maintenance",
+    "maintenance12": "12 Months Free Maintenance",
+    "shopify": "Shopify Platform Customization",
+    "sku100": "100 SKUs",
+    "payment2": "2 Payment Gateways",
+    "logistics": "Basic Logistics Integration",
+    "coupon": "Coupon System",
+    "reviews": "Product Reviews",
+    "mobileOpt": "Mobile Optimization"
+  },
+  "packages": {
+    "corp-starter": {
+      "name": "Starter",
+      "description": "Perfect for startups and personal brands",
+      "targetAudience": "Startups, Personal Brands"
+    },
+    "corp-growth": {
+      "name": "Business",
+      "description": "Ideal for growing businesses",
+      "targetAudience": "Growing Businesses"
+    },
+    "corp-business": {
+      "name": "Enterprise",
+      "description": "Designed for medium and large enterprises",
+      "targetAudience": "Medium to Large Enterprises"
+    },
+    "ecom-starter": {
+      "name": "Startup",
+      "description": "Great for new sellers and small e-commerce",
+      "targetAudience": "New Sellers, Small E-commerce"
+    },
+    "ecom-growth": {
+      "name": "Growth",
+      "description": "For growing e-commerce businesses",
+      "targetAudience": "Growing E-commerce Businesses"
+    },
+    "ecom-business": {
+      "name": "Enterprise",
+      "description": "For established e-commerce enterprises",
+      "targetAudience": "Established E-commerce Enterprises"
+    },
+    "admin-starter": {
+      "name": "Basic",
+      "description": "Perfect for small teams and startups",
+      "targetAudience": "Small Teams, Startups"
+    },
+    "admin-growth": {
+      "name": "Professional",
+      "description": "Ideal for growing businesses",
+      "targetAudience": "Growing Businesses"
+    },
+    "admin-business": {
+      "name": "Enterprise",
+      "description": "Designed for large enterprises",
+      "targetAudience": "Large Enterprises"
+    },
+    "app-starter": {
+      "name": "Basic",
+      "description": "Perfect for MVPs and small apps",
+      "targetAudience": "MVP Projects, Small Apps"
+    },
+    "app-growth": {
+      "name": "Professional",
+      "description": "Ideal for growing apps",
+      "targetAudience": "Growing Apps"
+    },
+    "app-business": {
+      "name": "Enterprise",
+      "description": "Designed for large applications",
+      "targetAudience": "Large Apps, Enterprise Products"
+    },
+    "mini-starter": {
+      "name": "Basic",
+      "description": "Perfect for showcase mini programs",
+      "targetAudience": "Showcase Mini Programs"
+    },
+    "mini-growth": {
+      "name": "Business",
+      "description": "Ideal for service-oriented mini programs",
+      "targetAudience": "Service-oriented Mini Programs"
+    },
+    "mini-business": {
+      "name": "Enterprise",
+      "description": "Designed for e-commerce mini programs",
+      "targetAudience": "E-commerce Mini Programs, Enterprise Apps"
+    },
+    "landing-starter": {
+      "name": "Basic",
+      "description": "Perfect for single-page campaigns",
+      "targetAudience": "Single-page Marketing, Event Promotion"
+    },
+    "landing-growth": {
+      "name": "Professional",
+      "description": "Ideal for multi-page campaigns",
+      "targetAudience": "Marketing Campaigns, Product Launches"
+    },
+    "landing-business": {
+      "name": "Enterprise",
+      "description": "Designed for large marketing campaigns",
+      "targetAudience": "Large Marketing Campaigns, Brand Promotion"
+    },
+    "website-starter": {
+      "name": "Starter Website",
+      "description": "Perfect for startups and personal studios",
+      "targetAudience": "Startups, Personal Studios, Small Businesses",
+      "features": [
+        "5-page elegant design",
+        "Responsive layout",
+        "Basic SEO optimization",
+        "Contact form",
+        "WordPress backend",
+        "3 months free maintenance"
+      ],
+      "bestFor": ["Startups", "Personal Studios", "Small Businesses"]
+    },
+    "website-business": {
+      "name": "Business Website",
+      "description": "Ideal for SMEs to showcase brand image",
+      "targetAudience": "SMEs, Brand Companies, Service Enterprises",
+      "features": [
+        "10-page original design",
+        "Advanced animation effects",
+        "Bilingual support",
+        "Deep SEO optimization",
+        "Blog system",
+        "Next.js tech stack",
+        "6 months free maintenance",
+        "Free domain + SSL"
+      ],
+      "bestFor": ["SMEs", "Brand Companies", "Service Enterprises"]
+    },
+    "website-enterprise": {
+      "name": "Enterprise Website",
+      "description": "Designed for large enterprises and groups",
+      "targetAudience": "Large Enterprises, Group Companies, Listed Companies",
+      "features": [
+        "20-page custom design",
+        "3D/WebGL effects",
+        "Trilingual support",
+        "Enterprise-level SEO",
+        "Blog + News system",
+        "Live chat",
+        "Custom CMS",
+        "12 months free maintenance",
+        "Free server deployment",
+        "Performance monitoring"
+      ],
+      "bestFor": ["Large Enterprises", "Group Companies", "Listed Companies"]
+    }
+  }
+}

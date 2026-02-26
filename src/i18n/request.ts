@@ -16,6 +16,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const about = (await import(`@/locales/${locale}/about.json`)).default;
   const services = (await import(`@/locales/${locale}/services.json`)).default;
   const home = (await import(`@/locales/${locale}/home.json`)).default;
+  const pricing = (await import(`@/locales/${locale}/pricing.json`)).default;
+  const contact = (await import(`@/locales/${locale}/contact.json`)).default;
+  const portfolio = (await import(`@/locales/${locale}/portfolio.json`)).default;
 
   return {
     locale,
@@ -24,6 +27,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
       about,
       services,
       home,
+      pricing,
+      contact,
+      portfolio,
     }
   };
 });

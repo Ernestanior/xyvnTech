@@ -15,35 +15,35 @@ export default function StatsSection() {
       value: 150,
       suffix: '+',
       statKey: 'projects',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-amber-500 to-orange-500',
     },
     {
       icon: Users,
       value: 80,
       suffix: '+',
       statKey: 'clients',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-orange-500 to-red-500',
     },
     {
       icon: Award,
       value: 98,
       suffix: '%',
       statKey: 'satisfaction',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-green-500 to-emerald-500',
     },
     {
       icon: Zap,
       value: 24,
       suffix: 'h',
       statKey: 'response',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-cyan-500 to-teal-500',
     },
   ];
 
   return (
     <section className="py-24 relative overflow-hidden">
       {/* 背景装饰 */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/5 to-transparent" />
       
       <div className="container mx-auto px-6 relative z-10">
         <ScrollReveal>

@@ -1,0 +1,313 @@
+{
+  "title": "透明定價",
+  "subtitle": "靈活選擇",
+  "description": "無隱藏費用，清晰的價格結構，讓您的預算更可控",
+  "description2": "選擇最適合您的服務套餐，開啟數位化之旅",
+  "viewPackages": "查看套餐",
+  "priceCalculator": "價格計算器",
+  "subscriptionCalculator": "訂閱費用計算器",
+  "calculatorDesc": "選擇專案類型和功能，即時計算價格",
+  "subscriptionCalculatorDesc": "計算您的訂閱總成本",
+  "selectServiceType": "選擇服務類型",
+  "selectServiceTypeDesc": "根據您的需求選擇合適的服務類型",
+  "corporate-website": "企業官網",
+  "ecommerce": "電商網站",
+  "landing-page": "一站式網頁",
+  "admin-system": "管理系統",
+  "cross-platform-app": "APP開發",
+  "miniprogram": "小程序",
+  "noSubscriptionTitle": "該服務類型暫無訂閱套餐",
+  "comingSoon": "即將推出",
+  "comingSoonDesc": "我們正在為更多服務類型推出訂閱套餐，敬請期待！",
+  "viewOneTimePackages": "查看買斷制套餐",
+  "whySubscription": "為什麼選擇訂閱制？",
+  "subscriptionComparison": "對比買斷制，訂閱制能為您節省更多成本",
+  "advantages": {
+    "transparent": {
+      "title": "透明報價",
+      "desc": "無隱藏費用，所有成本清晰可見"
+    },
+    "ontime": {
+      "title": "按時交付",
+      "desc": "嚴格遵守專案時間表，準時交付"
+    },
+    "dedicated": {
+      "title": "專屬團隊",
+      "desc": "配備專業團隊，全程跟進服務"
+    },
+    "continuous": {
+      "title": "持續優化",
+      "desc": "專案上線後持續優化和支援"
+    }
+  },
+  "subscribeNow": "立即訂閱",
+  "contactQuote": "聯繫報價",
+  "selectPackage": "選擇套餐",
+  "billing": {
+    "monthly": "月付",
+    "annual": "年付",
+    "save": "省 {discount}%"
+  },
+  "mode": {
+    "subscription": "訂閱制",
+    "oneTime": "買斷制"
+  },
+  "currency": {
+    "select": "選擇幣種",
+    "USD": "美元",
+    "SGD": "新加坡元",
+    "CNY": "人民幣",
+    "JPY": "日元",
+    "TWD": "新台幣",
+    "HKD": "港幣",
+    "EUR": "歐元",
+    "KRW": "韓元"
+  },
+  "bestFor": "適合：",
+  "suitableFor": "適合",
+  "startingAt": "起",
+  "month": "月",
+  "year": "年",
+  "oneTime": "一次性",
+  "popular": "熱門推薦",
+  "save": "節省",
+  "off": "折扣",
+  "originalPrice": "原價",
+  "discountedPrice": "折扣價",
+  "close": "關閉",
+  "monthlyPrice": "月",
+  "annualSavings": "年付節省",
+  "setupFee": "初裝費",
+  "transactionFee": "交易費",
+  "limits": {
+    "pages": "頁面",
+    "products": "SKU",
+    "orders": "訂單",
+    "storage": "存儲",
+    "bandwidth": "流量",
+    "users": "用戶"
+  },
+  "support": {
+    "label": "技術支援",
+    "email": "郵件",
+    "emailPhone": "郵件+電話",
+    "priority": "優先支援",
+    "dedicated": "專屬支援"
+  },
+  "responseTime": "響應時間",
+  "recommended": "推薦",
+  "bestValue": "最超值",
+  "priceDisclaimer": "估價範圍，具體以需求為準",
+  "costCalculator": "成本對比計算器",
+  "costCalculatorDesc": "對比買斷制與訂閱制的長期成本",
+  "yearsLabel": "使用年限：{years} 年",
+  "initialDev": "初始開發",
+  "annualMaint": "年度維護 ({years}年)",
+  "hostingFee": "服務器託管 ({years}年)",
+  "featureUpdates": "功能更新 ({years}年)",
+  "total": "總計",
+  "monthlyFee": "月費 ({years}年)",
+  "includesHosting": "包含服務器",
+  "included": "已包含",
+  "includesUpdates": "包含維護更新",
+  "subscriptionBetter": "訂閱制更划算",
+  "yearsComparison": "{years}年總成本對比",
+  "breakEven": "買斷制需要 {months} 個月才能回本，而訂閱制從第一天就開始節省成本",
+  "zeroInitial": "零初始投入",
+  "noLargeInvestment": "無需大額前期投資",
+  "continuousUpdates": "持續更新",
+  "freeUpgrades": "免費功能升級",
+  "flexibleScale": "靈活擴展",
+  "upgradeAnytime": "隨時升級套餐",
+  "features": {
+    "pages": "{count}個頁面",
+    "templateDesign": "模板定製設計",
+    "originalDesign": "原創設計",
+    "premiumDesign": "高端定製設計",
+    "responsive": "響應式設計",
+    "fullDevice": "全設備適配",
+    "seoBasic": "基礎SEO優化",
+    "seoAdvanced": "高級SEO優化",
+    "seoPro": "專業SEO優化",
+    "cloudHosting": "雲服務器託管",
+    "vps": "VPS服務器",
+    "dedicated": "獨立服務器",
+    "ssl": "SSL證書",
+    "cdn": "CDN加速",
+    "backup": "每日自動備份",
+    "updates": "內容更新",
+    "supportEmail": "郵件技術支援",
+    "supportEmailPhone": "郵件+電話支援",
+    "supportPriority": "優先技術支援",
+    "cms": "CMS後台",
+    "cmsBasic": "基礎CMS後台",
+    "cmsAdvanced": "高級CMS後台",
+    "multilang": "多語言",
+    "bilingual": "雙語言",
+    "trilingual": "三語言",
+    "analytics": "數據分析",
+    "analyticsPro": "專業數據分析",
+    "training": "在線培訓",
+    "contactForm": "聯繫表單",
+    "wordpress": "WordPress後台",
+    "blog": "博客系統",
+    "animation": "高級動畫效果",
+    "3dEffects": "3D/WebGL特效",
+    "news": "博客+新聞系統",
+    "liveChat": "在線客服",
+    "customCms": "自定義CMS",
+    "serverDeploy": "免費服務器部署",
+    "monitoring": "性能監控",
+    "domain": "免費域名+SSL",
+    "maintenance3": "3個月免費維護",
+    "maintenance6": "6個月免費維護",
+    "maintenance12": "12個月免費維護",
+    "shopify": "Shopify平台定製",
+    "sku100": "100個SKU",
+    "payment2": "2個支付網關",
+    "logistics": "基礎物流對接",
+    "coupon": "優惠券系統",
+    "reviews": "商品評價",
+    "mobileOpt": "移動端優化"
+  },
+  "packages": {
+    "corp-starter": {
+      "name": "入門版",
+      "description": "適合初創公司和個人品牌",
+      "targetAudience": "初創公司、個人品牌"
+    },
+    "corp-growth": {
+      "name": "商務版",
+      "description": "適合成長型企業",
+      "targetAudience": "成長型企業"
+    },
+    "corp-business": {
+      "name": "企業版",
+      "description": "適合中大型企業",
+      "targetAudience": "中大型企業"
+    },
+    "ecom-starter": {
+      "name": "創業版",
+      "description": "適合新手賣家和小型電商",
+      "targetAudience": "新手賣家、小型電商"
+    },
+    "ecom-growth": {
+      "name": "成長版",
+      "description": "適合成長中的電商企業",
+      "targetAudience": "成長型電商企業"
+    },
+    "ecom-business": {
+      "name": "企業版",
+      "description": "適合成熟的電商企業",
+      "targetAudience": "成熟電商企業"
+    },
+    "admin-starter": {
+      "name": "基礎版",
+      "description": "適合小型團隊和初創企業",
+      "targetAudience": "小型團隊、初創企業"
+    },
+    "admin-growth": {
+      "name": "專業版",
+      "description": "適合成長型企業",
+      "targetAudience": "成長型企業"
+    },
+    "admin-business": {
+      "name": "企業版",
+      "description": "適合大型企業",
+      "targetAudience": "大型企業"
+    },
+    "app-starter": {
+      "name": "基礎版",
+      "description": "適合MVP和小型應用",
+      "targetAudience": "MVP項目、小型應用"
+    },
+    "app-growth": {
+      "name": "專業版",
+      "description": "適合成長型應用",
+      "targetAudience": "成長型應用"
+    },
+    "app-business": {
+      "name": "企業版",
+      "description": "適合大型應用",
+      "targetAudience": "大型應用、企業級產品"
+    },
+    "mini-starter": {
+      "name": "基礎版",
+      "description": "適合展示型小程序",
+      "targetAudience": "展示型小程序"
+    },
+    "mini-growth": {
+      "name": "商務版",
+      "description": "適合服務型小程序",
+      "targetAudience": "服務型小程序"
+    },
+    "mini-business": {
+      "name": "企業版",
+      "description": "適合電商型小程序",
+      "targetAudience": "電商型小程序、企業級應用"
+    },
+    "landing-starter": {
+      "name": "基礎版",
+      "description": "適合單頁營銷活動",
+      "targetAudience": "單頁營銷、活動推廣"
+    },
+    "landing-growth": {
+      "name": "專業版",
+      "description": "適合多頁面營銷活動",
+      "targetAudience": "營銷活動、產品發佈"
+    },
+    "landing-business": {
+      "name": "企業版",
+      "description": "適合大型營銷活動",
+      "targetAudience": "大型營銷活動、品牌推廣"
+    },
+    "website-starter": {
+      "name": "入門版官網",
+      "description": "適合初創公司和個人工作室",
+      "targetAudience": "初創公司、個人工作室、小型企業",
+      "features": [
+        "5頁精美設計",
+        "響應式佈局",
+        "基礎SEO優化",
+        "聯繫表單",
+        "WordPress後台",
+        "3個月免費維護"
+      ],
+      "bestFor": ["初創公司", "個人工作室", "小型企業"]
+    },
+    "website-business": {
+      "name": "商務版官網",
+      "description": "適合中小企業展示品牌形象",
+      "targetAudience": "中小企業、品牌公司、服務型企業",
+      "features": [
+        "10頁原創設計",
+        "高級動畫效果",
+        "雙語言支持",
+        "深度SEO優化",
+        "博客系統",
+        "Next.js技術棧",
+        "6個月免費維護",
+        "免費域名+SSL"
+      ],
+      "bestFor": ["中小企業", "品牌公司", "服務型企業"]
+    },
+    "website-enterprise": {
+      "name": "企業版官網",
+      "description": "適合大型企業和集團公司",
+      "targetAudience": "大型企業、集團公司、上市公司",
+      "features": [
+        "20頁定製設計",
+        "3D/WebGL特效",
+        "三語言支持",
+        "企業級SEO",
+        "博客+新聞系統",
+        "在線客服",
+        "自定義CMS",
+        "12個月免費維護",
+        "免費服務器部署",
+        "性能監控"
+      ],
+      "bestFor": ["大型企業", "集團公司", "上市公司"]
+    }
+  }
+}

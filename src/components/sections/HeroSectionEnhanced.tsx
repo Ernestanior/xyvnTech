@@ -13,7 +13,7 @@ export default function HeroSectionEnhanced() {
       {/* 精致背景渐变 */}
       <div className="absolute inset-0">
         {/* 顶部紫色光晕 */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-gradient-to-b from-purple-500/15 via-purple-500/5 to-transparent blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-gradient-to-b from-amber-500/15 via-orange-500/5 to-transparent blur-3xl" />
         
         {/* 网格背景 */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
@@ -33,7 +33,7 @@ export default function HeroSectionEnhanced() {
               <span className="block text-white mb-3">
                 {t('titleLine1')}
               </span>
-              <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 bg-clip-text text-transparent">
                 {t('titleLine2')}
               </span>
             </motion.h1>
@@ -62,7 +62,7 @@ export default function HeroSectionEnhanced() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative px-8 py-4 bg-white text-black rounded-xl font-medium text-lg overflow-hidden transition-all hover:shadow-2xl hover:shadow-purple-500/20"
+                className="group relative px-8 py-4 bg-white text-black rounded-xl font-medium text-lg overflow-hidden transition-all hover:shadow-2xl hover:shadow-amber-500/20"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   {t('cta.primary')}
@@ -100,7 +100,7 @@ export default function HeroSectionEnhanced() {
                 transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
                 className="group cursor-default"
               >
-                <div className="text-5xl md:text-6xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                <div className="text-5xl md:text-6xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
                   {t(`stats.${key}.value`)}
                 </div>
                 <div className="text-sm text-gray-500 uppercase tracking-wider">

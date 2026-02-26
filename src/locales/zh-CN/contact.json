@@ -1,0 +1,105 @@
+{
+  "title": "让我们一起",
+  "subtitle": "创造精彩",
+  "description": "无论是新项目咨询、技术支持，还是商务合作\n我们都期待与您交流，共同打造卓越的数字产品",
+  "status": {
+    "online": "在线服务中",
+    "offline": "非工作时间"
+  },
+  "contactUs": "联系我们",
+  "whatsappContact": "WhatsApp 联系",
+  "whyChooseUs": "为什么选择我们",
+  "partnerDescription": "专业、高效、可靠的合作伙伴",
+  "contactMethodsTitle": "联系方式",
+  "contactMethodsSubtitle": "选择最适合您的沟通方式",
+  "available": "可用",
+  "offline": "离线",
+  "officeTitle": "办公地点",
+  "officeSubtitle": "我们的新加坡办公室",
+  "reasons": {
+    "fastResponse": {
+      "title": "快速响应",
+      "desc": "工作时间内 1 小时响应",
+      "stat": "< 1h"
+    },
+    "professionalTeam": {
+      "title": "专业团队",
+      "desc": "平均 8 年行业经验",
+      "stat": "8+ 年"
+    },
+    "qualityGuarantee": {
+      "title": "品质保证",
+      "desc": "客户满意度 98%",
+      "stat": "98%"
+    },
+    "successCases": {
+      "title": "成功案例",
+      "desc": "已完成 200+ 项目",
+      "stat": "200+"
+    }
+  },
+  "contactMethods": {
+    "whatsapp": {
+      "title": "WhatsApp",
+      "desc": "通过 WhatsApp 联系我们",
+      "responseTime": "即时回复"
+    },
+    "email": {
+      "title": "邮件联系",
+      "desc": "发送邮件详细说明需求",
+      "responseTime": "12小时内回复"
+    }
+  },
+  "faqs": {
+    "title": "常见问题",
+    "subtitle": "快速了解我们的服务",
+    "q1": {
+      "question": "项目开发周期一般多久？",
+      "answer": "根据项目复杂度，一般网站 1-3 周，APP 4-8 周，小程序 3-6 周。"
+    },
+    "q2": {
+      "question": "如何保证项目质量？",
+      "answer": "我们有严格的代码审查、测试流程，并提供免费维护期。"
+    },
+    "q3": {
+      "question": "支持哪些付款方式？",
+      "answer": "支持分期付款、里程碑付款和月度订阅等多种方式。"
+    },
+    "q4": {
+      "question": "是否提供售后服务？",
+      "answer": "提供 3-12 个月免费维护期和终身技术支持。"
+    },
+    "q5": {
+      "question": "可以先看看案例吗？",
+      "answer": "当然可以！我们有丰富的成功案例，欢迎查看作品集。"
+    },
+    "q6": {
+      "question": "如何开始合作？",
+      "answer": "联系我们后，我们会安排免费咨询，提供详细方案。"
+    }
+  },
+  "office": {
+    "title": "新加坡办公室",
+    "address": "1 Jln Membina, Singapore 169479",
+    "hours": "周一至周五 9:00-18:00"
+  },
+  "form": {
+    "title": "发送消息",
+    "name": "您的姓名",
+    "email": "电子邮箱",
+    "phone": "联系电话",
+    "company": "公司名称（选填）",
+    "service": "感兴趣的服务",
+    "budget": "预算范围",
+    "message": "项目描述",
+    "submit": "发送消息",
+    "sending": "发送中...",
+    "success": "消息已发送！我们会尽快与您联系。"
+  },
+  "cta": {
+    "title": "准备开始您的项目了吗？",
+    "subtitle": "立即联系我们，获取免费咨询和项目报价",
+    "freeConsult": "免费咨询",
+    "phoneConsult": "电话咨询"
+  }
+}

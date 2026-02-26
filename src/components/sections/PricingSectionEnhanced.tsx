@@ -27,7 +27,7 @@ export default function PricingSectionEnhanced() {
         '邮件支持',
         '工作日响应',
       ],
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-amber-500 to-orange-500',
       popular: false,
       savings: 10,
     },
@@ -49,7 +49,7 @@ export default function PricingSectionEnhanced() {
         '优先技术支持',
         '7x12 在线支持',
       ],
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-orange-500 to-red-500',
       popular: true,
       savings: 20,
     },
@@ -73,7 +73,7 @@ export default function PricingSectionEnhanced() {
         '7x24 专属支持',
         '源代码交付',
       ],
-      color: 'from-orange-500 to-red-500',
+      color: 'from-violet-500 to-purple-500',
       popular: false,
       savings: 40,
     },
@@ -87,8 +87,8 @@ export default function PricingSectionEnhanced() {
     <section className="py-32 relative overflow-hidden">
       {/* 背景装饰 */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -108,7 +108,7 @@ export default function PricingSectionEnhanced() {
                 onClick={() => setBillingCycle('monthly')}
                 className={`px-6 py-2.5 rounded-full font-medium transition-all ${
                   billingCycle === 'monthly'
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg'
                     : 'text-gray-400 hover:text-white'
                 }`}
               >
@@ -118,7 +118,7 @@ export default function PricingSectionEnhanced() {
                 onClick={() => setBillingCycle('yearly')}
                 className={`px-6 py-2.5 rounded-full font-medium transition-all relative ${
                   billingCycle === 'yearly'
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg'
                     : 'text-gray-400 hover:text-white'
                 }`}
               >
@@ -145,7 +145,7 @@ export default function PricingSectionEnhanced() {
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium rounded-full shadow-lg z-10 flex items-center gap-1"
+                    className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium rounded-full shadow-lg z-10 flex items-center gap-1"
                   >
                     <Sparkles className="w-4 h-4" />
                     最受欢迎
@@ -168,7 +168,7 @@ export default function PricingSectionEnhanced() {
 
                 {/* 卡片 */}
                 <div className={`relative p-8 bg-white/5 backdrop-blur-sm border ${
-                  plan.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20' : 'border-white/10'
+                  plan.popular ? 'border-orange-500/50 shadow-2xl shadow-orange-500/20' : 'border-white/10'
                 } rounded-3xl overflow-hidden h-full flex flex-col transition-all duration-300 ${
                   hoveredPlan === index ? 'shadow-2xl' : ''
                 }`}>
@@ -287,7 +287,7 @@ export default function PricingSectionEnhanced() {
           <div className="mt-20 text-center space-y-6">
             <div className="flex items-center justify-center gap-8 flex-wrap">
               <div className="flex items-center gap-2 text-gray-400">
-                <Gift className="w-5 h-5 text-blue-400" />
+                <Gift className="w-5 h-5 text-amber-400" />
                 <span>首次合作享 9 折优惠</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
@@ -295,7 +295,7 @@ export default function PricingSectionEnhanced() {
                 <span>7 天无理由退款</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
-                <Sparkles className="w-5 h-5 text-purple-400" />
+                <Sparkles className="w-5 h-5 text-orange-400" />
                 <span>免费技术咨询</span>
               </div>
             </div>

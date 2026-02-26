@@ -114,7 +114,7 @@ export default function LanguageSwitcher() {
                   disabled={isPending}
                   className={`w-full flex items-center justify-between px-4 py-3 transition-colors ${
                     currentLocale === loc
-                      ? 'bg-blue-500/20 text-blue-400'
+                      ? 'bg-amber-500/20 text-amber-400'
                       : 'hover:bg-white/5 text-gray-300'
                   } ${isPending ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >

@@ -16,19 +16,19 @@ export default function AboutPage() {
       icon: Target,
       title: t('values.excellence.title'),
       desc: t('values.excellence.description'),
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-amber-500 to-orange-500',
     },
     {
       icon: Heart,
       title: t('values.userFirst.title'),
       desc: t('values.userFirst.description'),
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-orange-500 to-red-500',
     },
     {
       icon: Zap,
       title: t('values.innovation.title'),
       desc: t('values.innovation.description'),
-      color: 'from-orange-500 to-red-500',
+      color: 'from-violet-500 to-purple-500',
     },
     {
       icon: Users,
@@ -78,7 +78,7 @@ export default function AboutPage() {
     <>
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-pink-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-orange-600/10" />
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
@@ -86,7 +86,7 @@ export default function AboutPage() {
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 {t('hero.title')}
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-orange-500 bg-clip-text text-transparent">
                   {' '}{t('hero.titleHighlight')}
                 </span>
               </h1>
@@ -107,7 +107,7 @@ export default function AboutPage() {
                       contactSection.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center gap-2"
+                  className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-amber-500/50 transition-all flex items-center gap-2"
                 >
                   {t('hero.startCollaboration')}
                   <ArrowRight className="w-5 h-5" />
@@ -123,8 +123,8 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <ScrollReveal>
-              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-3xl p-10 hover:scale-105 transition-transform">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-sm border border-white/10 rounded-3xl p-10 hover:scale-105 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mb-6">
                   <Target className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-4">{t('mission.title')}</h3>
@@ -135,8 +135,8 @@ export default function AboutPage() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-white/10 rounded-3xl p-10 hover:scale-105 transition-transform">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-sm border border-white/10 rounded-3xl p-10 hover:scale-105 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mb-6">
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-4">{t('vision.title')}</h3>
@@ -189,7 +189,7 @@ export default function AboutPage() {
             {achievements.map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all">
-                  <item.icon className="w-10 h-10 text-blue-400 mx-auto mb-4" />
+                  <item.icon className="w-10 h-10 text-amber-400 mx-auto mb-4" />
                   <div className="text-4xl font-bold text-white mb-2">{item.value}</div>
                   <div className="text-gray-400 text-sm">{item.label}</div>
                 </div>
@@ -217,7 +217,7 @@ export default function AboutPage() {
             {team.map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all">
-                  <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
+                  <div className="text-5xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent mb-2">
                     {item.count}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{item.role}</h3>
@@ -225,7 +225,7 @@ export default function AboutPage() {
                   <div className="space-y-2">
                     {item.skills.map((skill: string, idx: number) => (
                       <div key={idx} className="flex items-center gap-2 text-sm text-gray-500">
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                         {skill}
                       </div>
                     ))}
@@ -254,13 +254,13 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500" />
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-amber-500 via-orange-500 to-red-500" />
               
               <div className="space-y-8">
                 {milestones.map((milestone, index) => (
                   <ScrollReveal key={index} delay={index * 0.1}>
                     <div className="relative pl-20">
-                      <div className="absolute left-0 w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center font-bold text-white">
+                      <div className="absolute left-0 w-16 h-16 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center font-bold text-white">
                         {milestone.year}
                       </div>
                       <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">

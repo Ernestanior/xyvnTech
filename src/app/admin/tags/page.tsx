@@ -126,7 +126,7 @@ export default function TagsPage() {
         action={
           <button
             onClick={() => setShowModal(true)}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center gap-2"
+            className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors flex items-center gap-2"
           >
             <Plus className="w-5 h-5" />
             新建标签
@@ -174,7 +174,7 @@ export default function TagsPage() {
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <Tag className="w-4 h-4 text-blue-400" />
+                    <Tag className="w-4 h-4 text-amber-400" />
                     <h3 className="text-white font-medium">{tag.name}</h3>
                   </div>
                   {tag.usage_count > 0 && (

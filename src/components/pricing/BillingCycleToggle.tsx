@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { BillingCycle } from '@/types/pricing';
 
 interface BillingCycleToggleProps {
@@ -10,6 +11,7 @@ interface BillingCycleToggleProps {
 }
 
 export default function BillingCycleToggle({ value, onChange, annualDiscount = 17 }: BillingCycleToggleProps) {
+  const t = useTranslations('pricing');
   return (
     <div className="flex items-center justify-center gap-4 mb-8">
       <div className="relative inline-flex bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-full p-1.5 shadow-lg">
@@ -35,7 +37,7 @@ export default function BillingCycleToggle({ value, onChange, annualDiscount = 1
               }}
             />
           )}
-          <span className="relative z-10">月付</span>
+          <span className="relative z-10">{t('billing.monthly')}</span>
         </button>
         
         {/* 年付按钮 */}
@@ -61,13 +63,13 @@ export default function BillingCycleToggle({ value, onChange, annualDiscount = 1
             />
           )}
           <div className="relative z-10 flex items-center gap-2">
-            <span>年付</span>
+            <span>{t('billing.annual')}</span>
             <span className={`px-2 py-0.5 text-xs rounded-full transition-all duration-300 ${
               value === 'annual'
                 ? 'bg-white/20 text-white'
                 : 'bg-green-500/20 text-green-400'
             }`}>
-              省{annualDiscount}%
+              {t('billing.save', { discount: annualDiscount })}
             </span>
           </div>
         </button>

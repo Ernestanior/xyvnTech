@@ -15,7 +15,7 @@ export default function FAQSection() {
   return (
     <section className="py-32 relative overflow-hidden">
       {/* 背景装饰 */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/5 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
         <ScrollReveal>
@@ -41,7 +41,7 @@ export default function FAQSection() {
                   className="w-full text-left p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all group"
                 >
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-white pr-8 group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg font-semibold text-white pr-8 group-hover:text-amber-400 transition-colors">
                       {faq.question}
                     </h3>
                     <motion.div
@@ -49,7 +49,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.3 }}
                       className="flex-shrink-0"
                     >
-                      <ChevronDown className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
+                      <ChevronDown className="w-5 h-5 text-gray-400 group-hover:text-amber-400 transition-colors" />
                     </motion.div>
                   </div>
 

@@ -17,7 +17,7 @@ export default function AnnouncementBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -100, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed top-0 left-0 right-0 z-[100] bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-3 px-4 shadow-lg"
+          className="fixed top-0 left-0 right-0 z-[100] bg-gradient-to-r from-amber-500 via-orange-500 to-orange-600 text-white py-3 px-4 shadow-lg"
         >
           <div className="container mx-auto flex items-center justify-between gap-4">
             <div className="flex items-center gap-3 flex-1">
@@ -41,7 +41,7 @@ export default function AnnouncementBanner() {
                     contactSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="px-4 py-1.5 bg-white text-purple-600 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors whitespace-nowrap"
+                className="px-4 py-1.5 bg-white text-orange-600 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors whitespace-nowrap"
               >
                 立即咨询
               </motion.button>

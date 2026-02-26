@@ -3,15 +3,38 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, X, ExternalLink, Calendar, Tag, TrendingUp, Award, Users, Sparkles, Eye, Heart, Star, Grid3x3, List, SortAsc, Download, Share2, Bookmark, Play, Image as ImageIcon, Code, Zap, Target, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import PortfolioSectionEnhanced from '@/components/sections/PortfolioSectionEnhanced';
 import StatsSection from '@/components/sections/StatsSection';
-import TestimonialsSectionEnhanced from '@/components/sections/TestimonialsSectionEnhanced';
 import CTASection from '@/components/sections/CTASection';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { portfolioProjects, Project } from '@/data/portfolioData';
+
+interface Project {
+  id: number;
+  title: string;
+  category: 'website' | 'app' | 'ecommerce' | 'enterprise';
+  client: string;
+  industry: string;
+  description: string;
+  image: string;
+  tags: string[];
+  metrics: {
+    icon: string;
+    label: string;
+    value: string;
+  }[];
+  highlights: string[];
+  year: string;
+  duration: string;
+  challenge?: string;
+  solution?: string;
+  results?: string[];
+}
 
 export default function PortfolioPage() {
-  const [selectedCategory, setSelectedCategory] = useState('全部');
+  const t = useTranslations('portfolio');
+  const portfolioProjects: Project[] = t.raw('projects');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -19,19 +42,21 @@ export default function PortfolioPage() {
   const [likedProjects, setLikedProjects] = useState<number[]>([]);
   const [bookmarkedProjects, setBookmarkedProjects] = useState<number[]>([]);
 
-  const categories = ['全部', '电商平台', '企业官网', '教育平台', '金融科技', '社交应用', '工具应用'];
+  const categories = ['all', 'ecommerce', 'enterprise', 'education', 'fintech', 'social', 'tools'];
 
-  // 映射分类
+  // Category mapping
   const categoryMap: Record<string, string> = {
-    '电商平台': 'ecommerce',
-    '企业官网': 'enterprise',
-    '教育平台': 'website',
-    '金融科技': 'app',
+    'ecommerce': 'ecommerce',
+    'enterprise': 'enterprise',
+    'education': 'website',
+    'fintech': 'app',
+    'social': 'social',
+    'tools': 'tools',
   };
 
-  // 筛选和排序
+  // Filter and sort
   let filteredProjects = portfolioProjects.filter((project: Project) => {
-    const matchesCategory = selectedCategory === '全部' || 
+    const matchesCategory = selectedCategory === 'all' || 
       project.category === categoryMap[selectedCategory] ||
       project.industry.includes(selectedCategory);
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -39,7 +64,7 @@ export default function PortfolioPage() {
     return matchesCategory && matchesSearch;
   });
 
-  // 排序
+  // Sorting
   if (sortBy === 'latest') {
     filteredProjects = [...filteredProjects].sort((a, b) => b.year.localeCompare(a.year));
   } else if (sortBy === 'popular') {
@@ -65,34 +90,32 @@ export default function PortfolioPage() {
   };
 
   const stats = [
-    { icon: Award, label: '获奖项目', value: '12+', color: 'from-blue-500 to-cyan-500' },
-    { icon: Users, label: '服务客户', value: '150+', color: 'from-purple-500 to-pink-500' },
-    { icon: TrendingUp, label: '项目成功率', value: '98%', color: 'from-green-500 to-emerald-500' },
-    { icon: Star, label: '客户评分', value: '4.9', color: 'from-orange-500 to-red-500' },
+    { icon: Award, label: t('stats.awards'), value: '12+', color: 'from-amber-500 to-orange-500' },
+    { icon: Users, label: t('stats.clients'), value: '150+', color: 'from-orange-500 to-red-500' },
+    { icon: TrendingUp, label: t('stats.successRate'), value: '98%', color: 'from-green-500 to-emerald-500' },
+    { icon: Star, label: t('stats.rating'), value: '4.9', color: 'from-cyan-500 to-teal-500' },
   ];
 
   return (
     <>
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-pink-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-red-500/10" />
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                我们的
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  {' '}精彩作品
+                {t('title')}
+                <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+                  {' '}{t('highlight')}
                 </span>
               </h1>
               
               <p className="text-xl text-gray-400 leading-relaxed mb-8">
-                为各行业客户创造的卓越数字产品
-                <br />
-                每一个项目都是我们专业能力的体现
+                {t('subtitle')}
               </p>
 
-              {/* 统计数据 */}
+              {/* Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
                 {stats.map((stat, index) => (
                   <motion.div
@@ -119,16 +142,15 @@ export default function PortfolioPage() {
 
       {/* Featured Projects Carousel */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-purple-500/5" />
+        <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-orange-500/5" />
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                明星项目
+                {t('featured.title')}
               </h2>
               <p className="text-xl text-gray-400">
-                最具代表性的成功案例
+                {t('featured.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -142,15 +164,15 @@ export default function PortfolioPage() {
                     onClick={() => setSelectedProject(project)}
                     className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl overflow-hidden cursor-pointer group"
                   >
-                    {/* 背景装饰 */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    {/* Background decoration */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 via-orange-500/10 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
-                    {/* 内容 */}
+                    {/* Content */}
                     <div className="relative p-8">
-                      {/* 标签组 */}
+                      {/* Tags */}
                       <div className="flex items-center gap-3 mb-6">
-                        <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-medium rounded-full">
-                          精选
+                        <span className="px-3 py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-medium rounded-full">
+                          {t('featured.badge')}
                         </span>
                         <span className="px-3 py-1 bg-white/10 text-gray-300 text-xs font-medium rounded-full">
                           {project.year}
@@ -160,26 +182,26 @@ export default function PortfolioPage() {
                         </span>
                       </div>
 
-                      {/* 项目图标 */}
+                      {/* Project icon */}
                       <div className="text-7xl mb-6 group-hover:scale-110 transition-transform duration-300">
                         {project.category === 'ecommerce' ? '🛍️' : 
                          project.category === 'app' ? '📱' : 
                          project.category === 'enterprise' ? '🏢' : '🌐'}
                       </div>
 
-                      {/* 标题和描述 */}
-                      <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                      {/* Title and description */}
+                      <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-amber-400 transition-colors">
                         {project.title}
                       </h3>
                       <p className="text-gray-400 leading-relaxed mb-6">
                         {project.description}
                       </p>
 
-                      {/* 关键指标 */}
+                      {/* Key metrics */}
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         {project.metrics.map((metric, idx) => (
                           <div key={idx} className="text-center">
-                            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-1">
+                            <div className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent mb-1">
                               {metric.value}
                             </div>
                             <div className="text-xs text-gray-500">{metric.label}</div>
@@ -187,7 +209,7 @@ export default function PortfolioPage() {
                         ))}
                       </div>
 
-                      {/* 技术标签 */}
+                      {/* Tech tags */}
                       <div className="flex flex-wrap gap-2 mb-6">
                         {project.tags.slice(0, 4).map((tag: string, idx: number) => (
                           <span
@@ -199,16 +221,16 @@ export default function PortfolioPage() {
                         ))}
                       </div>
 
-                      {/* 查看按钮 */}
-                      <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center justify-center gap-2 group-hover:gap-3">
-                        查看详情
+                      {/* View Button */}
+                      <button className="w-full px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl font-medium hover:shadow-lg hover:shadow-amber-500/50 transition-all flex items-center justify-center gap-2 group-hover:gap-3">
+                        {t('viewDetails')}
                         <ArrowUpRight className="w-5 h-5" />
                       </button>
                     </div>
 
-                    {/* 装饰元素 */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
-                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-pink-500/20 to-orange-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
+                    {/* Decorative Elements */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
+                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-red-500/20 to-orange-500/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
                   </motion.div>
                 </ScrollReveal>
               ))}
@@ -221,16 +243,16 @@ export default function PortfolioPage() {
       <section className="py-10 relative">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            {/* 搜索栏和视图切换 */}
+            {/* Search Bar & View Toggle */}
             <div className="mb-8 flex flex-col md:flex-row gap-4">
               <div className="relative flex-1">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="搜索项目名称、描述、标签..."
+                  placeholder={t('search.placeholder')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 transition-all"
+                  className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-amber-500/50 transition-all"
                 />
                 {searchQuery && (
                   <button
@@ -242,14 +264,14 @@ export default function PortfolioPage() {
                 )}
               </div>
 
-              {/* 视图切换和排序 */}
+              {/* View Toggle & Sort */}
               <div className="flex gap-2">
                 <div className="flex bg-white/5 border border-white/10 rounded-full p-1">
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-full transition-all ${
                       viewMode === 'grid' 
-                        ? 'bg-blue-500 text-white' 
+                        ? 'bg-amber-500 text-white' 
                         : 'text-gray-400 hover:text-white'
                     }`}
                   >
@@ -259,7 +281,7 @@ export default function PortfolioPage() {
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-full transition-all ${
                       viewMode === 'list' 
-                        ? 'bg-blue-500 text-white' 
+                        ? 'bg-amber-500 text-white' 
                         : 'text-gray-400 hover:text-white'
                     }`}
                   >
@@ -270,20 +292,20 @@ export default function PortfolioPage() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
-                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm focus:outline-none focus:border-blue-500/50 transition-all cursor-pointer"
+                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm focus:outline-none focus:border-amber-500/50 transition-all cursor-pointer"
                 >
-                  <option value="latest">最新项目</option>
-                  <option value="popular">最受欢迎</option>
-                  <option value="name">按名称</option>
+                  <option value="latest">{t('sort.latest')}</option>
+                  <option value="popular">{t('sort.popular')}</option>
+                  <option value="name">{t('sort.name')}</option>
                 </select>
               </div>
             </div>
 
-            {/* 分类筛选 */}
+            {/* Category Filter */}
             <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
               <div className="flex items-center gap-2 text-gray-400 text-sm">
                 <Filter className="w-4 h-4" />
-                <span>筛选：</span>
+                <span>{t('filter.label')}</span>
               </div>
               {categories.map((category) => (
                 <motion.button
@@ -293,18 +315,18 @@ export default function PortfolioPage() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                     selectedCategory === category
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg'
                       : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
                   }`}
                 >
-                  {category}
+                  {t(`filter.${category}`)}
                 </motion.button>
               ))}
             </div>
 
-            {/* 结果统计 */}
+            {/* Results Count */}
             <div className="text-center text-gray-400 text-sm">
-              找到 <span className="text-blue-400 font-medium">{filteredProjects.length}</span> 个项目
+              {t('results', { count: filteredProjects.length })}
             </div>
           </div>
         </div>
@@ -335,10 +357,10 @@ export default function PortfolioPage() {
                     whileHover={{ y: -10 }}
                     className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:bg-white/10 transition-all group relative"
                   >
-                    {/* 项目图片 */}
+                    {/* Project Image */}
                     <div 
                       onClick={() => setSelectedProject(project)}
-                      className="relative h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 overflow-hidden"
+                      className="relative h-48 bg-gradient-to-br from-amber-500/20 to-orange-500/20 overflow-hidden"
                     >
                       <div className="absolute inset-0 flex items-center justify-center text-6xl">
                         {project.category === 'ecommerce' ? '🛍️' : 
@@ -359,22 +381,22 @@ export default function PortfolioPage() {
                           <Play className="w-5 h-5 text-white" />
                         </motion.div>
                       </div>
-                      {/* 分类标签 */}
+                      {/* Category Label */}
                       <div className="absolute top-4 left-4 px-3 py-1 bg-blue-500/80 backdrop-blur-sm rounded-full text-white text-xs font-medium">
                         {project.category}
                       </div>
-                      {/* 年份标签 */}
+                      {/* Year Label */}
                       <div className="absolute top-4 right-4 px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-white text-xs font-medium">
                         {project.year}
                       </div>
                     </div>
 
-                    {/* 项目信息 */}
+                    {/* Project Info */}
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-2">
                         <h3 
                           onClick={() => setSelectedProject(project)}
-                          className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors flex-1"
+                          className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors flex-1"
                         >
                           {project.title}
                         </h3>
@@ -399,7 +421,7 @@ export default function PortfolioPage() {
                         {project.description}
                       </p>
 
-                      {/* 标签 */}
+                      {/* Tags */}
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.tags.slice(0, 3).map((tag: string, idx: number) => (
                           <span
@@ -416,7 +438,7 @@ export default function PortfolioPage() {
                         )}
                       </div>
 
-                      {/* 底部信息 */}
+                      {/* Bottom Info */}
                       <div className="flex items-center justify-between pt-4 border-t border-white/10">
                         <div className="flex items-center gap-4 text-xs text-gray-500">
                           <div className="flex items-center gap-1">
@@ -442,9 +464,9 @@ export default function PortfolioPage() {
                         </div>
                         <button 
                           onClick={() => setSelectedProject(project)}
-                          className="text-blue-400 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
+                          className="text-amber-400 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
                         >
-                          查看详情
+                          {t('viewDetails')}
                           <ExternalLink className="w-4 h-4" />
                         </button>
                       </div>
@@ -461,10 +483,10 @@ export default function PortfolioPage() {
                     className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all group"
                   >
                     <div className="flex flex-col md:flex-row">
-                      {/* 左侧图片 */}
+                      {/* Left Image */}
                       <div 
                         onClick={() => setSelectedProject(project)}
-                        className="relative w-full md:w-64 h-48 md:h-auto bg-gradient-to-br from-blue-500/20 to-purple-500/20 cursor-pointer flex-shrink-0"
+                        className="relative w-full md:w-64 h-48 md:h-auto bg-gradient-to-br from-amber-500/20 to-orange-500/20 cursor-pointer flex-shrink-0"
                       >
                         <div className="absolute inset-0 flex items-center justify-center text-6xl">
                           {project.category === 'ecommerce' ? '🛍️' : 
@@ -474,19 +496,19 @@ export default function PortfolioPage() {
                         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                           <Eye className="w-8 h-8 text-white" />
                         </div>
-                        <div className="absolute top-4 left-4 px-3 py-1 bg-blue-500/80 backdrop-blur-sm rounded-full text-white text-xs font-medium">
+                        <div className="absolute top-4 left-4 px-3 py-1 bg-amber-500/80 backdrop-blur-sm rounded-full text-white text-xs font-medium">
                           {project.category}
                         </div>
                       </div>
 
-                      {/* 右侧内容 */}
+                      {/* Right Content */}
                       <div className="flex-1 p-6">
                         <div className="flex items-start justify-between mb-3">
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-2">
                               <h3 
                                 onClick={() => setSelectedProject(project)}
-                                className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors cursor-pointer"
+                                className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors cursor-pointer"
                               >
                                 {project.title}
                               </h3>
@@ -515,7 +537,7 @@ export default function PortfolioPage() {
                           </button>
                         </div>
 
-                        {/* 标签 */}
+                        {/* Tags */}
                         <div className="flex flex-wrap gap-2 mb-4">
                           {project.tags.map((tag: string, idx: number) => (
                             <span
@@ -527,12 +549,12 @@ export default function PortfolioPage() {
                           ))}
                         </div>
 
-                        {/* 底部信息 */}
+                        {/* Bottom Info */}
                         <div className="flex items-center justify-between pt-4 border-t border-white/10">
                           <div className="flex items-center gap-6 text-sm text-gray-500">
                             <div className="flex items-center gap-2">
                               <Eye className="w-4 h-4" />
-                              <span>1.2k 浏览</span>
+                              <span>1.2k {t('views')}</span>
                             </div>
                             <button
                               onClick={(e) => {
@@ -548,7 +570,7 @@ export default function PortfolioPage() {
                                     : ''
                                 }`}
                               />
-                              <span>{89 + (likedProjects.includes(project.id) ? 1 : 0)} 点赞</span>
+                              <span>{89 + (likedProjects.includes(project.id) ? 1 : 0)} {t('likes')}</span>
                             </button>
                             <div className="flex items-center gap-2">
                               <Calendar className="w-4 h-4" />
@@ -557,9 +579,9 @@ export default function PortfolioPage() {
                           </div>
                           <button 
                             onClick={() => setSelectedProject(project)}
-                            className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium hover:shadow-lg transition-all flex items-center gap-2"
+                            className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full text-sm font-medium hover:shadow-lg transition-all flex items-center gap-2"
                           >
-                            查看详情
+                            {t('viewDetails')}
                             <ArrowUpRight className="w-4 h-4" />
                           </button>
                         </div>
@@ -571,7 +593,7 @@ export default function PortfolioPage() {
             </motion.div>
           </AnimatePresence>
 
-          {/* 空状态 */}
+          {/* Empty State */}
           {filteredProjects.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -579,16 +601,16 @@ export default function PortfolioPage() {
               className="text-center py-20"
             >
               <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">未找到相关项目</h3>
-              <p className="text-gray-400 mb-6">试试其他关键词或分类</p>
+              <h3 className="text-2xl font-bold text-white mb-2">{t('empty.title')}</h3>
+              <p className="text-gray-400 mb-6">{t('empty.subtitle')}</p>
               <button
                 onClick={() => {
                   setSearchQuery('');
-                  setSelectedCategory('全部');
+                  setSelectedCategory('all');
                 }}
-                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg transition-all"
+                className="px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium hover:shadow-lg transition-all"
               >
-                重置筛选
+                {t('empty.reset')}
               </button>
             </motion.div>
           )}
@@ -612,7 +634,7 @@ export default function PortfolioPage() {
               onClick={(e) => e.stopPropagation()}
               className="bg-gray-900 border border-white/10 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             >
-              {/* 头部 */}
+              {/* Header */}
               <div className="sticky top-0 bg-gray-900/95 backdrop-blur-sm border-b border-white/10 p-6 flex items-center justify-between z-10">
                 <div className="flex items-center gap-4">
                   <div className="text-4xl">
@@ -676,49 +698,49 @@ export default function PortfolioPage() {
                 </div>
               </div>
 
-              {/* 内容 */}
+              {/* Content */}
               <div className="p-8">
-                {/* 客户信息 */}
-                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-6 mb-8">
+                {/* Client Info */}
+                <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-6 mb-8">
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div>
-                      <div className="text-xs text-gray-500 mb-1">客户</div>
+                      <div className="text-xs text-gray-500 mb-1">{t('modal.client')}</div>
                       <div className="text-white font-medium">{selectedProject.client}</div>
                     </div>
                     <div>
-                      <div className="text-xs text-gray-500 mb-1">行业</div>
+                      <div className="text-xs text-gray-500 mb-1">{t('modal.industry')}</div>
                       <div className="text-white font-medium">{selectedProject.industry}</div>
                     </div>
                     <div>
-                      <div className="text-xs text-gray-500 mb-1">年份</div>
+                      <div className="text-xs text-gray-500 mb-1">{t('modal.year')}</div>
                       <div className="text-white font-medium">{selectedProject.year}</div>
                     </div>
                     <div>
-                      <div className="text-xs text-gray-500 mb-1">周期</div>
+                      <div className="text-xs text-gray-500 mb-1">{t('modal.duration')}</div>
                       <div className="text-white font-medium">{selectedProject.duration}</div>
                     </div>
                   </div>
                 </div>
 
-                {/* 项目描述 */}
+                {/* Project Description */}
                 <div className="mb-8">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
                       <Target className="w-4 h-4 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white">项目介绍</h3>
+                    <h3 className="text-xl font-bold text-white">{t('modal.intro')}</h3>
                   </div>
                   <p className="text-gray-400 leading-relaxed">{selectedProject.description}</p>
                 </div>
 
-                {/* 挑战、解决方案、成果 */}
+                {/* Challenge, Solution, Results */}
                 {(selectedProject.challenge || selectedProject.solution || selectedProject.results) && (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     {selectedProject.challenge && (
                       <div className="bg-white/5 rounded-xl p-6">
                         <div className="flex items-center gap-2 mb-3">
                           <Zap className="w-5 h-5 text-orange-400" />
-                          <h4 className="font-bold text-white">挑战</h4>
+                          <h4 className="font-bold text-white">{t('modal.challenge')}</h4>
                         </div>
                         <p className="text-sm text-gray-400 leading-relaxed">
                           {selectedProject.challenge}
@@ -728,8 +750,8 @@ export default function PortfolioPage() {
                     {selectedProject.solution && (
                       <div className="bg-white/5 rounded-xl p-6">
                         <div className="flex items-center gap-2 mb-3">
-                          <Code className="w-5 h-5 text-blue-400" />
-                          <h4 className="font-bold text-white">解决方案</h4>
+                          <Code className="w-5 h-5 text-amber-400" />
+                          <h4 className="font-bold text-white">{t('modal.solution')}</h4>
                         </div>
                         <p className="text-sm text-gray-400 leading-relaxed">
                           {selectedProject.solution}
@@ -740,7 +762,7 @@ export default function PortfolioPage() {
                       <div className="bg-white/5 rounded-xl p-6">
                         <div className="flex items-center gap-2 mb-3">
                           <CheckCircle2 className="w-5 h-5 text-green-400" />
-                          <h4 className="font-bold text-white">成果</h4>
+                          <h4 className="font-bold text-white">{t('modal.results')}</h4>
                         </div>
                         <ul className="space-y-2">
                           {selectedProject.results.map((result: string, idx: number) => (
@@ -755,18 +777,18 @@ export default function PortfolioPage() {
                   </div>
                 )}
 
-                {/* 项目亮点 */}
+                {/* Project Highlights */}
                 <div className="mb-8">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
                       <Sparkles className="w-4 h-4 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white">项目亮点</h3>
+                    <h3 className="text-xl font-bold text-white">{t('modal.highlights')}</h3>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {selectedProject.highlights.map((highlight: string, index: number) => (
                       <div key={index} className="flex items-start gap-3 bg-white/5 rounded-xl p-4">
-                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center flex-shrink-0">
                           <span className="text-white text-xs font-bold">{index + 1}</span>
                         </div>
                         <span className="text-gray-300 text-sm">{highlight}</span>
@@ -775,13 +797,13 @@ export default function PortfolioPage() {
                   </div>
                 </div>
 
-                {/* 技术栈 */}
+                {/* Tech Stack */}
                 <div className="mb-8">
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
                       <Code className="w-4 h-4 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white">技术栈</h3>
+                    <h3 className="text-xl font-bold text-white">{t('modal.techStack')}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.tags.map((tag: string, index: number) => (
@@ -795,31 +817,31 @@ export default function PortfolioPage() {
                   </div>
                 </div>
 
-                {/* 项目数据 */}
+                {/* Project Data */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                   <div className="bg-white/5 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-blue-400 mb-1">1.2k</div>
-                    <div className="text-xs text-gray-400">浏览量</div>
-                  </div>
-                  <div className="bg-white/5 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-purple-400 mb-1">
-                      {89 + (likedProjects.includes(selectedProject.id) ? 1 : 0)}
-                    </div>
-                    <div className="text-xs text-gray-400">点赞数</div>
-                  </div>
-                  <div className="bg-white/5 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-green-400 mb-1">4.8</div>
-                    <div className="text-xs text-gray-400">评分</div>
+                    <div className="text-2xl font-bold text-amber-400 mb-1">1.2k</div>
+                    <div className="text-xs text-gray-400">{t('modal.views')}</div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center">
                     <div className="text-2xl font-bold text-orange-400 mb-1">
-                      {bookmarkedProjects.includes(selectedProject.id) ? '已收藏' : '未收藏'}
+                      {89 + (likedProjects.includes(selectedProject.id) ? 1 : 0)}
                     </div>
-                    <div className="text-xs text-gray-400">收藏状态</div>
+                    <div className="text-xs text-gray-400">{t('modal.likes')}</div>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold text-green-400 mb-1">4.8</div>
+                    <div className="text-xs text-gray-400">{t('modal.rating')}</div>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold text-orange-400 mb-1">
+                      {bookmarkedProjects.includes(selectedProject.id) ? t('modal.bookmark.saved') : t('modal.bookmark.unsaved')}
+                    </div>
+                    <div className="text-xs text-gray-400">{t('modal.bookmark.status')}</div>
                   </div>
                 </div>
 
-                {/* 行动按钮 */}
+                {/* Action Buttons */}
                 <div className="flex justify-center">
                   <button 
                     onClick={() => {
@@ -829,9 +851,9 @@ export default function PortfolioPage() {
                         contactSection.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all"
+                    className="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-amber-500/50 transition-all"
                   >
-                    联系我们
+                    {t('modal.contact')}
                   </button>
                 </div>
               </div>
@@ -846,24 +868,24 @@ export default function PortfolioPage() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                行业分布
+                {t('industries.title')}
               </h2>
               <p className="text-xl text-gray-400">
-                我们服务的行业领域
+                {t('industries.subtitle')}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { name: '零售电商', count: 25, icon: '🛍️', color: 'from-blue-500 to-cyan-500' },
-              { name: '企业服务', count: 30, icon: '🏢', color: 'from-purple-500 to-pink-500' },
-              { name: '教育培训', count: 20, icon: '📚', color: 'from-green-500 to-emerald-500' },
-              { name: '金融科技', count: 15, icon: '💰', color: 'from-orange-500 to-red-500' },
-              { name: '医疗健康', count: 18, icon: '🏥', color: 'from-pink-500 to-rose-500' },
-              { name: '社交娱乐', count: 22, icon: '🎮', color: 'from-indigo-500 to-purple-500' },
-              { name: '生活服务', count: 28, icon: '🏠', color: 'from-teal-500 to-cyan-500' },
-              { name: '其他行业', count: 12, icon: '✨', color: 'from-yellow-500 to-orange-500' },
+              { id: 'retail', count: 25, icon: '🛍️', color: 'from-amber-500 to-orange-500' },
+              { id: 'enterprise', count: 30, icon: '🏢', color: 'from-orange-500 to-red-500' },
+              { id: 'education', count: 20, icon: '📚', color: 'from-green-500 to-emerald-500' },
+              { id: 'fintech', count: 15, icon: '💰', color: 'from-cyan-500 to-teal-500' },
+              { id: 'healthcare', count: 18, icon: '🏥', color: 'from-pink-500 to-rose-500' },
+              { id: 'social', count: 22, icon: '🎮', color: 'from-violet-500 to-purple-500' },
+              { id: 'lifestyle', count: 28, icon: '🏠', color: 'from-teal-500 to-cyan-500' },
+              { id: 'others', count: 12, icon: '✨', color: 'from-yellow-500 to-orange-500' },
             ].map((industry, index) => (
               <ScrollReveal key={index} delay={index * 0.05}>
                 <motion.div
@@ -871,11 +893,11 @@ export default function PortfolioPage() {
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all cursor-pointer group"
                 >
                   <div className="text-5xl mb-3">{industry.icon}</div>
-                  <h3 className="text-lg font-bold text-white mb-2">{industry.name}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{t(`industries.${industry.id}`)}</h3>
                   <div className={`text-2xl font-bold bg-gradient-to-r ${industry.color} bg-clip-text text-transparent`}>
                     {industry.count}+
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">成功案例</p>
+                  <p className="text-xs text-gray-500 mt-1">{t('industries.cases')}</p>
                 </motion.div>
               </ScrollReveal>
             ))}
@@ -889,10 +911,10 @@ export default function PortfolioPage() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                技术能力
+                {t('techStack.title')}
               </h2>
               <p className="text-xl text-gray-400">
-                我们擅长的技术栈
+                {t('techStack.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -901,39 +923,39 @@ export default function PortfolioPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  category: '前端技术',
+                  category: 'Frontend',
                   icon: '🎨',
-                  color: 'from-blue-500 to-cyan-500',
+                  color: 'from-amber-500 to-orange-500',
                   techs: ['React', 'Next.js', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
                 },
                 {
-                  category: '后端技术',
+                  category: 'Backend',
                   icon: '⚙️',
-                  color: 'from-purple-500 to-pink-500',
+                  color: 'from-orange-500 to-red-500',
                   techs: ['Node.js', 'Python', 'Java', 'Go', 'GraphQL', 'REST API'],
                 },
                 {
-                  category: '移动开发',
+                  category: 'Mobile',
                   icon: '📱',
                   color: 'from-green-500 to-emerald-500',
-                  techs: ['React Native', 'Flutter', 'Swift', 'Kotlin', '微信小程序', 'uni-app'],
+                  techs: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'WeChat Mini Program', 'uni-app'],
                 },
                 {
-                  category: '数据库',
+                  category: 'Database',
                   icon: '💾',
-                  color: 'from-orange-500 to-red-500',
+                  color: 'from-cyan-500 to-teal-500',
                   techs: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Firebase', 'Supabase'],
                 },
                 {
-                  category: '云服务',
+                  category: 'Cloud',
                   icon: '☁️',
                   color: 'from-pink-500 to-rose-500',
                   techs: ['AWS', 'Vercel', 'Docker', 'Kubernetes', 'CI/CD', 'Serverless'],
                 },
                 {
-                  category: 'AI & 数据',
+                  category: 'AI & Data',
                   icon: '🤖',
-                  color: 'from-indigo-500 to-purple-500',
+                  color: 'from-violet-500 to-purple-500',
                   techs: ['TensorFlow', 'PyTorch', 'OpenAI', 'Data Analytics', 'ML Models', 'NLP'],
                 },
               ].map((stack, index) => (
@@ -972,20 +994,20 @@ export default function PortfolioPage() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                项目成果
+                {t('resultsSection.title')}
               </h2>
               <p className="text-xl text-gray-400">
-                用数据说话的成功案例
+                {t('resultsSection.subtitle')}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
             {[
-              { label: '平均转化率提升', value: '180%', icon: TrendingUp, color: 'from-blue-500 to-cyan-500' },
-              { label: '用户满意度', value: '96%', icon: Award, color: 'from-purple-500 to-pink-500' },
-              { label: '平均开发周期', value: '6周', icon: Calendar, color: 'from-green-500 to-emerald-500' },
-              { label: '项目成功率', value: '98%', icon: CheckCircle2, color: 'from-orange-500 to-red-500' },
+              { label: 'Avg Conversion Increase', value: '180%', icon: TrendingUp, color: 'from-amber-500 to-orange-500' },
+              { label: 'User Satisfaction', value: '96%', icon: Award, color: 'from-orange-500 to-red-500' },
+              { label: 'Avg Dev Cycle', value: '6 weeks', icon: Calendar, color: 'from-green-500 to-emerald-500' },
+              { label: 'Project Success Rate', value: '98%', icon: CheckCircle2, color: 'from-cyan-500 to-teal-500' },
             ].map((metric, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <motion.div
@@ -1008,23 +1030,23 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
-                title: '电商平台案例',
-                metric: 'GMV 增长 300%',
-                desc: '通过优化用户体验和推荐算法，帮助客户实现销售额三倍增长',
+                title: 'E-commerce Case Study',
+                metric: 'GMV Growth 300%',
+                desc: 'Optimized UX and recommendation algorithms to triple sales for clients',
                 icon: '📈',
-                color: 'from-blue-500 to-cyan-500',
+                color: 'from-amber-500 to-orange-500',
               },
               {
-                title: '企业 SaaS 案例',
-                metric: '效率提升 250%',
-                desc: '自动化工作流程，减少人工操作，大幅提升团队协作效率',
+                title: 'Enterprise SaaS Case',
+                metric: 'Efficiency +250%',
+                desc: 'Automated workflows, reduced manual operations, greatly improved team collaboration',
                 icon: '⚡',
-                color: 'from-purple-500 to-pink-500',
+                color: 'from-orange-500 to-red-500',
               },
               {
-                title: '移动应用案例',
-                metric: '用户留存 85%',
-                desc: '精心设计的用户体验和功能，实现行业领先的用户留存率',
+                title: 'Mobile App Case',
+                metric: 'User Retention 85%',
+                desc: 'Carefully designed UX and features, achieving industry-leading retention rates',
                 icon: '🎯',
                 color: 'from-green-500 to-emerald-500',
               },
@@ -1052,10 +1074,10 @@ export default function PortfolioPage() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                荣誉与认证
+                {t('awards.title')}
               </h2>
               <p className="text-xl text-gray-400">
-                专业能力获得行业认可
+                {t('awards.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -1063,32 +1085,32 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
               {
-                title: '最佳设计奖',
+                title: 'Best Design Award',
                 year: '2024',
                 org: 'Awwwards',
                 icon: '🏆',
                 color: 'from-yellow-500 to-orange-500',
               },
               {
-                title: '技术创新奖',
+                title: 'Tech Innovation Award',
                 year: '2024',
                 org: 'Tech Innovation',
                 icon: '🚀',
-                color: 'from-blue-500 to-cyan-500',
+                color: 'from-amber-500 to-orange-500',
               },
               {
-                title: '用户体验奖',
+                title: 'UX Excellence Award',
                 year: '2023',
                 org: 'UX Design Awards',
-                icon: '⭐',
-                color: 'from-purple-500 to-pink-500',
+                icon: '✨',
+                color: 'from-green-500 to-emerald-500',
               },
               {
-                title: '最佳团队奖',
+                title: 'Best Team Award',
                 year: '2023',
-                org: 'Developer Awards',
-                icon: '👥',
-                color: 'from-green-500 to-emerald-500',
+                org: 'Industry Awards',
+                icon: '🌟',
+                color: 'from-cyan-500 to-teal-500',
               },
             ].map((award, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
@@ -1116,10 +1138,10 @@ export default function PortfolioPage() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                我们的工作流程
+                {t('process.title')}
               </h2>
               <p className="text-xl text-gray-400">
-                从构思到交付的完整流程
+                {t('process.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -1129,35 +1151,35 @@ export default function PortfolioPage() {
               {[
                 {
                   step: '01',
-                  title: '需求分析',
-                  desc: '深入了解客户需求和业务目标',
+                  title: 'Requirements Analysis',
+                  desc: 'Deep understanding of client needs and business goals',
                   icon: '🎯',
-                  color: 'from-blue-500 to-cyan-500',
-                  items: ['用户研究', '竞品分析', '需求文档', '项目规划'],
+                  color: 'from-amber-500 to-orange-500',
+                  items: ['User Research', 'Competitive Analysis', 'Requirements Documentation', 'Project Planning'],
                 },
                 {
-                  step: '02',
-                  title: '设计阶段',
-                  desc: '创造性的设计解决方案',
+                  title: 'Our Team',
+                  subtitle: 'Elite team of multi-domain experts',
+                  desc: 'Creative design solutions',
                   icon: '🎨',
-                  color: 'from-purple-500 to-pink-500',
-                  items: ['原型设计', '视觉设计', '交互设计', '设计评审'],
+                  color: 'from-orange-500 to-red-500',
+                  items: ['Prototyping', 'Visual Design', 'Interaction Design', 'Design Review'],
                 },
                 {
                   step: '03',
-                  title: '开发实现',
-                  desc: '高质量的代码实现',
+                  title: 'Development',
+                  desc: 'High-quality code implementation',
                   icon: '⚙️',
                   color: 'from-green-500 to-emerald-500',
-                  items: ['前端开发', '后端开发', '测试调试', '性能优化'],
+                  items: ['Frontend Development', 'Backend Development', 'Testing & Debugging', 'Performance Optimization'],
                 },
                 {
                   step: '04',
-                  title: '上线维护',
-                  desc: '持续优化和技术支持',
+                  title: 'Launch & Maintenance',
+                  desc: 'Continuous optimization and technical support',
                   icon: '🚀',
-                  color: 'from-orange-500 to-red-500',
-                  items: ['部署上线', '数据监控', '用户反馈', '持续迭代'],
+                  color: 'from-cyan-500 to-teal-500',
+                  items: ['Deployment', 'Data Monitoring', 'User Feedback', 'Continuous Iteration'],
                 },
               ].map((process, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
@@ -1165,21 +1187,21 @@ export default function PortfolioPage() {
                     whileHover={{ y: -10 }}
                     className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all group"
                   >
-                    {/* 步骤编号 */}
+                    {/* Step Number */}
                     <div className={`absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br ${process.color} flex items-center justify-center text-white font-bold text-lg shadow-lg`}>
                       {process.step}
                     </div>
 
-                    {/* 图标 */}
+                    {/* Icon */}
                     <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
                       {process.icon}
                     </div>
 
-                    {/* 标题和描述 */}
+                    {/* Title and Description */}
                     <h3 className="text-xl font-bold text-white mb-2">{process.title}</h3>
                     <p className="text-sm text-gray-400 mb-4">{process.desc}</p>
 
-                    {/* 详细项目 */}
+                    {/* Items */}
                     <ul className="space-y-2">
                       {process.items.map((item, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-xs text-gray-500">
@@ -1189,7 +1211,7 @@ export default function PortfolioPage() {
                       ))}
                     </ul>
 
-                    {/* 连接线 */}
+                    {/* Connector Line */}
                     {index < 3 && (
                       <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-white/20 to-transparent" />
                     )}
@@ -1207,61 +1229,60 @@ export default function PortfolioPage() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                发展历程
+                {t('timeline.title')}
               </h2>
               <p className="text-xl text-gray-400">
-                我们的成长轨迹
+                {t('timeline.subtitle')}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="max-w-5xl mx-auto">
             <div className="relative">
-              {/* 时间线 */}
+              {/* Timeline */}
               <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 hidden md:block" />
 
-              {/* 里程碑 */}
               <div className="space-y-12">
                 {[
                   {
                     year: '2020',
-                    title: '公司成立',
-                    desc: '在深圳成立，专注于数字产品开发',
+                    title: 'Founded',
+                    desc: 'Established in Shenzhen, focusing on digital product development',
                     icon: '🎉',
-                    stats: ['5人团队', '首个项目'],
-                    color: 'from-blue-500 to-cyan-500',
+                    stats: ['5-person team', 'First project'],
+                    color: 'from-amber-500 to-orange-500',
                   },
                   {
                     year: '2021',
-                    title: '快速成长',
-                    desc: '团队扩展，服务客户突破50家',
+                    title: 'Rapid Growth',
+                    desc: 'Team expansion, serving 50+ clients',
                     icon: '📈',
-                    stats: ['20人团队', '50+ 客户'],
-                    color: 'from-purple-500 to-pink-500',
+                    stats: ['20-person team', '50+ clients'],
+                    color: 'from-orange-500 to-red-500',
                   },
                   {
                     year: '2022',
-                    title: '业务拓展',
-                    desc: '开设北京、上海分部，获得多项行业奖项',
+                    title: 'Business Expansion',
+                    desc: 'Opened Beijing and Shanghai offices, won multiple industry awards',
                     icon: '🏆',
-                    stats: ['3个办公室', '100+ 项目'],
+                    stats: ['3 offices', '100+ projects'],
                     color: 'from-green-500 to-emerald-500',
                   },
                   {
                     year: '2023',
-                    title: '技术创新',
-                    desc: '引入AI技术，推出智能化解决方案',
+                    title: 'Tech Innovation',
+                    desc: 'Introduced AI technology, launched intelligent solutions',
                     icon: '🤖',
-                    stats: ['50人团队', '150+ 客户'],
-                    color: 'from-orange-500 to-red-500',
+                    stats: ['50-person team', '150+ clients'],
+                    color: 'from-cyan-500 to-teal-500',
                   },
                   {
                     year: '2024',
-                    title: '行业领先',
-                    desc: '成为行业标杆，服务世界500强企业',
+                    title: 'Industry Leader',
+                    desc: 'Became industry benchmark, serving Fortune 500 companies',
                     icon: '⭐',
-                    stats: ['80人团队', '200+ 项目'],
-                    color: 'from-pink-500 to-rose-500',
+                    stats: ['80-person team', '200+ projects'],
+                    color: 'from-violet-500 to-purple-500',
                   },
                 ].map((milestone, index) => (
                   <ScrollReveal key={index} delay={index * 0.1}>
@@ -1271,7 +1292,7 @@ export default function PortfolioPage() {
                         index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                       }`}
                     >
-                      {/* 内容卡片 */}
+                      {/* Content Card */}
                       <div className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">
                         <div className="flex items-center gap-3 mb-3">
                           <div className="text-4xl">{milestone.icon}</div>
@@ -1295,12 +1316,12 @@ export default function PortfolioPage() {
                         </div>
                       </div>
 
-                      {/* 中心点 */}
+                      {/* Center Point */}
                       <div className={`hidden md:flex w-12 h-12 rounded-full bg-gradient-to-br ${milestone.color} items-center justify-center text-white font-bold shadow-lg z-10`}>
                         {index + 1}
                       </div>
 
-                      {/* 占位 */}
+                      {/* Placeholder */}
                       <div className="flex-1 hidden md:block" />
                     </motion.div>
                   </ScrollReveal>
@@ -1318,10 +1339,10 @@ export default function PortfolioPage() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                团队专长
+                Our Team
               </h2>
               <p className="text-xl text-gray-400">
-                多领域专家组成的精英团队
+                Elite team of multi-domain experts
               </p>
             </div>
           </ScrollReveal>
@@ -1330,52 +1351,52 @@ export default function PortfolioPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  role: 'UI/UX 设计师',
+                  role: 'UI/UX Designer',
                   count: 15,
                   icon: '🎨',
                   color: 'from-pink-500 to-rose-500',
-                  skills: ['用户研究', '交互设计', '视觉设计', '原型制作'],
-                  experience: '平均 6 年经验',
+                  skills: ['User Research', 'Interaction Design', 'Visual Design', 'Prototyping'],
+                  experience: 'Avg 6 years exp',
                 },
                 {
-                  role: '前端工程师',
+                  role: 'Frontend Engineer',
                   count: 20,
                   icon: '💻',
-                  color: 'from-blue-500 to-cyan-500',
-                  skills: ['React/Vue', 'TypeScript', '响应式设计', '性能优化'],
-                  experience: '平均 7 年经验',
+                  color: 'from-amber-500 to-orange-500',
+                  skills: ['React/Vue', 'TypeScript', 'Responsive Design', 'Performance Optimization'],
+                  experience: 'Avg 7 years exp',
                 },
                 {
-                  role: '后端工程师',
+                  role: 'Backend Engineer',
                   count: 18,
                   icon: '⚙️',
                   color: 'from-green-500 to-emerald-500',
-                  skills: ['Node.js', 'Python', '数据库设计', 'API开发'],
-                  experience: '平均 8 年经验',
+                  skills: ['Node.js', 'Python', 'Database Design', 'API Development'],
+                  experience: 'Avg 8 years exp',
                 },
                 {
-                  role: '移动开发工程师',
+                  role: 'Mobile Developer',
                   count: 12,
                   icon: '📱',
-                  color: 'from-purple-500 to-pink-500',
-                  skills: ['React Native', 'Flutter', 'iOS/Android', '小程序'],
-                  experience: '平均 6 年经验',
+                  color: 'from-orange-500 to-red-500',
+                  skills: ['React Native', 'Flutter', 'iOS/Android', 'Mini Programs'],
+                  experience: 'Avg 6 years exp',
                 },
                 {
-                  role: '产品经理',
+                  role: 'Product Manager',
                   count: 8,
                   icon: '📊',
-                  color: 'from-orange-500 to-red-500',
-                  skills: ['需求分析', '产品规划', '项目管理', '数据分析'],
-                  experience: '平均 9 年经验',
+                  color: 'from-cyan-500 to-teal-500',
+                  skills: ['Requirements Analysis', 'Product Planning', 'Project Management', 'Data Analysis'],
+                  experience: 'Avg 9 years exp',
                 },
                 {
-                  role: 'QA 测试工程师',
+                  role: 'QA Engineer',
                   count: 7,
                   icon: '🔍',
-                  color: 'from-indigo-500 to-purple-500',
-                  skills: ['功能测试', '自动化测试', '性能测试', '安全测试'],
-                  experience: '平均 5 年经验',
+                  color: 'from-violet-500 to-purple-500',
+                  skills: ['Functional Testing', 'Automation Testing', 'Performance Testing', 'Security Testing'],
+                  experience: 'Avg 5 years exp',
                 },
               ].map((team, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
@@ -1383,7 +1404,7 @@ export default function PortfolioPage() {
                     whileHover={{ y: -10, scale: 1.05 }}
                     className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all group"
                   >
-                    {/* 头部 */}
+                    {/* Header */}
                     <div className="flex items-center justify-between mb-4">
                       <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${team.color} flex items-center justify-center text-3xl group-hover:scale-110 transition-transform`}>
                         {team.icon}
@@ -1393,11 +1414,11 @@ export default function PortfolioPage() {
                       </div>
                     </div>
 
-                    {/* 角色 */}
+                    {/* Role */}
                     <h3 className="text-xl font-bold text-white mb-2">{team.role}</h3>
                     <p className="text-sm text-gray-500 mb-4">{team.experience}</p>
 
-                    {/* 技能 */}
+                    {/* Skills */}
                     <div className="space-y-2">
                       {team.skills.map((skill, idx) => (
                         <div key={idx} className="flex items-center gap-2">
@@ -1415,7 +1436,6 @@ export default function PortfolioPage() {
       </section>
 
       <StatsSection />
-      <TestimonialsSectionEnhanced />
       <CTASection />
     </>
   );

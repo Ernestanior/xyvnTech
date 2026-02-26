@@ -107,7 +107,7 @@ export default function SettingsPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-500"></div>
       </div>
     );
   }
@@ -138,8 +138,8 @@ export default function SettingsPage() {
           className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 bg-blue-500/20 rounded-lg">
-              <Globe className="w-5 h-5 text-blue-400" />
+            <div className="p-2 bg-amber-500/20 rounded-lg">
+              <Globe className="w-5 h-5 text-amber-400" />
             </div>
             <h2 className="text-xl font-semibold text-white">网站基本信息</h2>
           </div>
@@ -279,8 +279,8 @@ export default function SettingsPage() {
           className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 bg-purple-500/20 rounded-lg">
-              <Facebook className="w-5 h-5 text-purple-400" />
+            <div className="p-2 bg-orange-500/20 rounded-lg">
+              <Facebook className="w-5 h-5 text-orange-400" />
             </div>
             <h2 className="text-xl font-semibold text-white">社交媒体链接</h2>
           </div>

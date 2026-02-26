@@ -222,19 +222,90 @@
   },
   "portfolio": {
     "title": "Our Work",
+    "highlight": "Amazing Projects",
     "subtitle": "Excellent digital products created for clients across industries",
     "categories": {
-      "all": "All Projects",
-      "website": "Web Development",
-      "app": "APP Development",
-      "ecommerce": "E-commerce Platform",
-      "enterprise": "Enterprise System"
+      "all": "All",
+      "website": "Website",
+      "app": "App",
+      "ecommerce": "E-commerce",
+      "enterprise": "Enterprise"
     },
     "highlights": "Key Highlights",
     "viewDetails": "View Details",
     "cta": {
-      "question": "Want to learn more about our case studies?",
-      "button": "Contact Us for Consultation"
+      "question": "Have a project in mind?",
+      "button": "Start Collaboration"
+    },
+    "projects": {
+      "1": {
+        "title": "Smart Retail E-commerce Platform",
+        "client": "Well-known Retail Brand",
+        "description": "Building an omnichannel smart retail solution, integrating online and offline shopping experiences, achieving real-time inventory synchronization and intelligent recommendation systems.",
+        "metrics": {
+          "conversion": "Conversion Rate Boost",
+          "dau": "Daily Active Users",
+          "satisfaction": "Customer Satisfaction"
+        },
+        "highlights": [
+          "Real-time Inventory Management",
+          "AI Smart Recommendation Engine",
+          "Multi-channel Data Sync",
+          "High-concurrency Architecture"
+        ],
+        "duration": "6 months"
+      },
+      "2": {
+        "title": "Enterprise SaaS Management Platform",
+        "client": "Listed Tech Company",
+        "description": "Providing enterprises with one-stop project management, team collaboration and data analysis solutions, supporting 100,000+ enterprise users online simultaneously.",
+        "metrics": {
+          "users": "Enterprise Users",
+          "efficiency": "Efficiency Boost",
+          "stability": "System Stability"
+        },
+        "highlights": [
+          "Microservices Architecture",
+          "Real-time Collaboration",
+          "Data Visualization Dashboard",
+          "Permission Management System"
+        ],
+        "duration": "8 months"
+      },
+      "3": {
+        "title": "Smart Fitness APP",
+        "client": "Fitness Chain Brand",
+        "description": "Smart fitness application combining AI technology, providing personalized training plans, real-time motion recognition and social interaction features.",
+        "metrics": {
+          "active": "Active Users",
+          "retention": "User Retention",
+          "rating": "App Store Rating"
+        },
+        "highlights": [
+          "AI Motion Recognition",
+          "Personalized Training Plans",
+          "Social Interaction Features",
+          "Data Statistics Analysis"
+        ],
+        "duration": "5 months"
+      },
+      "4": {
+        "title": "Online Education Platform",
+        "client": "Well-known Education Institution",
+        "description": "Creating an immersive online learning experience, supporting live interaction, homework grading, learning progress tracking and other complete teaching loop features.",
+        "metrics": {
+          "students": "Registered Students",
+          "completion": "Completion Rate",
+          "satisfaction": "Satisfaction Rate"
+        },
+        "highlights": [
+          "Live Video Interaction",
+          "Smart Homework Grading",
+          "Learning Path Planning",
+          "Multi-terminal Sync Learning"
+        ],
+        "duration": "7 months"
+      }
     }
   },
   "techStack": {
@@ -265,13 +336,56 @@
     }
   },
   "testimonials": {
-    "title": "Client Trust Drives Us Forward",
-    "subtitle": "Real feedback from clients across industries",
+    "title": "What Our",
+    "highlight": "Clients Say",
+    "subtitle": "Real feedback from partners who have worked with us",
     "stats": {
       "clients": "Satisfied Clients",
       "satisfaction": "Client Satisfaction",
       "rating": "Average Rating",
       "recommendation": "Recommendation Rate"
+    },
+    "items": {
+      "1": {
+        "name": "Zhang Ming",
+        "position": "CEO",
+        "company": "Well-known Retail Brand",
+        "content": "ARVIX team's professional capabilities are impressive. They not only delivered a high-quality e-commerce platform on time but also provided many innovative solutions. The conversion rate increased by 230%, exceeding our expectations.",
+        "project": "Smart Retail E-commerce Platform",
+        "tags": ["E-commerce Platform", "High Conversion", "Innovative Solutions"]
+      },
+      "2": {
+        "name": "Li Hua",
+        "position": "CTO",
+        "company": "Listed Tech Company",
+        "content": "From requirements analysis to system launch, the entire process was very smooth. The team has strong technical control, reasonable microservices architecture design, and system stability reached 99.9%. This is the most professional development team we have worked with.",
+        "project": "Enterprise SaaS Management Platform",
+        "tags": ["Enterprise System", "High Stability", "Professional Team"]
+      },
+      "3": {
+        "name": "Wang Fang",
+        "position": "Product Director",
+        "company": "Fitness Chain Brand",
+        "content": "The AI motion recognition feature works very well, with positive user feedback. The APP design is also exquisite, with user retention reaching 85%. XYVN truly understood our needs and provided the best technical solution.",
+        "project": "Smart Fitness APP",
+        "tags": ["AI Technology", "User Experience", "High Retention"]
+      },
+      "4": {
+        "name": "Chen Qiang",
+        "position": "Operations Director",
+        "company": "Well-known Education Institution",
+        "content": "The live streaming function of the online education platform is very stable, supporting tens of thousands of simultaneous online users. The learning path planning feature helped us significantly improve the course completion rate. The success of this project cannot be separated from the efforts of the XYVN team.",
+        "project": "Online Education Platform",
+        "tags": ["Online Education", "Live Streaming Tech", "High Completion Rate"]
+      },
+      "5": {
+        "name": "Liu Yang",
+        "position": "Technical Lead",
+        "company": "FinTech Company",
+        "content": "Security is the top priority for financial products, and ARVIX has done an excellent job in this regard. Multi-factor authentication, data encryption and other security measures are all in place. The product received AAA security certification after launch.",
+        "project": "FinTech APP",
+        "tags": ["Financial Security", "AAA Certification", "Professional & Reliable"]
+      }
     }
   },
   "pricing": {

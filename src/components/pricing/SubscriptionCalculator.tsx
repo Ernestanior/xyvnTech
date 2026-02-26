@@ -48,9 +48,9 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
   // 如果当前类别没有订阅套餐，显示提示信息
   if (!selectedPackage || packages.length === 0) {
     return (
-      <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-3xl p-8">
+      <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-3xl p-8">
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
             <Calculator className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -69,7 +69,7 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
                 onClick={() => handleCategoryChange(cat.id)}
                 className={`p-4 rounded-xl transition-all flex items-center gap-3 ${
                   category === cat.id
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
                     : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
                 }`}
               >
@@ -82,8 +82,8 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
 
         {/* 暂无订阅套餐提示 */}
         <div className="text-center py-12">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mx-auto mb-6">
-            <Calculator className="w-10 h-10 text-purple-400" />
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center mx-auto mb-6">
+            <Calculator className="w-10 h-10 text-orange-400" />
           </div>
           <h3 className="text-2xl font-bold text-white mb-3">该服务类型暂无订阅套餐</h3>
           <p className="text-gray-400 mb-6">
@@ -137,9 +137,9 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
   };
 
   return (
-    <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-3xl p-8">
+    <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-3xl p-8">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
           <Calculator className="w-6 h-6 text-white" />
         </div>
         <div>
@@ -158,7 +158,7 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
               onClick={() => handleCategoryChange(cat.id)}
               className={`p-4 rounded-xl transition-all flex items-center gap-3 ${
                 category === cat.id
-                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
                   : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
               }`}
             >
@@ -179,7 +179,7 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
               onClick={() => setSelectedTier(pkg.tier)}
               className={`p-4 rounded-xl transition-all ${
                 selectedTier === pkg.tier
-                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
                   : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
               }`}
             >
@@ -200,7 +200,7 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
             onClick={() => setBillingCycle('monthly')}
             className={`p-4 rounded-xl transition-all ${
               billingCycle === 'monthly'
-                ? 'bg-purple-500/20 border-2 border-purple-500 text-white'
+                ? 'bg-orange-500/20 border-2 border-orange-500 text-white'
                 : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
             }`}
           >
@@ -211,7 +211,7 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
             onClick={() => setBillingCycle('annual')}
             className={`p-4 rounded-xl transition-all relative ${
               billingCycle === 'annual'
-                ? 'bg-purple-500/20 border-2 border-purple-500 text-white'
+                ? 'bg-orange-500/20 border-2 border-orange-500 text-white'
                 : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
             }`}
           >
@@ -235,7 +235,7 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
           onChange={(e) => setYears(parseInt(e.target.value))}
           className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer"
           style={{
-            background: `linear-gradient(to right, rgb(168, 85, 247) 0%, rgb(168, 85, 247) ${(years - 1) * 25}%, rgba(255,255,255,0.1) ${(years - 1) * 25}%, rgba(255,255,255,0.1) 100%)`
+            background: `linear-gradient(to right, rgb(249, 115, 22) 0%, rgb(249, 115, 22) ${(years - 1) * 25}%, rgba(255,255,255,0.1) ${(years - 1) * 25}%, rgba(255,255,255,0.1) 100%)`
           }}
         />
         <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -260,14 +260,14 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
                   onClick={() => toggleAddon(addon.id)}
                   className={`w-full p-4 rounded-xl transition-all text-left ${
                     isSelected
-                      ? 'bg-purple-500/20 border-2 border-purple-500'
+                      ? 'bg-orange-500/20 border-2 border-orange-500'
                       : 'bg-white/5 border border-white/10 hover:bg-white/10'
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div className={`w-5 h-5 rounded border-2 flex items-center justify-center ${
-                        isSelected ? 'bg-purple-500 border-purple-500' : 'border-gray-600'
+                        isSelected ? 'bg-orange-500 border-orange-500' : 'border-gray-600'
                       }`}>
                         {isSelected && <Check className="w-3 h-3 text-white" />}
                       </div>
@@ -276,7 +276,7 @@ export default function SubscriptionCalculator({ currency, category, onCategoryC
                         <div className="text-xs text-gray-400">{addon.description}</div>
                       </div>
                     </div>
-                    <div className="text-sm text-purple-400 font-medium">
+                    <div className="text-sm text-orange-400 font-medium">
                       +{formatPrice(addon.price, currency)}/{addon.billingType === 'monthly' ? '月' : addon.billingType === 'per-unit' ? '单位' : '次'}
                     </div>
                   </div>

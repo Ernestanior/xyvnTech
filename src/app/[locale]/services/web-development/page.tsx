@@ -61,12 +61,12 @@ export default function WebDevelopmentPage() {
     <>
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-orange-500/10" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               {t('hero.title')}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
                 {' '}{t('hero.titleHighlight')}
               </span>
             </h1>
@@ -83,7 +83,7 @@ export default function WebDevelopmentPage() {
                     contactSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all"
+                className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-amber-500/50 transition-all"
               >
                 {t('hero.startConsulting')}
               </button>
@@ -112,7 +112,7 @@ export default function WebDevelopmentPage() {
                 key={index}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all group"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
@@ -163,7 +163,7 @@ export default function WebDevelopmentPage() {
             {process.map((item, index) => (
               <div key={index} className="relative">
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all">
-                  <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                  <div className="text-5xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent mb-4">
                     {item.step}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>

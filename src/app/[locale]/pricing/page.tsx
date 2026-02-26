@@ -2,6 +2,8 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { Check, X, Calculator, TrendingUp, Shield, Clock, Users, ArrowRight, Sparkles, DollarSign, Globe, ChevronDown } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import FAQSection from '@/components/sections/FAQSection';
@@ -15,55 +17,58 @@ import SubscriptionCalculator from '@/components/pricing/SubscriptionCalculator'
 import CostComparisonCalculator from '@/components/pricing/CostComparisonCalculator';
 import { allSubscriptionPackages, getSubscriptionsByCategory } from '@/data/subscriptionPackages';
 import { PricingMode, BillingCycle } from '@/types/pricing';
+import { useTranslations } from 'next-intl';
 
 export default function PricingPage() {
+  const { locale } = useParams();
+  const t = useTranslations('pricing');
   const [selectedCategory, setSelectedCategory] = useState('corporate-website');
-  const [selectedCurrency, setSelectedCurrency] = useState<Currency>(getCurrency('USD')); // 默认美元
+  const [selectedCurrency, setSelectedCurrency] = useState<Currency>(getCurrency('USD'));
   const [showCurrencyMenu, setShowCurrencyMenu] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<PricingPackage | null>(null);
   const [showCalculator, setShowCalculator] = useState(false);
   
   // 新增：定价模式状态
-  const [pricingMode, setPricingMode] = useState<PricingMode>('subscription'); // 默认订阅制
-  const [billingCycle, setBillingCycle] = useState<BillingCycle>('annual'); // 默认年付
+  const [pricingMode, setPricingMode] = useState<PricingMode>('subscription');
+  const [billingCycle, setBillingCycle] = useState<BillingCycle>('annual');
   
   // 计算器状态
   const [calculatorCategory, setCalculatorCategory] = useState('corporate-website');
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
 
   const categories = [
-    { id: 'corporate-website', name: '企业官网', icon: '🌐' },
-    { id: 'ecommerce', name: '电商网站', icon: '🛍️' },
-    { id: 'landing-page', name: '一站式网页', icon: '🎯' },
-    { id: 'admin-system', name: '管理系统', icon: '⚙️' },
-    { id: 'cross-platform-app', name: 'APP开发', icon: '📱' },
-    { id: 'miniprogram', name: '小程序', icon: '💬' },
+    { id: 'corporate-website', name: t('corporate-website'), icon: '🌐' },
+    { id: 'ecommerce', name: t('ecommerce'), icon: '🛍️' },
+    { id: 'landing-page', name: t('landing-page'), icon: '🎯' },
+    { id: 'admin-system', name: t('admin-system'), icon: '⚙️' },
+    { id: 'cross-platform-app', name: t('cross-platform-app'), icon: '📱' },
+    { id: 'miniprogram', name: t('miniprogram'), icon: '💬' },
   ];
 
   const advantages = [
     {
       icon: Shield,
-      title: '透明报价',
-      desc: '无隐藏费用，所有成本清晰可见',
-      color: 'from-blue-500 to-cyan-500',
+      title: t('advantages.transparent.title'),
+      desc: t('advantages.transparent.desc'),
+      color: 'from-amber-500 to-orange-500',
     },
     {
       icon: Clock,
-      title: '按时交付',
-      desc: '严格遵守项目时间表，准时交付',
-      color: 'from-purple-500 to-pink-500',
+      title: t('advantages.ontime.title'),
+      desc: t('advantages.ontime.desc'),
+      color: 'from-orange-500 to-red-500',
     },
     {
       icon: Users,
-      title: '专属团队',
-      desc: '配备专业团队，全程跟进服务',
+      title: t('advantages.dedicated.title'),
+      desc: t('advantages.dedicated.desc'),
       color: 'from-green-500 to-emerald-500',
     },
     {
       icon: TrendingUp,
-      title: '持续优化',
-      desc: '项目上线后持续优化和支持',
-      color: 'from-orange-500 to-red-500',
+      title: t('advantages.continuous.title'),
+      desc: t('advantages.continuous.desc'),
+      color: 'from-cyan-500 to-teal-500',
     },
   ];
 
@@ -479,21 +484,21 @@ export default function PricingPage() {
     <>
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-pink-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-orange-600/10" />
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                透明定价
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  {' '}灵活选择
+                {t('title')}
+                <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-orange-500 bg-clip-text text-transparent">
+                  {' '}{t('subtitle')}
                 </span>
               </h1>
               
               <p className="text-xl text-gray-400 leading-relaxed mb-8">
-                无隐藏费用，清晰的价格结构，让您的预算更可控
+                {t('description')}
                 <br />
-                选择最适合您的服务套餐，开启数字化之旅
+                {t('description2')}
               </p>
 
               {/* 币种切换器 */}
@@ -503,8 +508,8 @@ export default function PricingPage() {
                     onClick={() => setShowCurrencyMenu(!showCurrencyMenu)}
                     className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all relative z-10"
                   >
-                    <Globe className="w-5 h-5 text-blue-400" />
-                    <span className="text-white font-medium">{selectedCurrency.name}</span>
+                    <Globe className="w-5 h-5 text-amber-400" />
+                    <span className="text-white font-medium">{t(`currency.${selectedCurrency.code}`)}</span>
                     <span className="text-gray-400">({selectedCurrency.symbol})</span>
                     <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform ${showCurrencyMenu ? 'rotate-180' : ''}`} />
                   </button>
@@ -542,7 +547,7 @@ export default function PricingPage() {
                                 selectedCurrency.code === currency.code ? 'bg-white/10' : ''
                               }`}
                             >
-                              <span className="text-white font-medium">{currency.name}</span>
+                              <span className="text-white font-medium">{t(`currency.${currency.code}`)}</span>
                               <span className="text-gray-400">{currency.symbol}</span>
                             </button>
                           ))}
@@ -569,10 +574,10 @@ export default function PricingPage() {
                       packagesSection.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center gap-2"
+                  className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-amber-500/50 transition-all flex items-center gap-2"
                 >
                   <Sparkles className="w-5 h-5" />
-                  查看套餐
+                  {t('viewPackages')}
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -581,7 +586,7 @@ export default function PricingPage() {
                   className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-medium hover:bg-white/10 transition-all flex items-center gap-2"
                 >
                   <Calculator className="w-5 h-5" />
-                  价格计算器
+                  {t('priceCalculator')}
                 </motion.button>
               </div>
             </div>
@@ -617,10 +622,10 @@ export default function PricingPage() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                选择服务类型
+                {t('selectServiceType')}
               </h2>
               <p className="text-xl text-gray-400">
-                根据您的需求选择合适的服务类型
+                {t('selectServiceTypeDesc')}
               </p>
             </div>
           </ScrollReveal>
@@ -635,7 +640,7 @@ export default function PricingPage() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all flex items-center gap-2 ${
                   selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg'
                     : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
                 }`}
               >
@@ -665,12 +670,6 @@ export default function PricingPage() {
                     package={pkg}
                     billingCycle={billingCycle}
                     currency={selectedCurrency}
-                    onSelect={() => {
-                      const contactSection = document.getElementById('contact');
-                      if (contactSection) {
-                        contactSection.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
                     delay={index * 0.1}
                   />
                 ))
@@ -678,19 +677,19 @@ export default function PricingPage() {
                 // 暂无订阅套餐提示
                 <div className="col-span-full text-center py-20">
                   <div className="max-w-md mx-auto">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center mx-auto mb-6">
-                      <Sparkles className="w-10 h-10 text-blue-400" />
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mx-auto mb-6">
+                      <Sparkles className="w-10 h-10 text-amber-400" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">该服务类型暂无订阅套餐</h3>
+                    <h3 className="text-2xl font-bold text-white mb-3">{t('noSubscriptionTitle')}</h3>
                     <p className="text-gray-400 mb-6">
-                      我们正在为更多服务类型推出订阅套餐，敬请期待！
+                      {t('comingSoonDesc')}
                     </p>
                     <button
                       onClick={() => setPricingMode('one-time')}
-                      className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg transition-all inline-flex items-center gap-2"
+                      className="px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium hover:shadow-lg transition-all inline-flex items-center gap-2"
                     >
                       <ArrowRight className="w-5 h-5" />
-                      查看买断制套餐
+                      {t('viewOneTimePackages')}
                     </button>
                   </div>
                 </div>
@@ -702,21 +701,21 @@ export default function PricingPage() {
                 <motion.div
                   whileHover={{ y: -10, scale: 1.02 }}
                   className={`relative bg-white/5 backdrop-blur-sm border rounded-3xl p-8 hover:bg-white/10 transition-all ${
-                    pkg.popular ? 'border-purple-500 shadow-lg shadow-purple-500/20' : 'border-white/10'
+                    pkg.popular ? 'border-orange-500 shadow-lg shadow-orange-500/20' : 'border-white/10'
                   }`}
                 >
                   {/* Popular Badge */}
                   {pkg.popular && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <div className="px-4 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium rounded-full">
-                        最受欢迎
+                      <div className="px-4 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium rounded-full">
+                        {t('popular')}
                       </div>
                     </div>
                   )}
 
                   {/* Package Name */}
-                  <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
-                  <p className="text-gray-400 mb-6">{pkg.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{t(`packages.${pkg.id}.name`)}</h3>
+                  <p className="text-gray-400 mb-6">{t(`packages.${pkg.id}.description`)}</p>
 
                   {/* Price */}
                   <div className="mb-6">
@@ -725,14 +724,14 @@ export default function PricingPage() {
                         {formatPriceRange(getPriceRange(pkg.price).minPrice, getPriceRange(pkg.price).maxPrice, selectedCurrency)}
                       </span>
                     </div>
-                    <p className="text-sm text-gray-500 mt-1">估价范围，具体以需求为准</p>
+                    <p className="text-sm text-gray-500 mt-1">{t('priceDisclaimer')}</p>
                     {pkg.originalPrice && (
                       <div className="flex items-center gap-2 mt-2">
                         <span className="text-gray-500 line-through text-sm">
-                          原价 {formatPriceRange(getPriceRange(pkg.originalPrice).minPrice, getPriceRange(pkg.originalPrice).maxPrice, selectedCurrency)}
+                          {t('originalPrice')} {formatPriceRange(getPriceRange(pkg.originalPrice).minPrice, getPriceRange(pkg.originalPrice).maxPrice, selectedCurrency)}
                         </span>
                         <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">
-                          省 {calculateDiscount(pkg.price, pkg.originalPrice)}%
+                          {t('save')} {calculateDiscount(pkg.price, pkg.originalPrice)}%
                         </span>
                       </div>
                     )}
@@ -743,30 +742,31 @@ export default function PricingPage() {
                     {pkg.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-gray-300">
                         <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
+                        <span className="text-sm">{t(`packages.${pkg.id}.features.${idx}`)}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* CTA Button */}
-                  <button
-                    onClick={() => setSelectedPackage(pkg)}
-                    className={`w-full py-3 rounded-xl font-medium transition-all ${
-                      pkg.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg'
-                        : 'bg-white/5 border border-white/10 text-white hover:bg-white/10'
-                    }`}
-                  >
-                    查看详情
-                  </button>
+                  <Link href="payment">
+                    <button
+                      className={`w-full py-3 rounded-xl font-medium transition-all ${
+                        pkg.popular
+                          ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:shadow-lg'
+                          : 'bg-white/5 border border-white/10 text-white hover:bg-white/10'
+                      }`}
+                    >
+                      {t('selectPackage')}
+                    </button>
+                  </Link>
 
                   {/* Best For */}
                   <div className="mt-6 pt-6 border-t border-white/10">
-                    <p className="text-xs text-gray-500 mb-2">适合：</p>
+                    <p className="text-xs text-gray-500 mb-2">{t('bestFor')}</p>
                     <div className="flex flex-wrap gap-2">
                       {pkg.bestFor.map((type, idx) => (
                         <span key={idx} className="px-2 py-1 bg-white/5 text-gray-400 text-xs rounded-full">
-                          {type}
+                          {t(`packages.${pkg.id}.bestFor.${idx}`)}
                         </span>
                       ))}
                     </div>
@@ -786,10 +786,10 @@ export default function PricingPage() {
             <ScrollReveal>
               <div className="text-center mb-12">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                  为什么选择订阅制？
+                  {t('whySubscription')}
                 </h2>
                 <p className="text-xl text-gray-400">
-                  对比买断制，订阅制能为您节省更多成本
+                  {t('subscriptionComparison')}
                 </p>
               </div>
             </ScrollReveal>
@@ -832,9 +832,9 @@ export default function PricingPage() {
               </div>
 
               {/* Price */}
-              <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-6 mb-8">
+              <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-6 mb-8">
                 <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="text-4xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
                     {formatPriceRange(getPriceRange(selectedPackage.price).minPrice, getPriceRange(selectedPackage.price).maxPrice, selectedCurrency)}
                   </span>
                 </div>
@@ -893,7 +893,7 @@ export default function PricingPage() {
               {selectedPackage.caseStudy && (
                 <div className="bg-white/5 rounded-2xl p-6 mb-8">
                   <h4 className="text-lg font-bold text-white mb-3">成功案例</h4>
-                  <p className="text-purple-400 font-medium mb-2">{selectedPackage.caseStudy.title}</p>
+                  <p className="text-orange-400 font-medium mb-2">{selectedPackage.caseStudy.title}</p>
                   <p className="text-gray-400 text-sm mb-4">{selectedPackage.caseStudy.description}</p>
                   <div className="flex flex-wrap gap-3">
                     {selectedPackage.caseStudy.results.map((result, idx) => (
@@ -915,7 +915,7 @@ export default function PricingPage() {
                       contactSection.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg transition-all"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium hover:shadow-lg transition-all"
                 >
                   立即咨询
                 </button>
@@ -951,12 +951,12 @@ export default function PricingPage() {
               <div className="flex items-start justify-between mb-6">
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-2">
-                    {pricingMode === 'subscription' ? '订阅费用计算器' : '智能价格计算器'}
+                    {pricingMode === 'subscription' ? t('subscriptionCalculator') : t('priceCalculator')}
                   </h3>
                   <p className="text-gray-400">
                     {pricingMode === 'subscription' 
-                      ? '计算您的订阅总成本' 
-                      : '选择项目类型和功能，实时计算价格'}
+                      ? t('subscriptionCalculatorDesc') 
+                      : t('calculatorDesc')}
                   </p>
                 </div>
                 <button
@@ -986,15 +986,15 @@ export default function PricingPage() {
                           contactSection.scrollIntoView({ behavior: 'smooth' });
                         }
                       }}
-                      className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-medium hover:shadow-lg transition-all"
+                      className="flex-1 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-medium hover:shadow-lg transition-all"
                     >
-                      立即订阅
+                      {pricingMode === 'subscription' ? t('subscribeNow') : t('contactQuote')}
                     </button>
                     <button
                       onClick={() => setShowCalculator(false)}
                       className="px-6 py-3 bg-white/5 border border-white/10 text-white rounded-full font-medium hover:bg-white/10 transition-all"
                     >
-                      关闭
+                      {t('close')}
                     </button>
                   </div>
                 </>
@@ -1014,7 +1014,7 @@ export default function PricingPage() {
                       }}
                       className={`p-4 rounded-xl transition-all flex items-center gap-3 ${
                         calculatorCategory === category.id
-                          ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
+                          ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg'
                           : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
                       }`}
                     >
@@ -1079,7 +1079,7 @@ export default function PricingPage() {
                                       <span className="text-white font-medium">{feature.name}</span>
                                     </div>
                                     <span className={`text-sm font-medium ${
-                                      feature.price === 0 ? 'text-green-400' : 'text-blue-400'
+                                      feature.price === 0 ? 'text-green-400' : 'text-amber-400'
                                     }`}>
                                       {feature.price === 0 ? '包含' : `+${formatPrice(feature.price, selectedCurrency)}`}
                                     </span>
@@ -1096,14 +1096,14 @@ export default function PricingPage() {
               </div>
 
               {/* 价格总计 */}
-              <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-6 mb-6">
+              <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-6 mb-6">
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <h4 className="text-lg font-bold text-white mb-1">预估总价</h4>
                     <p className="text-sm text-gray-400">基于您选择的功能计算</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    <div className="text-4xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
                       {formatPrice(calculateTotal(), selectedCurrency)}
                     </div>
                     <p className="text-xs text-gray-500 mt-1">
@@ -1141,15 +1141,15 @@ export default function PricingPage() {
                 <h4 className="text-sm font-bold text-white mb-3">💡 温馨提示</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-0.5">•</span>
+                    <span className="text-amber-400 mt-0.5">•</span>
                     <span>此价格为估算价格，实际价格可能根据具体需求有所调整</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-0.5">•</span>
+                    <span className="text-amber-400 mt-0.5">•</span>
                     <span>同类别选项（如平台选择）只能选择一个</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-0.5">•</span>
+                    <span className="text-amber-400 mt-0.5">•</span>
                     <span>价格包含基础维护（3个月），不含服务器和第三方服务费用</span>
                   </li>
                 </ul>
@@ -1165,7 +1165,7 @@ export default function PricingPage() {
                       contactSection.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg transition-all"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium hover:shadow-lg transition-all"
                 >
                   获取精准报价
                 </button>

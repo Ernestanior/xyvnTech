@@ -14,6 +14,24 @@ const config: Config = {
           gray: '#1D1D1F',
           lightgray: '#F5F5F7',
         },
+        // 主题渐变色 - 琥珀-深橙
+        theme: {
+          primary: {
+            light: '#fbbf24', // amber-400
+            DEFAULT: '#f59e0b', // amber-500
+            dark: '#d97706', // amber-600
+          },
+          secondary: {
+            light: '#fb923c', // orange-400
+            DEFAULT: '#f97316', // orange-500
+            dark: '#ea580c', // orange-600
+          },
+          gradient: {
+            from: '#fbbf24', // amber-400
+            via: '#f59e0b', // amber-500
+            to: '#ea580c', // orange-600
+          },
+        },
       },
       fontFamily: {
         sans: ['var(--font-poppins)', 'var(--font-noto-sans-sc)', 'system-ui', 'sans-serif'],

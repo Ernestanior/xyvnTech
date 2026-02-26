@@ -1,0 +1,17 @@
+{
+  "title": "技術博客",
+  "subtitle": "分享技術見解，探索開發之道",
+  "searchPlaceholder": "搜尋文章...",
+  "noArticles": "暫無文章",
+  "previousPage": "上一頁",
+  "nextPage": "下一頁",
+  "comments": {
+    "pageTitle": "頁面標題",
+    "searchBox": "搜索框",
+    "articleList": "文章列表",
+    "coverImage": "封面圖",
+    "content": "內容",
+    "metaInfo": "元資訊",
+    "pagination": "分頁"
+  }
+}

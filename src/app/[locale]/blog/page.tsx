@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Search, Calendar, Eye } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface Article {
   id: string;
@@ -17,6 +18,7 @@ interface Article {
 }
 
 export default function BlogPage() {
+  const t = useTranslations('blog');
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
@@ -59,21 +61,21 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 页面标题 */}
+        {/* Page Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            技术博客
+            {t('title')}
           </h1>
           <p className="text-xl text-gray-400">
-            分享技术见解，探索开发之道
+            {t('subtitle')}
           </p>
         </motion.div>
 
-        {/* 搜索框 */}
+        {/* Search Box */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,14 +89,14 @@ export default function BlogPage() {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="搜索文章..."
-                className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+                placeholder={t('searchPlaceholder')}
+                className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
               />
             </div>
           </form>
         </motion.div>
 
-        {/* 文章列表 */}
+        {/* Article List */}
         {loading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[...Array(6)].map((_, i) => (
@@ -110,7 +112,7 @@ export default function BlogPage() {
           </div>
         ) : articles.length === 0 ? (
           <div className="text-center py-16">
-            <p className="text-gray-400 text-lg">暂无文章</p>
+            <p className="text-gray-400 text-lg">{t('noArticles')}</p>
           </div>
         ) : (
           <>
@@ -123,8 +125,8 @@ export default function BlogPage() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <Link href={`/blog/${article.slug}`}>
-                    <div className="bg-gray-800/50 border border-gray-700 rounded-lg overflow-hidden hover:border-blue-500/50 transition-all duration-300 group h-full flex flex-col">
-                      {/* 封面图 */}
+                    <div className="bg-gray-800/50 border border-gray-700 rounded-lg overflow-hidden hover:border-amber-500/50 transition-all duration-300 group h-full flex flex-col">
+                      {/* Cover Image */}
                       {article.cover_image && (
                         <div className="relative w-full h-48 overflow-hidden">
                           <Image
@@ -136,9 +138,9 @@ export default function BlogPage() {
                         </div>
                       )}
 
-                      {/* 内容 */}
+                      {/* Content */}
                       <div className="p-6 flex-1 flex flex-col">
-                        <h2 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
+                        <h2 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors line-clamp-2">
                           {article.title}
                         </h2>
                         
@@ -146,7 +148,7 @@ export default function BlogPage() {
                           {article.excerpt}
                         </p>
 
-                        {/* 元信息 */}
+                        {/* Meta Info */}
                         <div className="flex items-center gap-4 text-sm text-gray-500">
                           <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
@@ -164,7 +166,7 @@ export default function BlogPage() {
               ))}
             </div>
 
-            {/* 分页 */}
+            {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex justify-center gap-2 mt-12">
                 <button
@@ -172,7 +174,7 @@ export default function BlogPage() {
                   disabled={page === 1}
                   className="px-4 py-2 bg-gray-800 border border-gray-700 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
-                  上一页
+                  {t('previousPage')}
                 </button>
                 <span className="px-4 py-2 text-gray-400">
                   {page} / {totalPages}
@@ -182,7 +184,7 @@ export default function BlogPage() {
                   disabled={page === totalPages}
                   className="px-4 py-2 bg-gray-800 border border-gray-700 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
-                  下一页
+                  {t('nextPage')}
                 </button>
               </div>
             )}

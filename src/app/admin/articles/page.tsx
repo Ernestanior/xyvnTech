@@ -100,7 +100,7 @@ export default function ArticlesPage() {
         <h1 className="text-2xl font-bold text-white">文章管理</h1>
         <Link
           href="/admin/articles/new"
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
         >
           新建文章
         </Link>
@@ -114,7 +114,7 @@ export default function ArticlesPage() {
             placeholder="搜索文章标题或内容..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
           <select
             value={status}
@@ -122,7 +122,7 @@ export default function ArticlesPage() {
               setStatus(e.target.value);
               setPage(1);
             }}
-            className="px-4 py-2 bg-gray-800 border border-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-2 bg-gray-800 border border-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
           >
             <option value="">全部状态</option>
             <option value="draft">草稿</option>
@@ -131,7 +131,7 @@ export default function ArticlesPage() {
           </select>
           <button
             type="submit"
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
           >
             搜索
           </button>
@@ -179,7 +179,7 @@ export default function ArticlesPage() {
                     <div className="flex gap-2">
                       <Link
                         href={`/admin/articles/${article.id}/edit`}
-                        className="text-blue-400 hover:text-blue-300 transition-colors"
+                        className="text-amber-400 hover:text-amber-300 transition-colors"
                       >
                         编辑
                       </Link>

@@ -12,19 +12,19 @@ export default function ServicesSection() {
     {
       icon: Code,
       serviceKey: 'web',
-      gradient: 'from-blue-500 to-cyan-500',
+      bgColor: 'bg-orange-600',
       link: '/services/web-development',
     },
     {
       icon: Smartphone,
       serviceKey: 'app',
-      gradient: 'from-purple-500 to-pink-500',
+      bgColor: 'bg-rose-600',
       link: '/services/app-development',
     },
     {
       icon: MessageSquare,
       serviceKey: 'miniprogram',
-      gradient: 'from-green-500 to-emerald-500',
+      bgColor: 'bg-teal-600',
       link: '/services/miniprogram',
     },
   ];
@@ -33,8 +33,8 @@ export default function ServicesSection() {
     <section className="py-32 relative overflow-hidden bg-[#0a0a0f]">
       {/* 背景装饰 */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -67,15 +67,15 @@ export default function ServicesSection() {
               <Link href={service.link}>
                 <div className="group relative h-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer">
                   {/* 渐变光晕 */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`} />
+                  <div className={`absolute inset-0 bg-orange-500/5 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300`} />
                   
                   {/* 图标 */}
-                  <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`relative w-16 h-16 rounded-2xl ${service.bgColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
 
                   {/* 标题 */}
-                  <h3 className="relative text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
+                  <h3 className="relative text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-amber-400 group-hover:to-orange-400 transition-all duration-300">
                     {t(`items.${service.serviceKey}.title`)}
                   </h3>
 

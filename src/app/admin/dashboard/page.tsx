@@ -62,14 +62,14 @@ export default function AdminDashboardPage() {
       title: '总文章数',
       value: stats.articles.total,
       icon: FileText,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-amber-500 to-orange-500',
       subtitle: `${stats.articles.published} 已发布`,
     },
     {
       title: '咨询消息',
       value: stats.inquiries.total,
       icon: MessageSquare,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-orange-500 to-red-500',
       subtitle: `${stats.inquiries.unread} 未读`,
       badge: stats.inquiries.unread > 0 ? stats.inquiries.unread : undefined,
     },
@@ -84,7 +84,7 @@ export default function AdminDashboardPage() {
       title: '草稿文章',
       value: stats.articles.draft,
       icon: TrendingUp,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-cyan-500 to-teal-500',
       subtitle: '待发布',
     },
   ] : [];
@@ -159,7 +159,7 @@ export default function AdminDashboardPage() {
               >
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-lg font-semibold text-white">最近文章</h2>
-                  <a href="/admin/articles" className="text-sm text-blue-400 hover:text-blue-300">
+                  <a href="/admin/articles" className="text-sm text-amber-400 hover:text-amber-300">
                     查看全部 →
                   </a>
                 </div>
@@ -201,7 +201,7 @@ export default function AdminDashboardPage() {
               >
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-lg font-semibold text-white">最近咨询</h2>
-                  <a href="/admin/inquiries" className="text-sm text-blue-400 hover:text-blue-300">
+                  <a href="/admin/inquiries" className="text-sm text-amber-400 hover:text-amber-300">
                     查看全部 →
                   </a>
                 </div>
@@ -238,14 +238,14 @@ export default function AdminDashboardPage() {
                   href="/admin/articles/new"
                   className="flex flex-col items-center gap-2 p-4 bg-white/5 hover:bg-white/10 rounded-lg transition-all group"
                 >
-                  <FileText className="w-8 h-8 text-blue-400 group-hover:scale-110 transition-transform" />
+                  <FileText className="w-8 h-8 text-amber-400 group-hover:scale-110 transition-transform" />
                   <span className="text-sm text-gray-300">新建文章</span>
                 </a>
                 <a
                   href="/admin/articles"
                   className="flex flex-col items-center gap-2 p-4 bg-white/5 hover:bg-white/10 rounded-lg transition-all group"
                 >
-                  <Eye className="w-8 h-8 text-purple-400 group-hover:scale-110 transition-transform" />
+                  <Eye className="w-8 h-8 text-orange-400 group-hover:scale-110 transition-transform" />
                   <span className="text-sm text-gray-300">文章管理</span>
                 </a>
                 <a

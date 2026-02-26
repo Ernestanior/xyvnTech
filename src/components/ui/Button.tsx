@@ -24,7 +24,7 @@ export default function Button({
   const baseStyles = 'font-medium rounded-full transition-all duration-300'
   
   const variants = {
-    primary: 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 shadow-lg shadow-blue-500/50',
+    primary: 'bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-lg shadow-amber-500/50',
     secondary: 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20',
     outline: 'bg-white/5 backdrop-blur-sm border border-white/20 text-white hover:bg-white/10 hover:border-white/30',
   }

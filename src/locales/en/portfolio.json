@@ -1,0 +1,276 @@
+{
+  "title": "Our",
+  "highlight": "Amazing Work",
+  "subtitle": "Exceptional digital products for clients across industries. Every project demonstrates our professional capabilities.",
+  "stats": {
+    "awards": "Award-winning Projects",
+    "clients": "Clients Served",
+    "successRate": "Project Success Rate",
+    "rating": "Client Rating"
+  },
+  "featured": {
+    "title": "Featured Projects",
+    "subtitle": "Our most representative success stories",
+    "badge": "Featured"
+  },
+  "search": {
+    "placeholder": "Search project names, descriptions, tags...",
+    "clear": "Clear"
+  },
+  "view": {
+    "grid": "Grid View",
+    "list": "List View"
+  },
+  "sort": {
+    "label": "Sort by",
+    "latest": "Latest Projects",
+    "popular": "Most Popular",
+    "name": "By Name"
+  },
+  "filter": {
+    "label": "Filter:",
+    "all": "All",
+    "ecommerce": "E-commerce",
+    "enterprise": "Enterprise Website",
+    "education": "Education Platform",
+    "fintech": "FinTech",
+    "social": "Social App",
+    "tools": "Utility App"
+  },
+  "results": "Found {{count}} projects",
+  "viewDetails": "View Details",
+  "views": "views",
+  "likes": "likes",
+  "empty": {
+    "title": "No projects found",
+    "subtitle": "Try different keywords or categories",
+    "reset": "Reset Filters"
+  },
+  "modal": {
+    "client": "Client",
+    "industry": "Industry",
+    "year": "Year",
+    "duration": "Duration",
+    "intro": "Project Introduction",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "results": "Results",
+    "highlights": "Key Highlights",
+    "techStack": "Tech Stack",
+    "views": "Views",
+    "likes": "Likes",
+    "rating": "Rating",
+    "bookmark": {
+      "saved": "Saved",
+      "unsaved": "Not Saved"
+    },
+    "contact": "Contact Us"
+  },
+  "industries": {
+    "title": "Industry Distribution",
+    "subtitle": "Industries we serve",
+    "retail": "Retail & E-commerce",
+    "enterprise": "Enterprise Services",
+    "education": "Education & Training",
+    "fintech": "FinTech",
+    "healthcare": "Healthcare",
+    "social": "Social & Entertainment",
+    "lifestyle": "Lifestyle Services",
+    "others": "Other Industries",
+    "cases": "Success Cases"
+  },
+  "techStack": {
+    "title": "Tech Capabilities",
+    "subtitle": "Technologies we excel at"
+  },
+  "resultsSection": {
+    "title": "Success Metrics",
+    "subtitle": "Our track record of delivering exceptional results"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Smart Retail E-commerce Platform",
+      "category": "ecommerce",
+      "client": "Leading Retail Brand",
+      "industry": "Retail & E-commerce",
+      "description": "Omnichannel smart retail solution integrating online and offline shopping experiences with real-time inventory sync and intelligent recommendation system.",
+      "tags": ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Redis"],
+      "metrics": [
+        { "icon": "TrendingUp", "label": "Conversion Rate Increase", "value": "230%" },
+        { "icon": "Users", "label": "Daily Active Users", "value": "500K+" },
+        { "icon": "Award", "label": "User Satisfaction", "value": "98%" }
+      ],
+      "highlights": [
+        "Real-time Inventory Management System",
+        "AI Smart Recommendation Engine",
+        "Multi-device Data Sync",
+        "High-concurrency Architecture"
+      ],
+      "year": "2025",
+      "duration": "6 months",
+      "challenge": "Client needed to integrate online and offline channels, achieve real-time inventory sync, and provide personalized shopping experiences.",
+      "solution": "Adopted microservices architecture, used Redis for real-time inventory sync, built recommendation system based on user behavior data.",
+      "results": [
+        "Conversion rate increased 230%",
+        "Inventory turnover improved 150%",
+        "User repurchase rate reached 65%",
+        "System response time < 200ms"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Enterprise SaaS Management Platform",
+      "category": "enterprise",
+      "client": "Public Tech Company",
+      "industry": "Enterprise Services",
+      "description": "One-stop project management, team collaboration and data analysis solution for enterprises, supporting 100K+ concurrent enterprise users.",
+      "tags": ["React", "Node.js", "MongoDB", "WebSocket", "Docker"],
+      "metrics": [
+        { "icon": "Users", "label": "Enterprise Users", "value": "100K+" },
+        { "icon": "TrendingUp", "label": "Efficiency Improvement", "value": "180%" },
+        { "icon": "Award", "label": "System Stability", "value": "99.9%" }
+      ],
+      "highlights": [
+        "Microservices Architecture",
+        "Real-time Collaboration Features",
+        "Data Visualization Dashboard",
+        "Permission Management System"
+      ],
+      "year": "2025",
+      "duration": "8 months"
+    },
+    {
+      "id": 3,
+      "title": "AI Fitness App",
+      "category": "app",
+      "client": "Fitness Chain Brand",
+      "industry": "Health & Fitness",
+      "description": "AI-powered smart fitness application providing personalized training plans, real-time motion recognition and social interaction features.",
+      "tags": ["React Native", "TensorFlow", "Firebase", "GraphQL"],
+      "metrics": [
+        { "icon": "Users", "label": "Active Users", "value": "1M+" },
+        { "icon": "TrendingUp", "label": "User Retention", "value": "85%" },
+        { "icon": "Award", "label": "App Store Rating", "value": "4.8" }
+      ],
+      "highlights": [
+        "AI Motion Recognition",
+        "Personalized Training Plans",
+        "Social Interaction Features",
+        "Data Statistics Analysis"
+      ],
+      "year": "2025",
+      "duration": "5 months"
+    },
+    {
+      "id": 4,
+      "title": "Online Education Platform",
+      "category": "website",
+      "client": "Leading Education Institution",
+      "industry": "Online Education",
+      "description": "Immersive online learning experience supporting live interaction, homework correction, learning progress tracking and complete teaching loop.",
+      "tags": ["Next.js", "WebRTC", "AWS", "Tailwind CSS"],
+      "metrics": [
+        { "icon": "Users", "label": "Registered Students", "value": "500K+" },
+        { "icon": "TrendingUp", "label": "Completion Rate", "value": "92%" },
+        { "icon": "Award", "label": "Satisfaction", "value": "96%" }
+      ],
+      "highlights": [
+        "Real-time Video Interaction",
+        "Smart Homework Correction",
+        "Learning Path Planning",
+        "Multi-device Sync Learning"
+      ],
+      "year": "2025",
+      "duration": "7 months"
+    },
+    {
+      "id": 5,
+      "title": "FinTech App",
+      "category": "app",
+      "client": "FinTech Company",
+      "industry": "FinTech",
+      "description": "Secure and reliable mobile financial service platform providing investment, account management, data analysis and one-stop financial services.",
+      "tags": ["Flutter", "Kotlin", "Swift", "Blockchain"],
+      "metrics": [
+        { "icon": "Users", "label": "Users", "value": "2M+" },
+        { "icon": "TrendingUp", "label": "Transaction Volume", "value": "5B+" },
+        { "icon": "Award", "label": "Security Level", "value": "AAA" }
+      ],
+      "highlights": [
+        "Bank-grade Security Encryption",
+        "Real-time Market Push",
+        "Smart Investment Advice",
+        "Multi-factor Authentication"
+      ],
+      "year": "2024",
+      "duration": "10 months"
+    },
+    {
+      "id": 6,
+      "title": "Smart Healthcare Platform",
+      "category": "enterprise",
+      "client": "Top-tier Hospital",
+      "industry": "Healthcare",
+      "description": "Integrated hospital information system enabling online consultation, appointment booking, electronic medical records and remote consultation.",
+      "tags": ["Vue.js", "Spring Boot", "MySQL", "RabbitMQ"],
+      "metrics": [
+        { "icon": "Users", "label": "Patients Served", "value": "1M+" },
+        { "icon": "TrendingUp", "label": "Efficiency Improvement", "value": "300%" },
+        { "icon": "Award", "label": "Satisfaction", "value": "95%" }
+      ],
+      "highlights": [
+        "Online Consultation System",
+        "Electronic Medical Records",
+        "Remote Consultation Features",
+        "Smart Triage Assistant"
+      ],
+      "year": "2024",
+      "duration": "12 months"
+    },
+    {
+      "id": 7,
+      "title": "Social E-commerce Mini Program",
+      "category": "ecommerce",
+      "client": "New Retail Brand",
+      "industry": "Social E-commerce",
+      "description": "WeChat ecosystem-based social e-commerce solution achieving rapid growth through social裂变 and content marketing.",
+      "tags": ["WeChat Mini Program", "Taro", "Node.js", "MongoDB"],
+      "metrics": [
+        { "icon": "Users", "label": "Users", "value": "3M+" },
+        { "icon": "TrendingUp", "label": "GMV", "value": "500M+" },
+        { "icon": "Award", "label": "Repurchase Rate", "value": "68%" }
+      ],
+      "highlights": [
+        "Social裂变 System",
+        "Live Shopping Features",
+        "Group Buying Flash Sales",
+        "Membership Points System"
+      ],
+      "year": "2024",
+      "duration": "4 months"
+    },
+    {
+      "id": 8,
+      "title": "Corporate Website Rebuild",
+      "category": "website",
+      "client": "Fortune 500 Company",
+      "industry": "Corporate Brand",
+      "description": "High-end brand website for international enterprises supporting multi-language, multi-region with excellent UX and SEO optimization.",
+      "tags": ["Next.js", "i18n", "Strapi", "Vercel"],
+      "metrics": [
+        { "icon": "TrendingUp", "label": "Lighthouse", "value": "98" },
+        { "icon": "Users", "label": "Monthly Visits", "value": "5M+" },
+        { "icon": "Award", "label": "SEO Ranking", "value": "Top 3" }
+      ],
+      "highlights": [
+        "Multi-language Support",
+        "Deep SEO Optimization",
+        "Accessibility Features",
+        "Global CDN Acceleration"
+      ],
+      "year": "2024",
+      "duration": "5 months"
+    }
+  ]
+}

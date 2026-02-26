@@ -44,7 +44,7 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-4 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
           ARVIX
         </Link>
 
@@ -56,12 +56,12 @@ export default function Navbar() {
                 href={link.href}
                 className={`transition font-medium relative group ${
                   isActive(link.href)
-                    ? 'text-blue-400'
+                    ? 'text-amber-400'
                     : 'text-gray-300 hover:text-white'
                 }`}
               >
                 {link.label}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all ${
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-amber-400 to-orange-400 transition-all ${
                   isActive(link.href) ? 'w-full' : 'w-0 group-hover:w-full'
                 }`} />
               </Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
 
         <Link 
           href="/contact"
-          className="hidden md:block px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:scale-105 transition font-medium shadow-lg hover:shadow-blue-500/50"
+          className="hidden md:block px-6 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full hover:scale-105 transition font-medium shadow-lg hover:shadow-amber-500/50"
         >
           开始合作
         </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`block py-2 transition ${
                     isActive(link.href)
-                      ? 'text-blue-400'
+                      ? 'text-amber-400'
                       : 'text-gray-300 hover:text-white'
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
@@ -111,7 +111,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/contact"
-                className="block w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium text-center"
+                className="block w-full px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 开始合作

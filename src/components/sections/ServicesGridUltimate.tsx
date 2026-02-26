@@ -12,7 +12,7 @@ export default function ServicesGridUltimate() {
       title: '网站开发',
       description: '响应式网站、企业官网、电商平台，打造极致的用户体验',
       features: ['响应式设计', 'SEO优化', '高性能', '易维护'],
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-amber-500 to-orange-500',
       delay: 0,
     },
     {
@@ -20,7 +20,7 @@ export default function ServicesGridUltimate() {
       title: 'APP 开发',
       description: 'iOS、Android 原生应用，跨平台解决方案，流畅体验',
       features: ['原生开发', '跨平台', '高性能', '用户友好'],
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-orange-500 to-red-500',
       delay: 0.1,
     },
     {
@@ -36,7 +36,7 @@ export default function ServicesGridUltimate() {
       title: '产品策划',
       description: '从概念到落地，全流程产品规划和项目管理服务',
       features: ['需求分析', '产品规划', '项目管理', '敏捷开发'],
-      color: 'from-orange-500 to-red-500',
+      color: 'from-violet-500 to-purple-500',
       delay: 0.3,
     },
     {
@@ -52,7 +52,7 @@ export default function ServicesGridUltimate() {
       title: '安全保障',
       description: '数据加密、安全审计、漏洞修复，保护您的数字资产',
       features: ['数据加密', '安全审计', '漏洞修复', '合规认证'],
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-cyan-500 to-teal-500',
       delay: 0.5,
     },
     {
@@ -68,7 +68,7 @@ export default function ServicesGridUltimate() {
       title: '技术咨询',
       description: '技术选型、架构设计、团队培训，助力企业数字化',
       features: ['技术选型', '架构设计', '团队培训', '持续支持'],
-      color: 'from-cyan-500 to-blue-500',
+      color: 'from-indigo-500 to-blue-500',
       delay: 0.7,
     },
   ];
@@ -76,7 +76,7 @@ export default function ServicesGridUltimate() {
   return (
     <section className="py-32 relative overflow-hidden">
       {/* 背景装饰 */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/5 to-transparent" />
       
       <div className="container mx-auto px-6 relative z-10">
         <ScrollReveal>
@@ -85,9 +85,9 @@ export default function ServicesGridUltimate() {
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6"
+              className="inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6"
             >
-              <span className="text-blue-400 text-sm font-medium">我们的服务</span>
+              <span className="text-amber-400 text-sm font-medium">我们的服务</span>
             </motion.div>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
               全方位数字化解决方案
@@ -116,11 +116,11 @@ export default function ServicesGridUltimate() {
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     {/* 装饰圆点 */}
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-amber-400 rounded-full animate-pulse" />
                   </div>
 
                   {/* 标题 */}
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">
                     {service.title}
                   </h3>
 
@@ -169,7 +169,7 @@ export default function ServicesGridUltimate() {
                   contactSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium text-lg shadow-lg hover:shadow-blue-500/50 transition-all"
+              className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium text-lg shadow-lg hover:shadow-amber-500/50 transition-all"
             >
               免费咨询
             </motion.button>

@@ -43,7 +43,7 @@ export default function MouseGlow() {
       }}
       transition={{ type: 'spring', damping: 30, stiffness: 200, mass: 0.5 }}
     >
-      <div className="w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px]" />
+      <div className="w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[100px]" />
     </motion.div>
   )
 }

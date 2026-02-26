@@ -82,16 +82,17 @@
   "app": {
     "hero": {
       "title": "打造用户喜爱的",
-      "titleHighlight": "移动应用",
-      "description": "原生性能，流畅体验，支持 iOS 和 Android 双平台",
-      "descriptionLine2": "从产品设计到上架发布，提供一站式移动应用开发服务",
-      "startConsulting": "开始咨询",
-      "viewCases": "查看案例"
+      "highlight": "移动应用",
+      "subtitle": "原生性能，流畅体验，支持 iOS 和 Android 双平台\\n从产品设计到上架发布，提供一站式移动应用开发服务",
+      "cta": {
+        "primary": "开始咨询",
+        "secondary": "查看案例"
+      }
     },
     "features": {
       "title": "核心优势",
       "subtitle": "专注移动端开发，打造高质量应用",
-      "native": {
+      "nativeExperience": {
         "title": "原生体验",
         "description": "使用原生技术开发，确保应用流畅度和性能达到最佳状态"
       },
@@ -99,19 +100,19 @@
         "title": "跨平台方案",
         "description": "React Native 一套代码，同时支持 iOS 和 Android，降低开发成本"
       },
-      "performance": {
+      "highPerformance": {
         "title": "高性能优化",
         "description": "启动速度、响应速度、内存占用全方位优化，提供丝滑体验"
       },
-      "ux": {
+      "userExperience": {
         "title": "用户体验",
         "description": "遵循 iOS HIG 和 Material Design 规范，符合用户使用习惯"
       },
-      "push": {
+      "pushNotifications": {
         "title": "推送通知",
         "description": "集成 APNs 和 FCM，实现精准的消息推送功能"
       },
-      "security": {
+      "dataSecurity": {
         "title": "数据安全",
         "description": "本地加密存储，HTTPS 通信，生物识别认证，保护用户隐私"
       }
@@ -166,17 +167,17 @@
     "cases": {
       "title": "成功案例",
       "subtitle": "我们开发的应用深受用户喜爱",
-      "ecommerce": {
+      "ecommerceApp": {
         "name": "电商 APP",
         "description": "商品浏览、购物车、支付、订单管理",
         "stats": "日活 10万+"
       },
-      "social": {
+      "socialApp": {
         "name": "社交 APP",
         "description": "即时通讯、动态发布、好友系统",
         "stats": "用户 50万+"
       },
-      "tool": {
+      "utilityApp": {
         "name": "工具 APP",
         "description": "效率工具、数据同步、离线使用",
         "stats": "评分 4.8"

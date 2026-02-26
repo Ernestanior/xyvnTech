@@ -1,0 +1,276 @@
+{
+  "title": "我們的",
+  "highlight": "精彩作品",
+  "subtitle": "為各行業客戶創造的卓越數字產品\n每一個專案都是我們專業能力的體現",
+  "stats": {
+    "awards": "獲獎專案",
+    "clients": "服務客戶",
+    "successRate": "專案成功率",
+    "rating": "客戶評分"
+  },
+  "featured": {
+    "title": "明星專案",
+    "subtitle": "最具代表性的成功案例",
+    "badge": "精選"
+  },
+  "search": {
+    "placeholder": "搜尋專案名稱、描述、標籤...",
+    "clear": "清除"
+  },
+  "view": {
+    "grid": "網格視圖",
+    "list": "列表視圖"
+  },
+  "sort": {
+    "label": "排序",
+    "latest": "最新專案",
+    "popular": "最受歡迎",
+    "name": "按名稱"
+  },
+  "filter": {
+    "label": "篩選：",
+    "all": "全部",
+    "ecommerce": "電商平台",
+    "enterprise": "企業官網",
+    "education": "教育平台",
+    "fintech": "金融科技",
+    "social": "社交應用",
+    "tools": "工具應用"
+  },
+  "results": "找到 {{count}} 個專案",
+  "viewDetails": "查看詳情",
+  "views": "瀏覽",
+  "likes": "點讚",
+  "empty": {
+    "title": "未找到相關專案",
+    "subtitle": "試試其他關鍵詞或分類",
+    "reset": "重置篩選"
+  },
+  "modal": {
+    "client": "客戶",
+    "industry": "行業",
+    "year": "年份",
+    "duration": "週期",
+    "intro": "專案介紹",
+    "challenge": "挑戰",
+    "solution": "解決方案",
+    "results": "成果",
+    "highlights": "專案亮點",
+    "techStack": "技術棧",
+    "views": "瀏覽量",
+    "likes": "點讚數",
+    "rating": "評分",
+    "bookmark": {
+      "saved": "已收藏",
+      "unsaved": "未收藏"
+    },
+    "contact": "聯繫我們"
+  },
+  "industries": {
+    "title": "行業分佈",
+    "subtitle": "我們服務的行業領域",
+    "retail": "零售電商",
+    "enterprise": "企業服務",
+    "education": "教育培訓",
+    "fintech": "金融科技",
+    "healthcare": "醫療健康",
+    "social": "社交娛樂",
+    "lifestyle": "生活服務",
+    "others": "其他行業",
+    "cases": "成功案例"
+  },
+  "techStack": {
+    "title": "技術能力",
+    "subtitle": "我們擅長的技術棧"
+  },
+  "resultsSection": {
+    "title": "成果數據",
+    "subtitle": "我們交付卓越成果的業績記錄"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "智慧零售電商平台",
+      "category": "ecommerce",
+      "client": "某知名零售品牌",
+      "industry": "零售電商",
+      "description": "打造全渠道智慧零售解決方案，整合線上線下購物體驗，實現庫存實時同步和智能推薦系統。",
+      "tags": ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Redis"],
+      "metrics": [
+        { "icon": "TrendingUp", "label": "轉化率提升", "value": "230%" },
+        { "icon": "Users", "label": "日活用戶", "value": "50萬+" },
+        { "icon": "Award", "label": "用戶滿意度", "value": "98%" }
+      ],
+      "highlights": [
+        "實時庫存管理系統",
+        "AI 智能推薦引擎",
+        "多端數據同步",
+        "高併發架構設計"
+      ],
+      "year": "2025",
+      "duration": "6個月",
+      "challenge": "客戶需要整合線上線下渠道，實現庫存實時同步，並提供個性化購物體驗。",
+      "solution": "採用微服務架構，使用 Redis 實現實時庫存同步，基於用戶行為數據構建推薦系統。",
+      "results": [
+        "轉化率提升 230%",
+        "庫存周轉率提高 150%",
+        "用戶復購率達到 65%",
+        "系統響應時間 < 200ms"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "企業級 SaaS 管理平台",
+      "category": "enterprise",
+      "client": "某上市科技公司",
+      "industry": "企業服務",
+      "description": "為企業提供一站式項目管理、團隊協作和數據分析解決方案，支持10萬+企業用戶同時在線。",
+      "tags": ["React", "Node.js", "MongoDB", "WebSocket", "Docker"],
+      "metrics": [
+        { "icon": "Users", "label": "企業用戶", "value": "10萬+" },
+        { "icon": "TrendingUp", "label": "效率提升", "value": "180%" },
+        { "icon": "Award", "label": "系統穩定性", "value": "99.9%" }
+      ],
+      "highlights": [
+        "微服務架構",
+        "實時協作功能",
+        "數據可視化看板",
+        "權限管理系統"
+      ],
+      "year": "2025",
+      "duration": "8個月"
+    },
+    {
+      "id": 3,
+      "title": "智能健身 APP",
+      "category": "app",
+      "client": "某健身連鎖品牌",
+      "industry": "健康運動",
+      "description": "結合 AI 技術的智能健身應用，提供個性化訓練計劃、實時動作識別和社交互動功能。",
+      "tags": ["React Native", "TensorFlow", "Firebase", "GraphQL"],
+      "metrics": [
+        { "icon": "Users", "label": "活躍用戶", "value": "100萬+" },
+        { "icon": "TrendingUp", "label": "用戶留存", "value": "85%" },
+        { "icon": "Award", "label": "App Store評分", "value": "4.8" }
+      ],
+      "highlights": [
+        "AI 動作識別",
+        "個性化訓練計劃",
+        "社交互動功能",
+        "數據統計分析"
+      ],
+      "year": "2025",
+      "duration": "5個月"
+    },
+    {
+      "id": 4,
+      "title": "在線教育平台",
+      "category": "website",
+      "client": "某知名教育機構",
+      "industry": "在線教育",
+      "description": "打造沉浸式在線學習體驗，支持直播互動、作業批改、學習進度追蹤等完整教學閉環。",
+      "tags": ["Next.js", "WebRTC", "AWS", "Tailwind CSS"],
+      "metrics": [
+        { "icon": "Users", "label": "註冊學員", "value": "50萬+" },
+        { "icon": "TrendingUp", "label": "完課率", "value": "92%" },
+        { "icon": "Award", "label": "滿意度", "value": "96%" }
+      ],
+      "highlights": [
+        "實時視頻互動",
+        "智能作業批改",
+        "學習路徑規劃",
+        "多端同步學習"
+      ],
+      "year": "2025",
+      "duration": "7個月"
+    },
+    {
+      "id": 5,
+      "title": "金融科技 APP",
+      "category": "app",
+      "client": "某金融科技公司",
+      "industry": "金融科技",
+      "description": "安全可靠的移動金融服務平台，提供投資理財、賬戶管理、數據分析等一站式金融服務。",
+      "tags": ["Flutter", "Kotlin", "Swift", "Blockchain"],
+      "metrics": [
+        { "icon": "Users", "label": "用戶數", "value": "200萬+" },
+        { "icon": "TrendingUp", "label": "交易量", "value": "50億+" },
+        { "icon": "Award", "label": "安全等級", "value": "AAA" }
+      ],
+      "highlights": [
+        "銀行級安全加密",
+        "實時行情推送",
+        "智能投資建議",
+        "多重身份驗證"
+      ],
+      "year": "2024",
+      "duration": "10個月"
+    },
+    {
+      "id": 6,
+      "title": "智慧醫療平台",
+      "category": "enterprise",
+      "client": "某三甲醫院",
+      "industry": "醫療健康",
+      "description": "整合醫院信息系統，實現線上問診、預約掛號、電子病歷、遠程會診等智慧醫療服務。",
+      "tags": ["Vue.js", "Spring Boot", "MySQL", "RabbitMQ"],
+      "metrics": [
+        { "icon": "Users", "label": "服務患者", "value": "100萬+" },
+        { "icon": "TrendingUp", "label": "效率提升", "value": "300%" },
+        { "icon": "Award", "label": "滿意度", "value": "95%" }
+      ],
+      "highlights": [
+        "線上問診系統",
+        "電子病歷管理",
+        "遠程會診功能",
+        "智能導診助手"
+      ],
+      "year": "2024",
+      "duration": "12個月"
+    },
+    {
+      "id": 7,
+      "title": "社交電商小程序",
+      "category": "ecommerce",
+      "client": "某新零售品牌",
+      "industry": "社交電商",
+      "description": "基於微信生態的社交電商解決方案，通過社交裂變和內容營銷實現快速增長。",
+      "tags": ["微信小程序", "Taro", "Node.js", "MongoDB"],
+      "metrics": [
+        { "icon": "Users", "label": "用戶數", "value": "300萬+" },
+        { "icon": "TrendingUp", "label": "GMV", "value": "5億+" },
+        { "icon": "Award", "label": "復購率", "value": "68%" }
+      ],
+      "highlights": [
+        "社交裂變系統",
+        "直播帶貨功能",
+        "拼團秒殺活動",
+        "會員積分體系"
+      ],
+      "year": "2024",
+      "duration": "4個月"
+    },
+    {
+      "id": 8,
+      "title": "企業官網重構",
+      "category": "website",
+      "client": "某世界500強企業",
+      "industry": "企業品牌",
+      "description": "為國際化企業打造高端品牌官網，支持多語言、多地區，提供卓越的用戶體驗和SEO優化。",
+      "tags": ["Next.js", "i18n", "Strapi", "Vercel"],
+      "metrics": [
+        { "icon": "TrendingUp", "label": "Lighthouse", "value": "98分" },
+        { "icon": "Users", "label": "月瀏覽量", "value": "500萬+" },
+        { "icon": "Award", "label": "SEO排名", "value": "Top 3" }
+      ],
+      "highlights": [
+        "多語言支持",
+        "SEO深度優化",
+        "無障礙訪問",
+        "CDN全球加速"
+      ],
+      "year": "2024",
+      "duration": "5個月"
+    }
+  ]
+}

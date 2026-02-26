@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link, usePathname } from '@/i18n/routing';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
+import { Menu, X, ChevronDown, Sparkles, Search, Smartphone, Code2 } from 'lucide-react';
 import logo from '@/app/assets/logo.png';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -33,19 +33,19 @@ export default function NavbarEnhanced() {
         { 
           href: '/services/web-development', 
           label: t('nav.webDevelopment'), 
-          icon: '🌐',
+          icon: Search,
           desc: t('nav.webDevelopmentDesc')
         },
         { 
           href: '/services/app-development', 
           label: t('nav.appDevelopment'), 
-          icon: '📱',
+          icon: Smartphone,
           desc: t('nav.appDevelopmentDesc')
         },
         { 
           href: '/services/miniprogram', 
           label: t('nav.miniprogram'), 
-          icon: '💬',
+          icon: Code2,
           desc: t('nav.miniprogramDesc')
         },
       ]
@@ -94,12 +94,12 @@ export default function NavbarEnhanced() {
                   />
                 </div>
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
                   <span className="relative text-md font-bold text-white bg-clip-text text-transparent">
                     ARVIX
                   </span>
                 </div>
-                <Sparkles className="w-5 h-5 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <Sparkles className="w-5 h-5 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             </Link>
 
@@ -116,7 +116,7 @@ export default function NavbarEnhanced() {
                     href={link.href}
                     className={`px-4 py-2 rounded-lg transition-all font-medium flex items-center gap-1 group ${
                       isActive(link.href)
-                        ? 'text-blue-400 bg-blue-500/10'
+                        ? 'text-amber-400 bg-amber-500/10'
                         : 'text-gray-300 hover:text-white hover:bg-white/5'
                     }`}
                   >
@@ -127,7 +127,7 @@ export default function NavbarEnhanced() {
                       }`} />
                     )}
                     {!link.dropdown && (
-                      <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all ${
+                      <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-amber-400 to-orange-400 transition-all ${
                         isActive(link.href) ? 'w-1/2' : 'w-0 group-hover:w-1/2'
                       }`} />
                     )}
@@ -149,17 +149,17 @@ export default function NavbarEnhanced() {
                               <Link
                                 key={idx}
                                 href={item.href}
-                                className="group relative p-5 rounded-xl bg-gray-800 hover:bg-gradient-to-br hover:from-blue-500/20 hover:to-purple-500/20 border border-white/5 hover:border-white/10 transition-all duration-300"
+                                className="group relative p-5 rounded-xl bg-gray-800 hover:bg-gradient-to-br hover:from-amber-500/20 hover:to-orange-500/20 border border-white/5 hover:border-white/10 transition-all duration-300"
                               >
                                 {/* 内容 */}
                                 <div className="relative">
                                   {/* 图标 */}
-                                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-300 border border-white/10">
-                                    {item.icon}
+                                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:from-amber-500/30 group-hover:to-orange-500/30 transition-all duration-300 border border-white/10">
+                                    <item.icon className="w-6 h-6 text-amber-400" />
                                   </div>
                                   
                                   {/* 标题 */}
-                                  <div className="font-bold text-white text-lg mb-2 group-hover:text-blue-400 transition-colors">
+                                  <div className="font-bold text-white text-lg mb-2 group-hover:text-amber-400 transition-colors">
                                     {item.label}
                                   </div>
                                   
@@ -169,7 +169,7 @@ export default function NavbarEnhanced() {
                                   </div>
                                   
                                   {/* 箭头 */}
-                                  <div className="absolute top-5 right-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-blue-400 text-xl">
+                                  <div className="absolute top-5 right-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-amber-400 text-xl">
                                     →
                                   </div>
                                 </div>
@@ -189,10 +189,10 @@ export default function NavbarEnhanced() {
               <LanguageSwitcher />
               <Link
                 href="/contact"
-                className="relative px-6 py-2.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium overflow-hidden group"
+                className="relative px-6 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium overflow-hidden group"
               >
                 <span className="relative z-10">{t('common.startCollaboration')}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform" />
               </Link>
             </div>
@@ -241,7 +241,7 @@ export default function NavbarEnhanced() {
                         className="object-contain"
                       />
                     </div>
-                    <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    <span className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
                       ARVIX
                     </span>
                   </div>
@@ -261,7 +261,7 @@ export default function NavbarEnhanced() {
                         href={link.href}
                         className={`block px-4 py-3 rounded-lg transition-all font-medium ${
                           isActive(link.href)
-                            ? 'text-blue-400 bg-blue-500/10'
+                            ? 'text-amber-400 bg-amber-500/10'
                             : 'text-gray-300 hover:text-white hover:bg-white/5'
                         }`}
                         onClick={() => setMobileMenuOpen(false)}
@@ -277,7 +277,7 @@ export default function NavbarEnhanced() {
                                 className="flex items-center gap-3 px-4 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all"
                                 onClick={() => setMobileMenuOpen(false)}
                               >
-                                <span>{item.icon}</span>
+                                <span><item.icon className="w-5 h-5" /></span>
                                 <span className="text-sm">{item.label}</span>
                               </Link>
                             </li>
@@ -291,7 +291,7 @@ export default function NavbarEnhanced() {
                 {/* CTA Button */}
                 <Link
                   href="/contact"
-                  className="block w-full mt-8 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium text-center"
+                  className="block w-full mt-8 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium text-center"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t('common.startCollaboration')}

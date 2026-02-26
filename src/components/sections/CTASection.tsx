@@ -30,14 +30,14 @@ export default function CTASection() {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* 背景渐变 */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-600/20 via-orange-600/20 to-red-600/20" />
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
       
       <div className="max-w-4xl mx-auto px-6 md:px-8 text-center relative z-10">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             {t('title')}
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
               {' '}{t('titleHighlight')}{' '}
             </span>
             {t('titleEnd')}
@@ -52,7 +52,7 @@ export default function CTASection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToContact}
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-amber-500/50 transition-all flex items-center justify-center gap-2"
             >
               {t('buttons.primary')}
               <ArrowRight className="w-5 h-5" />

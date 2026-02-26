@@ -13,19 +13,19 @@ export default function PricingSection() {
     {
       icon: Star,
       planKey: 'basic',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-amber-500 to-orange-500',
       popular: false,
     },
     {
       icon: Zap,
       planKey: 'professional',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-orange-500 to-red-500',
       popular: true,
     },
     {
       icon: Crown,
       planKey: 'enterprise',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-violet-500 to-purple-500',
       popular: false,
     },
   ];
@@ -34,8 +34,8 @@ export default function PricingSection() {
     <section className="py-32 relative overflow-hidden">
       {/* 背景装饰 */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -60,14 +60,14 @@ export default function PricingSection() {
               >
                 {/* 热门标签 */}
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium rounded-full shadow-lg z-10">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium rounded-full shadow-lg z-10">
                     {t('popular')}
                   </div>
                 )}
 
                 {/* 卡片 */}
                 <div className={`relative p-8 bg-white/5 backdrop-blur-sm border ${
-                  plan.popular ? 'border-purple-500/50' : 'border-white/10'
+                  plan.popular ? 'border-orange-500/50' : 'border-white/10'
                 } rounded-2xl overflow-hidden h-full flex flex-col`}>
                   {/* 渐变背景 */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${plan.color} opacity-0 hover:opacity-10 transition-opacity duration-500`} />

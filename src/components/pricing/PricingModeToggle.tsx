@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { PricingMode } from '@/types/pricing';
 
 interface PricingModeToggleProps {
@@ -9,6 +10,7 @@ interface PricingModeToggleProps {
 }
 
 export default function PricingModeToggle({ value, onChange }: PricingModeToggleProps) {
+  const t = useTranslations('pricing');
   return (
     <div className="flex items-center justify-center gap-4 mb-12">
       <div className="relative inline-flex bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-full p-1.5 shadow-lg">
@@ -25,7 +27,7 @@ export default function PricingModeToggle({ value, onChange }: PricingModeToggle
           {value === 'subscription' && (
             <motion.div
               layoutId="pricingModeTab"
-              className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg shadow-blue-500/50"
+              className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full shadow-lg shadow-amber-500/50"
               transition={{ 
                 type: 'spring', 
                 stiffness: 400, 
@@ -36,13 +38,13 @@ export default function PricingModeToggle({ value, onChange }: PricingModeToggle
           )}
           <div className="relative z-10 flex items-center gap-2">
             <span className="text-xl">🔄</span>
-            <span>订阅制</span>
+            <span>{t('mode.subscription')}</span>
             <span className={`px-2 py-0.5 text-xs rounded-full transition-all duration-300 ${
               value === 'subscription'
                 ? 'bg-white/20 text-white'
                 : 'bg-green-500/20 text-green-400'
             }`}>
-              推荐
+              {t('recommended')}
             </span>
           </div>
         </button>
@@ -60,7 +62,7 @@ export default function PricingModeToggle({ value, onChange }: PricingModeToggle
           {value === 'one-time' && (
             <motion.div
               layoutId="pricingModeTab"
-              className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg shadow-blue-500/50"
+              className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full shadow-lg shadow-amber-500/50"
               transition={{ 
                 type: 'spring', 
                 stiffness: 400, 
@@ -71,7 +73,7 @@ export default function PricingModeToggle({ value, onChange }: PricingModeToggle
           )}
           <div className="relative z-10 flex items-center gap-2">
             <span className="text-xl">💎</span>
-            <span>买断制</span>
+            <span>{t('mode.oneTime')}</span>
           </div>
         </button>
       </div>

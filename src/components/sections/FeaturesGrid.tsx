@@ -26,17 +26,17 @@ export default function FeaturesGrid() {
     {
       icon: Code2,
       titleKey: 'quality',
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-amber-500 to-orange-500',
     },
     {
       icon: Smartphone,
       titleKey: 'responsive',
-      gradient: 'from-purple-500 to-pink-500',
+      gradient: 'from-orange-500 to-red-500',
     },
     {
       icon: Rocket,
       titleKey: 'performance',
-      gradient: 'from-orange-500 to-red-500',
+      gradient: 'from-violet-500 to-purple-500',
     },
     {
       icon: Shield,
@@ -51,12 +51,12 @@ export default function FeaturesGrid() {
     {
       icon: Users,
       titleKey: 'team',
-      gradient: 'from-indigo-500 to-purple-500',
+      gradient: 'from-cyan-500 to-teal-500',
     },
     {
       icon: TrendingUp,
       titleKey: 'optimization',
-      gradient: 'from-teal-500 to-cyan-500',
+      gradient: 'from-indigo-500 to-blue-500',
     },
   ];
 

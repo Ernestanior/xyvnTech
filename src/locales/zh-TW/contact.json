@@ -1,0 +1,105 @@
+{
+  "title": "讓我們一起",
+  "subtitle": "創造精彩",
+  "description": "無論是新專案諮詢、技術支援，還是商務合作\n我們都期待與您交流，共同打造卓越的數位產品",
+  "status": {
+    "online": "在線服務中",
+    "offline": "非工作時間"
+  },
+  "contactUs": "聯繫我們",
+  "whatsappContact": "WhatsApp 聯繫",
+  "whyChooseUs": "為什麼選擇我們",
+  "partnerDescription": "專業、高效、可靠的合作夥伴",
+  "contactMethodsTitle": "聯繫方式",
+  "contactMethodsSubtitle": "選擇最適合您的溝通方式",
+  "available": "可用",
+  "offline": "離線",
+  "officeTitle": "辦公地點",
+  "officeSubtitle": "我們的新加坡辦公室",
+  "reasons": {
+    "fastResponse": {
+      "title": "快速響應",
+      "desc": "工作時間內 1 小時響應",
+      "stat": "< 1h"
+    },
+    "professionalTeam": {
+      "title": "專業團隊",
+      "desc": "平均 8 年行業經驗",
+      "stat": "8+ 年"
+    },
+    "qualityGuarantee": {
+      "title": "品質保證",
+      "desc": "客戶滿意度 98%",
+      "stat": "98%"
+    },
+    "successCases": {
+      "title": "成功案例",
+      "desc": "已完成 200+ 專案",
+      "stat": "200+"
+    }
+  },
+  "contactMethods": {
+    "whatsapp": {
+      "title": "WhatsApp",
+      "desc": "透過 WhatsApp 聯繫我們",
+      "responseTime": "即時回覆"
+    },
+    "email": {
+      "title": "郵件聯繫",
+      "desc": "發送郵件詳細說明需求",
+      "responseTime": "12小時內回覆"
+    }
+  },
+  "faqs": {
+    "title": "常見問題",
+    "subtitle": "快速了解我們的服務",
+    "q1": {
+      "question": "專案開發週期一般多久？",
+      "answer": "根據專案複雜度，一般網站 1-3 週，APP 4-8 週，小程序 3-6 週。"
+    },
+    "q2": {
+      "question": "如何保證專案品質？",
+      "answer": "我們有嚴格的代碼審查、測試流程，並提供免費維護期。"
+    },
+    "q3": {
+      "question": "支援哪些付款方式？",
+      "answer": "支援分期付款、里程碑付款和月度訂閱等多種方式。"
+    },
+    "q4": {
+      "question": "是否提供售後服務？",
+      "answer": "提供 3-12 個月免費維護期和終身技術支援。"
+    },
+    "q5": {
+      "question": "可以先看看案例嗎？",
+      "answer": "當然可以！我們有豐富的成功案例，歡迎查看作品集。"
+    },
+    "q6": {
+      "question": "如何開始合作？",
+      "answer": "聯繫我們後，我們會安排免費諮詢，提供詳細方案。"
+    }
+  },
+  "office": {
+    "title": "新加坡辦公室",
+    "address": "1 Jln Membina, Singapore 169479",
+    "hours": "週一至週五 9:00-18:00"
+  },
+  "form": {
+    "title": "發送訊息",
+    "name": "您的姓名",
+    "email": "電子郵箱",
+    "phone": "聯繫電話",
+    "company": "公司名稱（選填）",
+    "service": "感興趣的服務",
+    "budget": "預算範圍",
+    "message": "專案描述",
+    "submit": "發送訊息",
+    "sending": "發送中...",
+    "success": "訊息已發送！我們會儘快與您聯繫。"
+  },
+  "cta": {
+    "title": "準備開始您的專案了嗎？",
+    "subtitle": "立即聯繫我們，獲取免費諮詢和專案報價",
+    "freeConsult": "免費諮詢",
+    "phoneConsult": "電話諮詢"
+  }
+}

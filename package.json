@@ -22,6 +22,7 @@
     "@tiptap/extension-placeholder": "^3.19.0",
     "@tiptap/react": "^3.19.0",
     "@tiptap/starter-kit": "^3.19.0",
+    "airwallex-payment-elements": "^1.147.0",
     "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",

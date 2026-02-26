@@ -1,0 +1,323 @@
+{
+  "title": "透明定价",
+  "subtitle": "灵活选择",
+  "description": "无隐藏费用，清晰的价格结构，让您的预算更可控",
+  "description2": "选择最适合您的服务套餐，开启数字化之旅",
+  "viewPackages": "查看套餐",
+  "priceCalculator": "价格计算器",
+  "subscriptionCalculator": "订阅费用计算器",
+  "calculatorDesc": "选择项目类型和功能，实时计算价格",
+  "subscriptionCalculatorDesc": "计算您的订阅总成本",
+  "selectServiceType": "选择服务类型",
+  "selectServiceTypeDesc": "根据您的需求选择合适的服务类型",
+  "corporate-website": "企业官网",
+  "ecommerce": "电商网站",
+  "landing-page": "一站式网页",
+  "admin-system": "管理系统",
+  "cross-platform-app": "APP开发",
+  "miniprogram": "小程序",
+  "noSubscriptionTitle": "该服务类型暂无订阅套餐",
+  "comingSoon": "即将推出",
+  "comingSoonDesc": "我们正在为更多服务类型推出订阅套餐，敬请期待！",
+  "viewOneTimePackages": "查看买断制套餐",
+  "whySubscription": "为什么选择订阅制？",
+  "subscriptionComparison": "对比买断制，订阅制能为您节省更多成本",
+  "advantages": {
+    "transparent": {
+      "title": "透明报价",
+      "desc": "无隐藏费用，所有成本清晰可见"
+    },
+    "ontime": {
+      "title": "按时交付",
+      "desc": "严格遵守项目时间表，准时交付"
+    },
+    "dedicated": {
+      "title": "专属团队",
+      "desc": "配备专业团队，全程跟进服务"
+    },
+    "continuous": {
+      "title": "持续优化",
+      "desc": "项目上线后持续优化和支持"
+    }
+  },
+  "subscribeNow": "立即订阅",
+  "contactQuote": "联系报价",
+  "selectPackage": "选择套餐",
+  "billing": {
+    "monthly": "月付",
+    "annual": "年付",
+    "save": "省 {discount}%"
+  },
+  "mode": {
+    "subscription": "订阅制",
+    "oneTime": "买断制"
+  },
+  "currency": {
+    "select": "选择货币",
+    "USD": "美元",
+    "SGD": "新加坡元",
+    "CNY": "人民币",
+    "JPY": "日元",
+    "TWD": "新台币",
+    "HKD": "港币",
+    "EUR": "欧元",
+    "KRW": "韩元"
+  },
+  "currencies": {
+    "USD": "美元",
+    "SGD": "新加坡元",
+    "CNY": "人民币",
+    "JPY": "日元",
+    "TWD": "新台币",
+    "HKD": "港币",
+    "EUR": "欧元",
+    "KRW": "韩元"
+  },
+  "bestFor": "适合：",
+  "suitableFor": "适合",
+  "startingAt": "起",
+  "month": "月",
+  "year": "年",
+  "oneTime": "一次性",
+  "popular": "热门推荐",
+  "save": "节省",
+  "off": "折扣",
+  "originalPrice": "原价",
+  "discountedPrice": "折扣价",
+  "close": "关闭",
+  "monthlyPrice": "月",
+  "annualSavings": "年付节省",
+  "setupFee": "初装费",
+  "transactionFee": "交易费",
+  "limits": {
+    "pages": "页面",
+    "products": "SKU",
+    "orders": "订单",
+    "storage": "存储",
+    "bandwidth": "流量",
+    "users": "用户"
+  },
+  "support": {
+    "label": "技术支持",
+    "email": "邮件",
+    "emailPhone": "邮件+电话",
+    "priority": "优先支持",
+    "dedicated": "专属支持"
+  },
+  "responseTime": "响应时间",
+  "recommended": "推荐",
+  "bestValue": "最超值",
+  "priceDisclaimer": "估价范围，具体以需求为准",
+  "costCalculator": "成本对比计算器",
+  "costCalculatorDesc": "对比买断制与订阅制的长期成本",
+  "yearsLabel": "使用年限：{years} 年",
+  "initialDev": "初始开发",
+  "annualMaint": "年度维护 ({years}年)",
+  "hostingFee": "服务器托管 ({years}年)",
+  "featureUpdates": "功能更新 ({years}年)",
+  "total": "总计",
+  "monthlyFee": "月费 ({years}年)",
+  "includesHosting": "包含服务器",
+  "included": "已包含",
+  "includesUpdates": "包含维护更新",
+  "subscriptionBetter": "订阅制更划算",
+  "yearsComparison": "{years}年总成本对比",
+  "breakEven": "买断制需要 {months} 个月才能回本，而订阅制从第一天就开始节省成本",
+  "zeroInitial": "零初始投入",
+  "noLargeInvestment": "无需大额前期投资",
+  "continuousUpdates": "持续更新",
+  "freeUpgrades": "免费功能升级",
+  "flexibleScale": "灵活扩展",
+  "upgradeAnytime": "随时升级套餐",
+  "features": {
+    "pages": "{count}个页面",
+    "templateDesign": "模板定制设计",
+    "originalDesign": "原创设计",
+    "premiumDesign": "高端定制设计",
+    "responsive": "响应式设计",
+    "fullDevice": "全设备适配",
+    "seoBasic": "基础SEO优化",
+    "seoAdvanced": "高级SEO优化",
+    "seoPro": "专业SEO优化",
+    "cloudHosting": "云服务器托管",
+    "vps": "VPS服务器",
+    "dedicated": "独立服务器",
+    "ssl": "SSL证书",
+    "cdn": "CDN加速",
+    "backup": "每日自动备份",
+    "updates": "内容更新",
+    "supportEmail": "邮件技术支持",
+    "supportEmailPhone": "邮件+电话支持",
+    "supportPriority": "优先技术支持",
+    "cms": "CMS后台",
+    "cmsBasic": "基础CMS后台",
+    "cmsAdvanced": "高级CMS后台",
+    "multilang": "多语言",
+    "bilingual": "双语言",
+    "trilingual": "三语言",
+    "analytics": "数据分析",
+    "analyticsPro": "专业数据分析",
+    "training": "在线培训",
+    "contactForm": "联系表单",
+    "wordpress": "WordPress后台",
+    "blog": "博客系统",
+    "animation": "高级动画效果",
+    "3dEffects": "3D/WebGL特效",
+    "news": "博客+新闻系统",
+    "liveChat": "在线客服",
+    "customCms": "自定义CMS",
+    "serverDeploy": "免费服务器部署",
+    "monitoring": "性能监控",
+    "domain": "免费域名+SSL",
+    "maintenance3": "3个月免费维护",
+    "maintenance6": "6个月免费维护",
+    "maintenance12": "12个月免费维护",
+    "shopify": "Shopify平台定制",
+    "sku100": "100个SKU",
+    "payment2": "2个支付网关",
+    "logistics": "基础物流对接",
+    "coupon": "优惠券系统",
+    "reviews": "商品评价",
+    "mobileOpt": "移动端优化"
+  },
+  "packages": {
+    "corp-starter": {
+      "name": "入门版",
+      "description": "适合初创公司和个人品牌",
+      "targetAudience": "初创公司、个人品牌"
+    },
+    "corp-growth": {
+      "name": "商务版",
+      "description": "适合成长型企业",
+      "targetAudience": "成长型企业"
+    },
+    "corp-business": {
+      "name": "企业版",
+      "description": "适合中大型企业",
+      "targetAudience": "中大型企业"
+    },
+    "ecom-starter": {
+      "name": "创业版",
+      "description": "适合新手卖家和小型电商",
+      "targetAudience": "新手卖家、小型电商"
+    },
+    "ecom-growth": {
+      "name": "成长版",
+      "description": "适合成长中的电商企业",
+      "targetAudience": "成长型电商企业"
+    },
+    "ecom-business": {
+      "name": "企业版",
+      "description": "适合成熟的电商企业",
+      "targetAudience": "成熟电商企业"
+    },
+    "admin-starter": {
+      "name": "基础版",
+      "description": "适合小型团队和初创企业",
+      "targetAudience": "小型团队、初创企业"
+    },
+    "admin-growth": {
+      "name": "专业版",
+      "description": "适合成长型企业",
+      "targetAudience": "成长型企业"
+    },
+    "admin-business": {
+      "name": "企业版",
+      "description": "适合大型企业",
+      "targetAudience": "大型企业"
+    },
+    "app-starter": {
+      "name": "基础版",
+      "description": "适合MVP和小型应用",
+      "targetAudience": "MVP项目、小型应用"
+    },
+    "app-growth": {
+      "name": "专业版",
+      "description": "适合成长型应用",
+      "targetAudience": "成长型应用"
+    },
+    "app-business": {
+      "name": "企业版",
+      "description": "适合大型应用",
+      "targetAudience": "大型应用、企业级产品"
+    },
+    "mini-starter": {
+      "name": "基础版",
+      "description": "适合展示型小程序",
+      "targetAudience": "展示型小程序"
+    },
+    "mini-growth": {
+      "name": "商务版",
+      "description": "适合服务型小程序",
+      "targetAudience": "服务型小程序"
+    },
+    "mini-business": {
+      "name": "企业版",
+      "description": "适合电商型小程序",
+      "targetAudience": "电商型小程序、企业级应用"
+    },
+    "landing-starter": {
+      "name": "基础版",
+      "description": "适合单页营销活动",
+      "targetAudience": "单页营销、活动推广"
+    },
+    "landing-growth": {
+      "name": "专业版",
+      "description": "适合多页面营销活动",
+      "targetAudience": "营销活动、产品发布"
+    },
+    "landing-business": {
+      "name": "企业版",
+      "description": "适合大型营销活动",
+      "targetAudience": "大型营销活动、品牌推广"
+    },
+    "website-starter": {
+      "name": "入门版官网",
+      "description": "适合初创公司和个人工作室",
+      "targetAudience": "初创公司、个人工作室、小型企业",
+      "features": [
+        "5页精美设计",
+        "响应式布局",
+        "基础SEO优化",
+        "联系表单",
+        "WordPress后台",
+        "3个月免费维护"
+      ],
+      "bestFor": ["初创公司", "个人工作室", "小型企业"]
+    },
+    "website-business": {
+      "name": "商务版官网",
+      "description": "适合中小企业展示品牌形象",
+      "targetAudience": "中小企业、品牌公司、服务型企业",
+      "features": [
+        "10页原创设计",
+        "高级动画效果",
+        "双语言支持",
+        "深度SEO优化",
+        "博客系统",
+        "Next.js技术栈",
+        "6个月免费维护",
+        "免费域名+SSL"
+      ],
+      "bestFor": ["中小企业", "品牌公司", "服务型企业"]
+    },
+    "website-enterprise": {
+      "name": "企业版官网",
+      "description": "适合大型企业和集团公司",
+      "targetAudience": "大型企业、集团公司、上市公司",
+      "features": [
+        "20页定制设计",
+        "3D/WebGL特效",
+        "三语言支持",
+        "企业级SEO",
+        "博客+新闻系统",
+        "在线客服",
+        "自定义CMS",
+        "12个月免费维护",
+        "免费服务器部署",
+        "性能监控"
+      ],
+      "bestFor": ["大型企业", "集团公司", "上市公司"]
+    }
+  }
+}
