@@ -179,7 +179,7 @@ export default function TestimonialsSectionEnhanced() {
                         "{testimonials[activeIndex].content}"
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        {testimonials[activeIndex].tags.map((tag, idx) => (
+                        {testimonials[activeIndex].tags.map((tag:any, idx:any) => (
                           <span
                             key={idx}
                             className="px-3 py-1 bg-white/5 text-gray-400 text-sm rounded-full border border-white/10"
