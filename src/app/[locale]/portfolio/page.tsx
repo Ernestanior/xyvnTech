@@ -92,7 +92,7 @@ export default function PortfolioPage() {
   const stats = [
     { icon: Award, label: t('stats.awards'), value: '12+', color: 'from-amber-500 to-orange-500' },
     { icon: Users, label: t('stats.clients'), value: '150+', color: 'from-orange-500 to-red-500' },
-    { icon: TrendingUp, label: t('stats.successRate'), value: '98%', color: 'from-green-500 to-emerald-500' },
+    { icon: TrendingUp, label: t('stats.successRate'), value: '99%', color: 'from-green-500 to-emerald-500' },
     { icon: Star, label: t('stats.rating'), value: '4.9', color: 'from-cyan-500 to-teal-500' },
   ];
 
@@ -1007,7 +1007,7 @@ export default function PortfolioPage() {
               { label: 'Avg Conversion Increase', value: '180%', icon: TrendingUp, color: 'from-amber-500 to-orange-500' },
               { label: 'User Satisfaction', value: '96%', icon: Award, color: 'from-orange-500 to-red-500' },
               { label: 'Avg Dev Cycle', value: '6 weeks', icon: Calendar, color: 'from-green-500 to-emerald-500' },
-              { label: 'Project Success Rate', value: '98%', icon: CheckCircle2, color: 'from-cyan-500 to-teal-500' },
+              { label: 'Project Success Rate', value: '99%', icon: CheckCircle2, color: 'from-cyan-500 to-teal-500' },
             ].map((metric, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <motion.div

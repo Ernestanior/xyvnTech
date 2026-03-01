@@ -71,7 +71,7 @@ export default function AboutPage() {
     { icon: Award, label: t('achievements.awards'), value: '12+' },
     { icon: CheckCircle2, label: t('achievements.projects'), value: '200+' },
     { icon: Users, label: t('achievements.clients'), value: '150+' },
-    { icon: TrendingUp, label: t('achievements.satisfaction'), value: '98%' },
+    { icon: TrendingUp, label: t('achievements.satisfaction'), value: '99%' },
   ];
 
   return (

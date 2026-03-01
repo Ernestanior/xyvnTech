@@ -33,7 +33,7 @@ export const portfolioProjects: Project[] = [
     metrics: [
       { icon: 'TrendingUp', label: '转化率提升', value: '230%' },
       { icon: 'Users', label: '日活用户', value: '50万+' },
-      { icon: 'Award', label: '用户满意度', value: '98%' },
+      { icon: 'Award', label: '用户满意度', value: '99%' },
     ],
     highlights: [
       '实时库存管理系统',

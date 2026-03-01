@@ -31,7 +31,7 @@ export default function PortfolioSectionEnhanced() {
       metrics: [
         { icon: TrendingUp, label: t('projects.1.metrics.conversion'), value: '230%' },
         { icon: Users, label: t('projects.1.metrics.dau'), value: '50万+' },
-        { icon: Award, label: t('projects.1.metrics.satisfaction'), value: '98%' },
+        { icon: Award, label: t('projects.1.metrics.satisfaction'), value: '99%' },
       ],
       highlights: Array.isArray(t.raw('projects.1.highlights')) ? t.raw('projects.1.highlights') : [],
       year: '2025',

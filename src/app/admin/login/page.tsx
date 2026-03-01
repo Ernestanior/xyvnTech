@@ -1,13 +1,11 @@
 // 管理后台登录页面
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Mail, Lock, LogIn, AlertCircle } from 'lucide-react';
 import { useAuth } from '@/lib/hooks/useAuth';
-
-export const dynamic = 'force-dynamic';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -22,7 +20,6 @@ function LoginForm() {
   const redirectTo = searchParams.get('redirect') || '/admin/dashboard';
 
   useEffect(() => {
-    // 如果已经认证且不在加载中，跳转到目标页面
     if (isAuthenticated && !loading) {
       window.location.href = redirectTo;
     }
@@ -37,7 +34,6 @@ function LoginForm() {
       const result = await login(email, password);
 
       if (result.success) {
-        // 使用 window.location 强制刷新，确保 middleware 重新验证
         window.location.href = redirectTo;
       } else {
         setError(result.error || '登录失败');
@@ -166,7 +162,7 @@ function LoginForm() {
 
         {/* 版权信息 */}
         <p className="text-center text-gray-500 text-sm mt-8">
-          © 2024 ARVIX. All rights reserved.
+          2024 ARVIX. All rights reserved.
         </p>
       </motion.div>
     </div>
@@ -174,16 +170,5 @@ function LoginForm() {
 }
 
 export default function AdminLoginPage() {
-  return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-400">加载中...</p>
-        </div>
-      </div>
-    }>
-      <LoginForm />
-    </Suspense>
-  );
+  return <LoginForm />;
 }

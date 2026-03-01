@@ -99,7 +99,7 @@
       "metrics": [
         { "icon": "TrendingUp", "label": "Conversion Rate Increase", "value": "230%" },
         { "icon": "Users", "label": "Daily Active Users", "value": "500K+" },
-        { "icon": "Award", "label": "User Satisfaction", "value": "98%" }
+        { "icon": "Award", "label": "User Satisfaction", "value": "99%" }
       ],
       "highlights": [
         "Real-time Inventory Management System",

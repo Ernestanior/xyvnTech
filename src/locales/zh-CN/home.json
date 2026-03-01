@@ -16,7 +16,7 @@
         "label": "成功项目"
       },
       "satisfaction": {
-        "value": "98%",
+        "value": "99%",
         "label": "客户满意度"
       },
       "response": {
@@ -52,7 +52,7 @@
       },
       "industryRecognition": {
         "title": "行业认可",
-        "desc": "多次获得行业大奖，客户满意度 98%",
+        "desc": "多次获得行业大奖，客户满意度 99%",
         "features": ["设计大奖", "技术创新", "客户好评", "行业标杆"]
       },
       "support247": {
@@ -579,7 +579,7 @@
         "label": "合作客户"
       },
       "satisfaction": {
-        "value": "98%",
+        "value": "99%",
         "label": "客户满意度"
       }
     }

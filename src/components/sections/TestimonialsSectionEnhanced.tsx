@@ -233,7 +233,7 @@ export default function TestimonialsSectionEnhanced() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
               { value: '500+', key: 'clients' },
-              { value: '98%', key: 'satisfaction' },
+              { value: '99%', key: 'satisfaction' },
               { value: '4.9', key: 'rating' },
               { value: '95%', key: 'recommendation' },
             ].map((stat, idx) => (

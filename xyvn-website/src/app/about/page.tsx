@@ -41,7 +41,7 @@ export default function AboutPage() {
     { year: '2021', title: '团队扩张', desc: '团队规模扩大到 20+ 人' },
     { year: '2022', title: '业务突破', desc: '服务客户超过 100 家企业' },
     { year: '2023', title: '技术升级', desc: '全面采用最新技术栈' },
-    { year: '2024', title: '持续增长', desc: '项目成功率达 98%' },
+    { year: '2024', title: '持续增长', desc: '项目成功率达 99%' },
   ];
 
   const team = [
@@ -69,7 +69,6 @@ export default function AboutPage() {
     { icon: Award, label: '行业奖项', value: '12+' },
     { icon: CheckCircle2, label: '成功项目', value: '200+' },
     { icon: Users, label: '服务客户', value: '150+' },
-    { icon: TrendingUp, label: '客户满意度', value: '98%' },
   ];
 
   return (

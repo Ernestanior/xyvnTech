@@ -99,7 +99,7 @@
       "metrics": [
         { "icon": "TrendingUp", "label": "轉化率提升", "value": "230%" },
         { "icon": "Users", "label": "日活用戶", "value": "50萬+" },
-        { "icon": "Award", "label": "用戶滿意度", "value": "98%" }
+        { "icon": "Award", "label": "用戶滿意度", "value": "99%" }
       ],
       "highlights": [
         "實時庫存管理系統",
